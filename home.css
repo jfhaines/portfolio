@@ -6,14 +6,17 @@
 
 body{
     margin: 0px;
+    font-family: "Open Sans", "Arial", sans-serif;
 }
 
+/* header */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0% 15% 0% 3%;
     border-bottom: 0.75px solid #B0B2B5;
+    height: 4.5vh;
 }
 
 nav ul {
@@ -30,4 +33,58 @@ nav ul li {
 #logo {
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 1.2rem;
+}
+
+
+/* main */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 14% 0%;
+    background: #FEFFFA;
+    border-bottom: 0.75px solid #B0B2B5;
+}
+
+main h1 {
+    font-family: "Montserrat", Arial, sans-serif;
+    font-size: 3.1rem;
+    margin: 0px;
+}
+
+main p {
+    font-weight: 600;
+}
+
+main .line {
+    height: 5px;
+    width: 40%;
+    background: #EA3F33;
+}
+
+main ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px;
+}
+
+main ul li {
+    font-size: 0.7rem;
+    list-style: none;
+    padding: 0 2%;
+}
+
+main a {
+    margin-top: 3.5%;
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-color: #EA3F33;
+    padding: 0.4rem 0.7rem;
+    border-radius: 25px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
 }
