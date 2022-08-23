@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+$color-one: #F4F4E9;
+$color-two: #EA3F33;
+$color-three: #3C3687;
+$color-four: white;
+$color-five: black;
+$stroke-color: #B0B2B5;
+$typeface-one: "Montserrat", Arial, sans-serif;
+$typeface-two: "Open Sans", Arial, sans-serif;
+$stroke: 0.75px solid $stroke-color;
+
+
 * {
   box-sizing: border-box;
 }
@@ -46,45 +58,3 @@ nav ul li {
   font-weight: bold;
   font-size: 0.9rem;
 }
-
-/* main */
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 14% 0%;
-  background: #F4F4E9;
-  border-bottom: 0.75px solid #B0B2B5;
-}
-
-main h1 {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 3.1rem;
-  margin: 0px;
-}
-
-main p {
-  font-weight: 600;
-}
-
-main .line {
-  height: 3.5px;
-  width: 40%;
-  background: #3C3687;
-}
-
-main ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0px;
-}
-
-main ul li {
-  font-size: 0.7rem;
-  list-style: none;
-  padding: 0 2%;
-}
-
-/* About *//*# sourceMappingURL=home.css.map */
