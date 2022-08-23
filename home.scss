@@ -1,82 +1,197 @@
 @use 'base';
 
-
-/* main */
-main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 14% 0%;
-    background: base.$color-one;
-    border-bottom: base.$stroke;
-}
-
-main h1 {
-    font-family: base.$typeface-one;
-    font-size: 3.1rem;
-    margin: 0px;
-}
-
-main p {
-    font-weight: 600;
-    border-bottom: base.$line;
-    padding-bottom: 1.5rem;
-
-}
-
-main ul {
-    margin-top: 0.6rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0px;
-}
-
-main ul li {
-    font-size: 0.7rem;
-    list-style: none;
-    padding: 0 2%;
-}
-
-
-/* About */
-#about {
+@mixin article-layout {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 3rem 4rem;
     border-bottom: base.$stroke;
+    
+    h2 {
+        border-bottom: base.$line;
+        margin: 0rem;
+        padding-bottom: 0.35rem;
+        margin-bottom: 0;
+    }
+    
+    p {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+        font-weight: 500;
+    }
+
+    figure {
+        margin: 0;
+    }
+    
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    
+    .button {
+        margin: 1rem 0;
+    }
 }
 
-#about h2 {
-    border-bottom: base.$line;
-    margin: 0rem;
-    padding-bottom: 0.4rem;
-    margin-bottom: 0;
-}
 
-#about p {
-    font-size: 0.85rem;
-    line-height: 1.4rem;
-    font-weight: 500;
-}
 
-#about figure {
-    margin: 0;
-}
 
-#about img {
-    margin-left: 2rem;
-}
 
-#about section {
+// main
+main {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3.5vh;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        border-bottom: base.$stroke;
+        
+        h1 {
+            font-family: base.$typeface-one;
+            font-size: 3.1rem;
+            margin: 0px;
+        }
+    
+        p {
+            font-weight: 600;
+            border-bottom: base.$line;
+            padding-bottom: 1.5rem;
+    
+        }
+    
+        ul {
+            margin-top: 0.6rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 0px;
+            li {
+                font-size: 0.6rem;
+                font-weight: 700;
+                list-style: none;
+                padding: 0 2%;
+            }
+        }
+    }
+    
+    .main-open {
+        align-self: flex-start;
+        padding: 3.5%;
+    }
+
+    .div-open {
+        align-self: flex-start;
+        padding: 0 0 2% 12%
+    }
+
+    .div-close {
+        align-self: flex-start;
+        padding: 4% 0 0 12%;
+    }
+
+    .main-close {
+        align-self: flex-start;
+        padding: 3.5%;
+    }
 }
 
-#about .button {
-    margin: 1rem 0;
+
+
+
+// About
+#about {
+    @include article-layout();
+
+    background-color: base.$color-one;
+
+
+    section {
+        align-items: flex-start;
+    }
+
+    img {
+        margin-left: 2rem;
+    }
+}
+
+
+// Projects
+#projects {
+    @include article-layout();
+
+    flex-direction: row-reverse;
+    
+    section {
+        align-items: flex-end;
+    }
+
+    img {
+        margin-right: 2rem;
+    }
+
+    p {
+        transform: translateX(12.5px);
+    }
+}
+
+#blogs {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: base.$color-one;
+    padding: 3rem 1rem;
+
+    h2 {
+        border-bottom: base.$line;
+        margin: 0rem;
+        padding-bottom: 0.35rem;
+        margin-bottom: 3%;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        article {
+            width: 40%;
+            padding: 0.3rem 1.5rem;
+            flex: 0 1 auto;
+            text-align: center;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem;
+            box-shadow: 0 1.5px 4px #a4a4a4;
+            border-radius: 9px;
+
+            h3 {
+                font-size: 0.85rem;
+            }
+
+            p {
+                font-size: 0.7rem;
+                font-weight: 600;
+                color: rgb(101, 101, 101);
+            }
+        }
+    }
+}
+
+img {
+    box-shadow: 0 1.5px 4px #a4a4a4;
+    border-radius: 9px;
 }

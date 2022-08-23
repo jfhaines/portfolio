@@ -1,15 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
 
-$color-one: #F4F4E9;
-$color-two: #EA3F33;
-$color-three: #3C3687;
+$color-one: #f7f7f7;
+$color-two: #35b1b7;
+$color-three: #000000;
 $color-four: white;
 $color-five: black;
 $stroke-color: #B0B2B5;
 $typeface-one: "Montserrat", Arial, sans-serif;
 $typeface-two: "Open Sans", Arial, sans-serif;
-$stroke: 0.75px solid $stroke-color;
-$line: 3.5px solid $color-three;
+$stroke: 0px solid $stroke-color;
+$line: 3px solid $color-two;
 
 
 * {
@@ -23,28 +23,45 @@ body {
 
 /* header */
 header {
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0% 15% 0% 3%;
-    border-bottom: 0.75px solid #B0B2B5;
-    height: 4.5vh;
+    padding: 0% 3%;
+    border-bottom: $stroke;
+    height: 3.5vh;
+    box-shadow: 0 0px 4px #7d7d7d;
+    background: white;
+    z-index: 1;
+
+    nav ul {
+        display: flex;
+            
+        li {
+            list-style: none;
+            padding: 0rem 0.8rem;
+            font-family: "Open Sans", "Arial", sans-serif;
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: #494949;
+        }
+    }
+        
+    #logo {
+          font-family: "Montserrat", Arial, sans-serif;
+          font-size: 1rem;
+    }
 }
 
-nav ul {
-    display: flex;
-}
+footer {
+  display: flex;
+  justify-content: center;
 
-nav ul li {
-    list-style: none;
-    padding: 0rem 0.8rem;
-    font-family: "Open Sans", "Arial", sans-serif;
-    font-size: 0.8rem;
-}
-
-#logo {
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 1.2rem;
+  p {
+    padding: 0.4rem;
+    font-size: 0.6rem;
+    font-weight: 600;  }
 }
 
 .button {
@@ -52,10 +69,21 @@ nav ul li {
     text-decoration: none;
     color: white;
     display: block;
-    background-color: #EA3F33;
+    background-color: $color-two;
     padding: 0.4rem 0.7rem;
     border-radius: 25px;
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    box-shadow: 0 2px 3px #7d7d7d;
+}
+
+p {
+    color: #494949;
+}
+
+.decorator {
+    font-family: "Satisfy", Arial, sans-serif;
+    font-size: 0.8rem;
+    color: #979797;
 }

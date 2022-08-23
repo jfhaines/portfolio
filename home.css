@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -10,28 +10,42 @@ body {
 
 /* header */
 header {
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0% 15% 0% 3%;
-  border-bottom: 0.75px solid #B0B2B5;
-  height: 4.5vh;
+  padding: 0% 3%;
+  border-bottom: 0px solid #B0B2B5;
+  height: 3.5vh;
+  box-shadow: 0 0px 4px #7d7d7d;
+  background: white;
+  z-index: 1;
 }
-
-nav ul {
+header nav ul {
   display: flex;
 }
-
-nav ul li {
+header nav ul li {
   list-style: none;
   padding: 0rem 0.8rem;
   font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #494949;
+}
+header #logo {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1rem;
 }
 
-#logo {
-  font-family: "Montserrat", Arial, sans-serif;
-  font-size: 1.2rem;
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  padding: 0.4rem;
+  font-size: 0.6rem;
+  font-weight: 600;
 }
 
 .button {
@@ -39,88 +53,201 @@ nav ul li {
   text-decoration: none;
   color: white;
   display: block;
-  background-color: #EA3F33;
+  background-color: #35b1b7;
   padding: 0.4rem 0.7rem;
   border-radius: 25px;
   font-family: "Montserrat", Arial, sans-serif;
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
+  box-shadow: 0 2px 3px #7d7d7d;
 }
 
-/* main */
+p {
+  color: #494949;
+}
+
+.decorator {
+  font-family: "Satisfy", Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #979797;
+}
+
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 3.5vh;
+}
+main .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 14% 0%;
-  background: #F4F4E9;
-  border-bottom: 0.75px solid #B0B2B5;
+  padding: 0;
+  border-bottom: 0px solid #B0B2B5;
 }
-
-main h1 {
+main .container h1 {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 3.1rem;
   margin: 0px;
 }
-
-main p {
+main .container p {
   font-weight: 600;
-  border-bottom: 3.5px solid #3C3687;
+  border-bottom: 3px solid #35b1b7;
   padding-bottom: 1.5rem;
 }
-
-main ul {
+main .container ul {
   margin-top: 0.6rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 0px;
 }
-
-main ul li {
-  font-size: 0.7rem;
+main .container ul li {
+  font-size: 0.6rem;
+  font-weight: 700;
   list-style: none;
   padding: 0 2%;
 }
+main .main-open {
+  align-self: flex-start;
+  padding: 3.5%;
+}
+main .div-open {
+  align-self: flex-start;
+  padding: 0 0 2% 12%;
+}
+main .div-close {
+  align-self: flex-start;
+  padding: 4% 0 0 12%;
+}
+main .main-close {
+  align-self: flex-start;
+  padding: 3.5%;
+}
 
-/* About */
 #about {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 3rem 4rem;
-  border-bottom: 0.75px solid #B0B2B5;
+  border-bottom: 0px solid #B0B2B5;
+  background-color: #f7f7f7;
 }
-
 #about h2 {
-  border-bottom: 3.5px solid #3C3687;
+  border-bottom: 3px solid #35b1b7;
   margin: 0rem;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.35rem;
   margin-bottom: 0;
 }
-
 #about p {
   font-size: 0.85rem;
   line-height: 1.4rem;
   font-weight: 500;
 }
-
 #about figure {
   margin: 0;
 }
-
-#about img {
-  margin-left: 2rem;
-}
-
 #about section {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
 }
-
 #about .button {
   margin: 1rem 0;
+}
+#about section {
+  align-items: flex-start;
+}
+#about img {
+  margin-left: 2rem;
+}
+
+#projects {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 4rem;
+  border-bottom: 0px solid #B0B2B5;
+  flex-direction: row-reverse;
+}
+#projects h2 {
+  border-bottom: 3px solid #35b1b7;
+  margin: 0rem;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0;
+}
+#projects p {
+  font-size: 0.85rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+}
+#projects figure {
+  margin: 0;
+}
+#projects section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#projects .button {
+  margin: 1rem 0;
+}
+#projects section {
+  align-items: flex-end;
+}
+#projects img {
+  margin-right: 2rem;
+}
+#projects p {
+  transform: translateX(12.5px);
+}
+
+#blogs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  background-color: #f7f7f7;
+  padding: 3rem 1rem;
+}
+#blogs h2 {
+  border-bottom: 3px solid #35b1b7;
+  margin: 0rem;
+  padding-bottom: 0.35rem;
+  margin-bottom: 3%;
+}
+#blogs .container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+#blogs .container article {
+  width: 40%;
+  padding: 0.3rem 1.5rem;
+  flex: 0 1 auto;
+  text-align: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  box-shadow: 0 1.5px 4px #a4a4a4;
+  border-radius: 9px;
+}
+#blogs .container article h3 {
+  font-size: 0.85rem;
+}
+#blogs .container article p {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgb(101, 101, 101);
+}
+
+img {
+  box-shadow: 0 1.5px 4px #a4a4a4;
+  border-radius: 9px;
 }/*# sourceMappingURL=home.css.map */
