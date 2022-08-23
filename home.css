@@ -66,15 +66,12 @@ main h1 {
 
 main p {
   font-weight: 600;
-}
-
-main .line {
-  height: 3.5px;
-  width: 40%;
-  background: #3C3687;
+  border-bottom: 3.5px solid #3C3687;
+  padding-bottom: 1.5rem;
 }
 
 main ul {
+  margin-top: 0.6rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -87,4 +84,43 @@ main ul li {
   padding: 0 2%;
 }
 
-/* About *//*# sourceMappingURL=home.css.map */
+/* About */
+#about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 4rem;
+  border-bottom: 0.75px solid #B0B2B5;
+}
+
+#about h2 {
+  border-bottom: 3.5px solid #3C3687;
+  margin: 0rem;
+  padding-bottom: 0.4rem;
+  margin-bottom: 0;
+}
+
+#about p {
+  font-size: 0.85rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+}
+
+#about figure {
+  margin: 0;
+}
+
+#about img {
+  margin-left: 2rem;
+}
+
+#about section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+#about .button {
+  margin: 1rem 0;
+}/*# sourceMappingURL=home.css.map */
