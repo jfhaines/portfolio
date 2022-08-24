@@ -1,0 +1,51 @@
+@use '../base';
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#calculator {
+    margin-top: 2vw;
+    @include base.card;
+    @include base.article;
+    @include base.article-left;
+
+    figure {
+        width: 150px;
+        height: 150px;
+        background: rgb(6, 12, 46);
+        margin-right: 0;
+        float: right;
+    }
+}
+
+#backend {
+    margin-top: calc(1.5rem + 2vw);
+    @include base.article;
+    @include base.article-right;
+
+    figure {
+        width: 150px;
+        height: 150px;
+        background: rgb(6, 12, 46);
+        margin-left: 0;
+        float: left;
+    }
+}
+
+#portfolio {
+    margin-top: calc(1.5rem + 2vw);
+    @include base.card;
+    @include base.article;
+    @include base.article-left;
+
+    figure {
+        width: 150px;
+        height: 150px;
+        background: rgb(6, 12, 46);
+        margin-right: 0;
+        float: right;
+    }
+}

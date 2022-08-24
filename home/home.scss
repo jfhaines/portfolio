@@ -1,4 +1,4 @@
-@use 'base';
+@use '../base';
 
 @mixin article-layout {
     display: flex;
@@ -38,6 +38,7 @@
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 
@@ -117,9 +118,9 @@ main {
     @include article-layout();
 
     background-color: base.$color-one;
-    border-radius: 0 7px 7px 0;
-    box-shadow: 0 3px 15px rgb(180, 180, 180);
-    width: 90%;
+    border-radius: base.$card-border-radius;
+    box-shadow: 0 6px 20px rgb(180, 180, 180);
+    width: 87%;
 
 
     section {
@@ -132,25 +133,7 @@ main {
 }
 
 
-// Projects
-#projects {
-    @include article-layout();
-
-    background-color: base.$color-one;
-    border-radius: 0 7px 7px 0;
-    box-shadow: 0 3px 15px rgb(180, 180, 180);
-    width: 92%;
-
-
-    section {
-        align-items: flex-start;
-    }
-
-    img {
-        margin-left: 2rem;
-    }
-}
-
+// Blogs
 #blogs {
     display: flex;
     flex-direction: column;
@@ -205,7 +188,22 @@ main {
     }
 }
 
-img {
-    box-shadow: 0 1.5px 4px #a4a4a4;
-    border-radius: 8px;
+
+// Projects
+#projects {
+    @include article-layout();
+
+    background-color: base.$color-one;
+    border-radius: base.$card-border-radius;
+    box-shadow: 0 6px 20px rgb(180, 180, 180);
+    width: 87%;
+
+
+    section {
+        align-items: flex-start;
+    }
+
+    img {
+        margin-left: 2rem;
+    }
 }

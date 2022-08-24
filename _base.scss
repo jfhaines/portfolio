@@ -10,8 +10,9 @@ $typeface-one: "Montserrat", Arial, sans-serif;
 $typeface-two: "Open Sans", Arial, sans-serif;
 $stroke: 0px solid $stroke-color;
 $line: 3px solid $color-two;
-$box-shadow: 0 3px 15px rgb(180, 180, 180);
-$border-radius: 7px 7px 7px 7px;
+$box-shadow: 0 6px 20px rgb(180, 180, 180);
+$card-border-radius: 6px;
+$width: 87%;
 
 
 * {
@@ -23,19 +24,16 @@ body {
     font-family: "Open Sans", "Arial", sans-serif;
 }
 
+
+
 /* header */
 header {
-    position: fixed;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0% 3%;
-    border-bottom: $stroke;
-    height: 3.5vh;
-    box-shadow: 0 0px 4px #7d7d7d;
-    background: white;
-    z-index: 1;
+    padding: 1rem 2rem;
+    height: 3.5rem;
 
     nav ul {
         display: flex;
@@ -46,7 +44,11 @@ header {
             font-family: "Open Sans", "Arial", sans-serif;
             font-size: 0.65rem;
             font-weight: 700;
-            color: #494949;
+
+            a {
+                text-decoration: none;
+                color: #494949;
+            }
         }
     }
         
@@ -56,6 +58,9 @@ header {
     }
 }
 
+
+
+/* footer */
 footer {
   display: flex;
   justify-content: center;
@@ -65,6 +70,8 @@ footer {
     font-size: 0.6rem;
     font-weight: 600;  }
 }
+
+
 
 .button {
     margin-top: 3.5%;
@@ -90,45 +97,133 @@ p {
     color: #979797;
 }
 
-@mixin card {
+
+
+@mixin left-article {
+    width: 89%;
+    border-radius: $card-border-radius;
+    box-shadow: $box-shadow-one;
     background-color: $color-one;
-    border-radius: 7px 7px 7px 7px;
-    box-shadow: 0 3px 15px rgb(180, 180, 180);
+    padding: 0 3rem;
+    
+    h2 {
+
+    }
+    
+    figure {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+        float: right;
+        background-color: white;
+        border-radius: 14px;
+        box-shadow: 1px 1px 5px rgb(176, 176, 176);
+        margin: 0 2.5rem 1rem 0;
+    }
+
+    div {
+        width: 180px;
+        height: 180px;
+    }
+
+    p {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 4rem;
+    }
+
+    .button {
+        display: inline-block;
+    }
 }
 
 @mixin center-article {
-        width: 89%;
-        padding: 0 3rem;
-        @include card;
+    width: 89%;
+    border-radius: $card-border-radius;
+    box-shadow: $box-shadow-one;
+    background-color: $color-one;
+    padding: 0 3rem;
     
-        h2 {
-            border-bottom: $line;
-            padding-bottom: 0.35rem;
-            display: inline-block;
-            margin-right: 100%;
-            white-space: nowrap;
-        }
-    
-        figure {
-            width: 180px;
-            height: 180px;
-            margin: 0;
-            float: left;
-            background-color: white;
-            border-radius: 14px;
-            box-shadow: 1px 1px 5px rgb(176, 176, 176);
-            margin: 0 2.5rem 1rem 0;
-        }
-    
-        div {
-            width: 180px;
-            height: 180px;
-        }
-    
-        p {
-            font-size: 0.85rem;
-            line-height: 1.4rem;
-            font-weight: 500;
-            margin-bottom: 4rem;
-        }
+    h2 {
+        border-bottom: $line;
+        padding-bottom: 0.35rem;
+        display: inline-block;
+        margin-right: 100%;
+        white-space: nowrap;
     }
+    
+    figure {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+        float: left;
+        background-color: white;
+        border-radius: 14px;
+        box-shadow: 1px 1px 5px rgb(176, 176, 176);
+        margin: 0 2.5rem 1rem 0;
+    }
+
+    div {
+        width: 180px;
+        height: 180px;
+    }
+
+    p {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 4rem;
+    }
+}
+
+
+@mixin card {
+    background-color: $color-one;
+    border-radius: $card-border-radius;
+    box-shadow: 0 6px 20px rgb(180, 180, 180);
+}
+
+@mixin article {
+    padding: 2rem 3.5rem;
+    width: $width;
+
+    h2 {
+        border-bottom: $line;
+        margin: 0rem;
+        padding-bottom: 0.35rem;
+        margin-bottom: 0;
+        display: inline-block;
+    }
+    
+    p {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+        font-weight: 500;
+    }
+
+    .button {
+        display: inline-block;
+    }
+}
+
+@mixin article-right {
+    h2 {
+        margin-left: 100%;
+        transform: translateX(-100%);
+        white-space: nowrap;
+    }
+
+    .button {
+        margin-left: 100%;
+        transform: translateX(-100%);
+        white-space: nowrap;
+    }
+}
+
+@mixin article-left {
+    h2 {
+        margin-right: 100%;
+        white-space: nowrap;
+    }
+}
