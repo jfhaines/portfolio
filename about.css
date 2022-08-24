@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Open Sans", "Arial", sans-serif;
+}
+
+/* header */
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0% 3%;
+  border-bottom: 0px solid #B0B2B5;
+  height: 3.5vh;
+  box-shadow: 0 0px 4px #7d7d7d;
+  background: white;
+  z-index: 1;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul li {
+  list-style: none;
+  padding: 0rem 0.8rem;
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: #494949;
+}
+header #logo {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+footer p {
+  padding: 0.4rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+.button {
+  margin-top: 3.5%;
+  text-decoration: none;
+  color: white;
+  display: block;
+  background-color: #d75442;
+  padding: 0.4rem 0.7rem;
+  border-radius: 25px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.75rem;
+  box-shadow: 0 2px 3px #7d7d7d;
+}
+
+p {
+  color: #494949;
+}
+
+.decorator {
+  font-family: "Satisfy", Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #979797;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+article {
+  margin-top: calc(3.5vh + 4%);
+  width: 90%;
+  padding: 0 3rem;
+  background-color: #FEFFFA;
+  border-radius: 7px 7px 7px 7px;
+  box-shadow: 0 3px 15px rgb(180, 180, 180);
+}
+article h2 {
+  border-bottom: 3px solid #d75442;
+  padding-bottom: 0.35rem;
+  display: inline-block;
+  margin-right: 100%;
+  white-space: nowrap;
+}
+article figure {
+  width: 180px;
+  height: 180px;
+  margin: 0;
+  float: left;
+  background-color: white;
+  border-radius: 14px;
+  box-shadow: 1px 1px 5px rgb(176, 176, 176);
+  margin: 0 2.5rem 1rem 0;
+}
+article div {
+  width: 180px;
+  height: 180px;
+}
+article p {
+  font-size: 0.85rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}/*# sourceMappingURL=about.css.map */

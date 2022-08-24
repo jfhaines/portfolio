@@ -1,0 +1,45 @@
+@use 'base';
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article {
+    margin-top: calc(3.5vh + 4%);
+    width: 90%;
+    padding: 0 3rem;
+    @include base.card;
+
+    h2 {
+        border-bottom: base.$line;
+        padding-bottom: 0.35rem;
+        display: inline-block;
+        margin-right: 100%;
+        white-space: nowrap;
+    }
+
+    figure {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+        float: left;
+        background-color: white;
+        border-radius: 14px;
+        box-shadow: 1px 1px 5px rgb(176, 176, 176);
+        margin: 0 2.5rem 1rem 0;
+    }
+
+    div {
+        width: 180px;
+        height: 180px;
+    }
+
+    p {
+        font-size: 0.85rem;
+        line-height: 1.4rem;
+        font-weight: 500;
+        margin-bottom: 4rem;
+    }
+}

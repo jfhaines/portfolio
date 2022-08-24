@@ -46,6 +46,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding-top: 3.5vh;
+    padding-bottom: 1.5vh;
 
     .container {
         display: flex;
@@ -112,6 +113,9 @@ main {
     @include article-layout();
 
     background-color: base.$color-one;
+    border-radius: 0 7px 7px 0;
+    box-shadow: 0 3px 15px rgb(180, 180, 180);
+    width: 92%;
 
 
     section {
@@ -128,32 +132,31 @@ main {
 #projects {
     @include article-layout();
 
-    flex-direction: row-reverse;
-    
+    background-color: base.$color-one;
+    border-radius: 0 7px 7px 0;
+    box-shadow: 0 3px 15px rgb(180, 180, 180);
+    width: 92%;
+
+
     section {
-        align-items: flex-end;
+        align-items: flex-start;
     }
 
     img {
-        margin-right: 2rem;
-    }
-
-    p {
-        transform: translateX(12.5px);
+        margin-left: 2rem;
     }
 }
 
 #blogs {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     flex-wrap: wrap;
-    background-color: base.$color-one;
-    padding: 3rem 1rem;
+    padding: 3.5rem 1rem;
 
     h2 {
         border-bottom: base.$line;
-        margin: 0rem;
+        margin: 0 3rem 0 3rem;
         padding-bottom: 0.35rem;
         margin-bottom: 3%;
     }
@@ -166,26 +169,33 @@ main {
         justify-content: space-evenly;
 
         article {
-            width: 40%;
+            width: 35%;
             padding: 0.3rem 1.5rem;
             flex: 0 1 auto;
             text-align: center;
-            background-color: white;
+            background-color: base.$color-one;
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 1rem;
-            box-shadow: 0 1.5px 4px #a4a4a4;
-            border-radius: 9px;
+            box-shadow: 0 3px 15px rgb(180, 180, 180);
+            border-radius: 7px;
 
             h3 {
                 font-size: 0.85rem;
+                border-bottom: base.$line;
+                padding-bottom: 0.6rem;
+            }
+
+            figure {
+                margin: 0;
             }
 
             p {
                 font-size: 0.7rem;
                 font-weight: 600;
                 color: rgb(101, 101, 101);
+                margin: 0.4rem;
             }
         }
     }
@@ -193,5 +203,5 @@ main {
 
 img {
     box-shadow: 0 1.5px 4px #a4a4a4;
-    border-radius: 9px;
+    border-radius: 8px;
 }

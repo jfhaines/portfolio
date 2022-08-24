@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
 
-$color-one: #f7f7f7;
-$color-two: #35b1b7;
+$color-one: #FEFFFA;
+$color-two: #d75442;
 $color-three: #000000;
 $color-four: white;
 $color-five: black;
@@ -10,6 +10,8 @@ $typeface-one: "Montserrat", Arial, sans-serif;
 $typeface-two: "Open Sans", Arial, sans-serif;
 $stroke: 0px solid $stroke-color;
 $line: 3px solid $color-two;
+$box-shadow: 0 3px 15px rgb(180, 180, 180);
+$border-radius: 7px 7px 7px 7px;
 
 
 * {
@@ -86,4 +88,10 @@ p {
     font-family: "Satisfy", Arial, sans-serif;
     font-size: 0.8rem;
     color: #979797;
+}
+
+@mixin card {
+    background-color: $color-one;
+    border-radius: 7px 7px 7px 7px;
+    box-shadow: 0 3px 15px rgb(180, 180, 180);
 }

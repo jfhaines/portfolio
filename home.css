@@ -53,7 +53,7 @@ footer p {
   text-decoration: none;
   color: white;
   display: block;
-  background-color: #35b1b7;
+  background-color: #d75442;
   padding: 0.4rem 0.7rem;
   border-radius: 25px;
   font-family: "Montserrat", Arial, sans-serif;
@@ -78,6 +78,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding-top: 3.5vh;
+  padding-bottom: 1.5vh;
 }
 main .container {
   display: flex;
@@ -94,7 +95,7 @@ main .container h1 {
 }
 main .container p {
   font-weight: 600;
-  border-bottom: 3px solid #35b1b7;
+  border-bottom: 3px solid #d75442;
   padding-bottom: 1.5rem;
 }
 main .container ul {
@@ -133,10 +134,13 @@ main .main-close {
   align-items: center;
   padding: 3rem 4rem;
   border-bottom: 0px solid #B0B2B5;
-  background-color: #f7f7f7;
+  background-color: #FEFFFA;
+  border-radius: 0 7px 7px 0;
+  box-shadow: 0 3px 15px rgb(180, 180, 180);
+  width: 92%;
 }
 #about h2 {
-  border-bottom: 3px solid #35b1b7;
+  border-bottom: 3px solid #d75442;
   margin: 0rem;
   padding-bottom: 0.35rem;
   margin-bottom: 0;
@@ -170,10 +174,13 @@ main .main-close {
   align-items: center;
   padding: 3rem 4rem;
   border-bottom: 0px solid #B0B2B5;
-  flex-direction: row-reverse;
+  background-color: #FEFFFA;
+  border-radius: 0 7px 7px 0;
+  box-shadow: 0 3px 15px rgb(180, 180, 180);
+  width: 92%;
 }
 #projects h2 {
-  border-bottom: 3px solid #35b1b7;
+  border-bottom: 3px solid #d75442;
   margin: 0rem;
   padding-bottom: 0.35rem;
   margin-bottom: 0;
@@ -195,26 +202,22 @@ main .main-close {
   margin: 1rem 0;
 }
 #projects section {
-  align-items: flex-end;
+  align-items: flex-start;
 }
 #projects img {
-  margin-right: 2rem;
-}
-#projects p {
-  transform: translateX(12.5px);
+  margin-left: 2rem;
 }
 
 #blogs {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   flex-wrap: wrap;
-  background-color: #f7f7f7;
-  padding: 3rem 1rem;
+  padding: 3.5rem 1rem;
 }
 #blogs h2 {
-  border-bottom: 3px solid #35b1b7;
-  margin: 0rem;
+  border-bottom: 3px solid #d75442;
+  margin: 0 3rem 0 3rem;
   padding-bottom: 0.35rem;
   margin-bottom: 3%;
 }
@@ -226,28 +229,34 @@ main .main-close {
   justify-content: space-evenly;
 }
 #blogs .container article {
-  width: 40%;
+  width: 35%;
   padding: 0.3rem 1.5rem;
   flex: 0 1 auto;
   text-align: center;
-  background-color: white;
+  background-color: #FEFFFA;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
-  box-shadow: 0 1.5px 4px #a4a4a4;
-  border-radius: 9px;
+  box-shadow: 0 3px 15px rgb(180, 180, 180);
+  border-radius: 7px;
 }
 #blogs .container article h3 {
   font-size: 0.85rem;
+  border-bottom: 3px solid #d75442;
+  padding-bottom: 0.6rem;
+}
+#blogs .container article figure {
+  margin: 0;
 }
 #blogs .container article p {
   font-size: 0.7rem;
   font-weight: 600;
   color: rgb(101, 101, 101);
+  margin: 0.4rem;
 }
 
 img {
   box-shadow: 0 1.5px 4px #a4a4a4;
-  border-radius: 9px;
+  border-radius: 8px;
 }/*# sourceMappingURL=home.css.map */
