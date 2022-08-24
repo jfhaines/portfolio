@@ -72,6 +72,11 @@ p {
   color: #979797;
 }
 
+footer {
+  position: absolute;
+  bottom: 0;
+}
+
 main {
   display: flex;
   flex-direction: column;
