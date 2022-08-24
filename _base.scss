@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
 
 $color-one: #FEFFFA;
-$color-two: #d75442;
+$color-two: #ef4d42;
 $color-three: #000000;
 $color-four: white;
 $color-five: black;
@@ -92,9 +92,10 @@ p {
 }
 
 .decorator {
-    font-family: "Satisfy", Arial, sans-serif;
-    font-size: 0.8rem;
+    font-size: 0.65rem;
+    font-weight: 600;
     color: #979797;
+    display: none;
 }
 
 
@@ -141,7 +142,7 @@ p {
 @mixin center-article {
     width: 89%;
     border-radius: $card-border-radius;
-    box-shadow: $box-shadow-one;
+    box-shadow: $box-shadow;
     background-color: $color-one;
     padding: 0 3rem;
     
@@ -219,11 +220,70 @@ p {
         transform: translateX(-100%);
         white-space: nowrap;
     }
+
+    figure {
+        width: 150px;
+        height: 150px;
+        background: rgb(6, 12, 46);
+        margin-left: 0;
+        float: left;
+    }
 }
 
 @mixin article-left {
     h2 {
         margin-right: 100%;
         white-space: nowrap;
+    }
+
+    .button {
+        margin-right: 100%;
+        white-space: nowrap;
+    }
+
+    figure {
+        width: 150px;
+        height: 150px;
+        background: rgb(6, 12, 46);
+        margin-right: 0;
+        float: right;
+    }
+}
+
+@mixin blog-preview {
+    display: flex;
+    padding: 0.3rem 1.5rem;
+    flex: 0 1 auto;
+    text-align: center;
+    background-color: $color-one;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 1.4rem 0;
+    box-shadow: $box-shadow;
+    border-radius: $card-border-radius;
+
+    h3 {
+        font-size: 0.85rem;
+        border-bottom: $line;
+        padding-bottom: 0.6rem;
+    }
+
+    figure {
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+
+    p {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: rgb(101, 101, 101);
+        margin: 0.4rem;
+    }
+
+    .button {
+        margin-bottom: 1.2rem;
     }
 }

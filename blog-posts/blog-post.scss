@@ -6,7 +6,14 @@ body {
     align-items: center;
 }
 
+.back-nav {
+    align-self: flex-start;
+    margin: 1.4vh 0 0 calc((100% - base.$width)/2)
+}
+
 article {
-    margin-top: calc(3.5vh + 4.5%);
-    @include base.center-article;
+    margin-top: calc(0.5vh + 4.5%);
+    @include base.article;
+    @include base.card;
+    @include base.article-right;
 }

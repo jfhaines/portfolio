@@ -52,7 +52,7 @@ footer p {
   text-decoration: none;
   color: white;
   display: block;
-  background-color: #d75442;
+  background-color: #ef4d42;
   padding: 0.4rem 0.7rem;
   border-radius: 25px;
   font-family: "Montserrat", Arial, sans-serif;
@@ -66,9 +66,10 @@ p {
 }
 
 .decorator {
-  font-family: "Satisfy", Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
+  font-weight: 600;
   color: #979797;
+  display: none;
 }
 
 body {
@@ -80,121 +81,143 @@ body {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 3.5vh;
-  padding-bottom: 1.5vh;
-}
-main .container {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  border-bottom: 0px solid #B0B2B5;
+  width: 100%;
+  margin: calc(5vh + 4%);
+  /*
+  .main-open {
+      align-self: flex-start;
+      padding: 3% 6%;
+  }
+
+  .div-open {
+      align-self: flex-start;
+      padding: 0 0 3% 15%
+  }
+
+  .div-close {
+      align-self: flex-start;
+      padding: 3% 15%;
+  }
+
+  .main-close {
+      align-self: flex-start;
+      padding: 3% 6%;
+  }
+  */
 }
-main .container h1 {
+main h1 {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 3.1rem;
   margin: 0px;
 }
-main .container p {
+main p {
   font-weight: 600;
-  border-bottom: 3px solid #d75442;
+  border-bottom: 3px solid #ef4d42;
   padding-bottom: 1.5rem;
 }
-main .container ul {
+main ul {
   margin-top: 0.6rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 0px;
 }
-main .container ul li {
+main ul li {
   font-size: 0.6rem;
   font-weight: 700;
   list-style: none;
   padding: 0 2%;
 }
-main .main-open {
-  align-self: flex-start;
-  padding: 3.5%;
-}
-main .div-open {
-  align-self: flex-start;
-  padding: 0 0 2% 12%;
-}
-main .div-close {
-  align-self: flex-start;
-  padding: 4% 0 0 12%;
-}
-main .main-close {
-  align-self: flex-start;
-  padding: 3.5%;
-}
 
 #about {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem 4rem;
-  border-bottom: 0px solid #B0B2B5;
   background-color: #FEFFFA;
   border-radius: 6px;
   box-shadow: 0 6px 20px rgb(180, 180, 180);
+  padding: 2rem 3.5rem;
   width: 87%;
+  margin-top: calc(1.5rem + 2vw);
 }
 #about h2 {
-  border-bottom: 3px solid #d75442;
+  border-bottom: 3px solid #ef4d42;
   margin: 0rem;
   padding-bottom: 0.35rem;
   margin-bottom: 0;
+  display: inline-block;
 }
 #about p {
   font-size: 0.85rem;
   line-height: 1.4rem;
   font-weight: 500;
 }
-#about figure {
-  margin: 0;
+#about .button {
+  display: inline-block;
 }
-#about section {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+#about h2 {
+  margin-right: 100%;
+  white-space: nowrap;
 }
 #about .button {
-  margin: 1rem 0;
+  margin-right: 100%;
+  white-space: nowrap;
 }
-#about section {
-  align-items: flex-start;
-}
-#about img {
-  margin-left: 2rem;
+#about figure {
+  width: 150px;
+  height: 150px;
+  background: rgb(6, 12, 46);
+  margin-right: 0;
+  float: right;
 }
 
 #blogs {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  padding: 3.5rem 1rem;
-}
-#blogs h2 {
-  border-bottom: 3px solid #d75442;
-  margin: 0 3rem 0 3rem;
-  padding-bottom: 0.35rem;
-  margin-bottom: 3%;
-}
-#blogs .container {
+  padding: 2rem 3.5rem;
+  width: 87%;
+  margin-top: calc(1.5rem + 2vw);
   display: flex;
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
-#blogs .container article {
-  width: 35%;
+#blogs h2 {
+  border-bottom: 3px solid #ef4d42;
+  margin: 0rem;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0;
+  display: inline-block;
+}
+#blogs p {
+  font-size: 0.85rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+}
+#blogs .button {
+  display: inline-block;
+}
+#blogs h2 {
+  margin-left: 100%;
+  transform: translateX(-100%);
+  white-space: nowrap;
+}
+#blogs .button {
+  margin-left: 100%;
+  transform: translateX(-100%);
+  white-space: nowrap;
+}
+#blogs figure {
+  width: 150px;
+  height: 150px;
+  background: rgb(6, 12, 46);
+  margin-left: 0;
+  float: left;
+}
+#blogs h2 {
+  margin-bottom: 1rem;
+}
+#blogs article {
+  width: 46%;
+  display: flex;
   padding: 0.3rem 1.5rem;
   flex: 0 1 auto;
   text-align: center;
@@ -202,61 +225,66 @@ main .main-close {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
-  box-shadow: 0 3px 15px rgb(180, 180, 180);
-  border-radius: 7px;
+  justify-content: flex-end;
+  margin: 1.4rem 0;
+  box-shadow: 0 6px 20px rgb(180, 180, 180);
+  border-radius: 6px;
 }
-#blogs .container article h3 {
+#blogs article h3 {
   font-size: 0.85rem;
-  border-bottom: 3px solid #d75442;
+  border-bottom: 3px solid #ef4d42;
   padding-bottom: 0.6rem;
 }
-#blogs .container article figure {
+#blogs article figure {
   margin: 0;
+  width: auto;
+  height: auto;
 }
-#blogs .container article p {
+#blogs article p {
   font-size: 0.7rem;
   font-weight: 600;
   color: rgb(101, 101, 101);
   margin: 0.4rem;
 }
+#blogs article .button {
+  margin-bottom: 1.2rem;
+}
 
 #projects {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem 4rem;
-  border-bottom: 0px solid #B0B2B5;
   background-color: #FEFFFA;
   border-radius: 6px;
   box-shadow: 0 6px 20px rgb(180, 180, 180);
+  padding: 2rem 3.5rem;
   width: 87%;
+  margin-top: calc(1.5rem + 2vw);
 }
 #projects h2 {
-  border-bottom: 3px solid #d75442;
+  border-bottom: 3px solid #ef4d42;
   margin: 0rem;
   padding-bottom: 0.35rem;
   margin-bottom: 0;
+  display: inline-block;
 }
 #projects p {
   font-size: 0.85rem;
   line-height: 1.4rem;
   font-weight: 500;
 }
-#projects figure {
-  margin: 0;
+#projects .button {
+  display: inline-block;
 }
-#projects section {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+#projects h2 {
+  margin-right: 100%;
+  white-space: nowrap;
 }
 #projects .button {
-  margin: 1rem 0;
+  margin-right: 100%;
+  white-space: nowrap;
 }
-#projects section {
-  align-items: flex-start;
-}
-#projects img {
-  margin-left: 2rem;
+#projects figure {
+  width: 150px;
+  height: 150px;
+  background: rgb(6, 12, 46);
+  margin-right: 0;
+  float: right;
 }/*# sourceMappingURL=home.css.map */

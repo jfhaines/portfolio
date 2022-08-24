@@ -52,7 +52,7 @@ footer p {
   text-decoration: none;
   color: white;
   display: block;
-  background-color: #d75442;
+  background-color: #ef4d42;
   padding: 0.4rem 0.7rem;
   border-radius: 25px;
   font-family: "Montserrat", Arial, sans-serif;
@@ -66,9 +66,10 @@ p {
 }
 
 .decorator {
-  font-family: "Satisfy", Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
+  font-weight: 600;
   color: #979797;
+  display: none;
 }
 
 body {
@@ -86,7 +87,7 @@ body {
   width: 87%;
 }
 #calculator h2 {
-  border-bottom: 3px solid #d75442;
+  border-bottom: 3px solid #ef4d42;
   margin: 0rem;
   padding-bottom: 0.35rem;
   margin-bottom: 0;
@@ -104,6 +105,17 @@ body {
   margin-right: 100%;
   white-space: nowrap;
 }
+#calculator .button {
+  margin-right: 100%;
+  white-space: nowrap;
+}
+#calculator figure {
+  width: 150px;
+  height: 150px;
+  background: rgb(6, 12, 46);
+  margin-right: 0;
+  float: right;
+}
 #calculator figure {
   width: 150px;
   height: 150px;
@@ -118,7 +130,7 @@ body {
   width: 87%;
 }
 #backend h2 {
-  border-bottom: 3px solid #d75442;
+  border-bottom: 3px solid #ef4d42;
   margin: 0rem;
   padding-bottom: 0.35rem;
   margin-bottom: 0;
@@ -159,7 +171,7 @@ body {
   width: 87%;
 }
 #portfolio h2 {
-  border-bottom: 3px solid #d75442;
+  border-bottom: 3px solid #ef4d42;
   margin: 0rem;
   padding-bottom: 0.35rem;
   margin-bottom: 0;
@@ -174,6 +186,10 @@ body {
   display: inline-block;
 }
 #portfolio h2 {
+  margin-right: 100%;
+  white-space: nowrap;
+}
+#portfolio .button {
   margin-right: 100%;
   white-space: nowrap;
 }

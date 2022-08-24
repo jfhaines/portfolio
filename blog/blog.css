@@ -52,7 +52,7 @@ footer p {
   text-decoration: none;
   color: white;
   display: block;
-  background-color: #d75442;
+  background-color: #ef4d42;
   padding: 0.4rem 0.7rem;
   border-radius: 25px;
   font-family: "Montserrat", Arial, sans-serif;
@@ -66,21 +66,44 @@ p {
 }
 
 .decorator {
-  font-family: "Satisfy", Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.65rem;
+  font-weight: 600;
   color: #979797;
+  display: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 main {
-  padding: 6.2vh;
+  padding: 2rem 3.5rem;
+  width: 87%;
   display: flex;
   flex-direction: row;
   width: 100%;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
+}
+main h2 {
+  border-bottom: 3px solid #ef4d42;
+  margin: 0rem;
+  padding-bottom: 0.35rem;
+  margin-bottom: 0;
+  display: inline-block;
+}
+main p {
+  font-size: 0.85rem;
+  line-height: 1.4rem;
+  font-weight: 500;
+}
+main .button {
+  display: inline-block;
 }
 main article {
-  width: 35%;
+  width: 46%;
+  display: flex;
   padding: 0.3rem 1.5rem;
   flex: 0 1 auto;
   text-align: center;
@@ -88,21 +111,27 @@ main article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
-  box-shadow: 0 3px 15px rgb(180, 180, 180);
-  border-radius: 7px;
+  justify-content: flex-end;
+  margin: 1.4rem 0;
+  box-shadow: 0 6px 20px rgb(180, 180, 180);
+  border-radius: 6px;
 }
 main article h3 {
   font-size: 0.85rem;
-  border-bottom: 3px solid #d75442;
+  border-bottom: 3px solid #ef4d42;
   padding-bottom: 0.6rem;
 }
 main article figure {
   margin: 0;
+  width: auto;
+  height: auto;
 }
 main article p {
   font-size: 0.7rem;
   font-weight: 600;
   color: rgb(101, 101, 101);
   margin: 0.4rem;
+}
+main article .button {
+  margin-bottom: 1.2rem;
 }/*# sourceMappingURL=blog.css.map */
