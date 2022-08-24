@@ -72,9 +72,9 @@ p {
   color: #979797;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -142,7 +142,7 @@ main .main-close {
   background-color: #FEFFFA;
   border-radius: 0 7px 7px 0;
   box-shadow: 0 3px 15px rgb(180, 180, 180);
-  width: 92%;
+  width: 90%;
 }
 #about h2 {
   border-bottom: 3px solid #d75442;

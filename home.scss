@@ -35,6 +35,10 @@
     }
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
 
 
 
@@ -115,7 +119,7 @@ main {
     background-color: base.$color-one;
     border-radius: 0 7px 7px 0;
     box-shadow: 0 3px 15px rgb(180, 180, 180);
-    width: 92%;
+    width: 90%;
 
 
     section {
