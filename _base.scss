@@ -95,3 +95,40 @@ p {
     border-radius: 7px 7px 7px 7px;
     box-shadow: 0 3px 15px rgb(180, 180, 180);
 }
+
+@mixin center-article {
+        width: 89%;
+        padding: 0 3rem;
+        @include card;
+    
+        h2 {
+            border-bottom: $line;
+            padding-bottom: 0.35rem;
+            display: inline-block;
+            margin-right: 100%;
+            white-space: nowrap;
+        }
+    
+        figure {
+            width: 180px;
+            height: 180px;
+            margin: 0;
+            float: left;
+            background-color: white;
+            border-radius: 14px;
+            box-shadow: 1px 1px 5px rgb(176, 176, 176);
+            margin: 0 2.5rem 1rem 0;
+        }
+    
+        div {
+            width: 180px;
+            height: 180px;
+        }
+    
+        p {
+            font-size: 0.85rem;
+            line-height: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 4rem;
+        }
+    }
