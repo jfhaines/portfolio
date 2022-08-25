@@ -7,14 +7,13 @@ body {
 }
 
 article {
-    margin-top: calc(0.8vh + 4.5%);
     @include base.article;
     @include base.article-left;
     @include base.card;
 }
 
 section {
-    width: base.$width;
+    width: base.$article-width;
     margin-top: 5vh;
     display: flex;
     flex-direction: column;
@@ -22,6 +21,7 @@ section {
     padding: 0;
 
     h2 {
+        @include base.align-right;
         border-bottom: base.$line;
         padding-bottom: 0.35rem;
     }
@@ -55,6 +55,7 @@ section {
             p {
                 font-size: 0.9rem;
                 font-weight: 700;
+                text-align: center;
             }
         }
     }

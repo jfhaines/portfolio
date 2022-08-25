@@ -20,8 +20,14 @@ $article-side-padding: 3.5rem;
 }
 
 body {
-    margin: 0px;
+    margin: 0;
+    padding: 0;
     font-family: "Open Sans", "Arial", sans-serif;
+    height: 100vh;
+}
+
+img {
+    font-family: $typeface-one;
 }
 
 
@@ -34,6 +40,7 @@ header {
     justify-content: space-between;
     padding: 1rem 2rem;
     height: 3.5rem;
+    margin-bottom: 2rem;
 
     nav ul {
         display: flex;
@@ -58,6 +65,23 @@ header {
     }
 }
 
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: auto;
+    min-height: 4.5rem;
+  
+    p {
+      padding: 0.4rem;
+      font-size: 0.6rem;
+      font-weight: 600;
+    }
+  }
+
+
 .button {
     margin-top: 3.5%;
     text-decoration: none;
@@ -74,19 +98,6 @@ header {
 
 p label {
     color: #494949;
-}
-
-
-
-/* footer */
-footer {
-  display: flex;
-  justify-content: center;
-
-  p {
-    padding: 0.4rem;
-    font-size: 0.6rem;
-    font-weight: 600;  }
 }
 
 
@@ -170,7 +181,6 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    margin: 1.4rem 0;
     box-shadow: $box-shadow;
     border-radius: $card-border-radius;
 
@@ -266,6 +276,7 @@ footer {
         li {
             width: 45%;
             list-style: none;
+            margin-bottom: 2.8rem;
 
             a {
                 text-decoration: none;

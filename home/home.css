@@ -4,8 +4,14 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
+  height: 100vh;
+}
+
+img {
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
 /* header */
@@ -16,6 +22,7 @@ header {
   justify-content: space-between;
   padding: 1rem 2rem;
   height: 3.5rem;
+  margin-bottom: 2rem;
 }
 header nav ul {
   display: flex;
@@ -36,6 +43,21 @@ header #logo {
   font-size: 1rem;
 }
 
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top: auto;
+  min-height: 4.5rem;
+}
+footer p {
+  padding: 0.4rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
 .button {
   margin-top: 3.5%;
   text-decoration: none;
@@ -54,49 +76,38 @@ p label {
   color: #494949;
 }
 
-/* footer */
-footer {
-  display: flex;
-  justify-content: center;
-}
-footer p {
-  padding: 0.4rem;
-  font-size: 0.6rem;
-  font-weight: 600;
-}
-
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-main {
+#hero {
+  margin: 4rem 0 5.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: calc(5vh + 4%);
 }
-main h1 {
+#hero h1 {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 3.1rem;
   margin: 0px;
 }
-main p {
+#hero p {
   font-weight: 600;
   border-bottom: 3px solid #ef4242;
   padding-bottom: 1.5rem;
 }
-main ul {
+#hero ul {
   margin-top: 0.6rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   padding: 0px;
 }
-main ul li {
+#hero ul li {
   font-size: 0.6rem;
   font-weight: 700;
   list-style: none;
@@ -174,6 +185,7 @@ main ul li {
 #blogs nav li {
   width: 45%;
   list-style: none;
+  margin-bottom: 2.8rem;
 }
 #blogs nav li a {
   text-decoration: none;
@@ -189,7 +201,6 @@ main ul li {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  margin: 1.4rem 0;
   box-shadow: 0 6px 20px rgb(180, 180, 180);
   border-radius: 6px;
 }

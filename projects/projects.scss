@@ -7,18 +7,9 @@ body {
 }
 
 #calculator {
-    margin-top: 2vw;
     @include base.card;
     @include base.article;
     @include base.article-left;
-
-    figure {
-        width: 150px;
-        height: 150px;
-        background: rgb(6, 12, 46);
-        margin-right: 0;
-        float: right;
-    }
 }
 
 #backend {

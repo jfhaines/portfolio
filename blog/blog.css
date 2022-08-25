@@ -4,8 +4,14 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
+  height: 100vh;
+}
+
+img {
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
 /* header */
@@ -16,6 +22,7 @@ header {
   justify-content: space-between;
   padding: 1rem 2rem;
   height: 3.5rem;
+  margin-bottom: 2rem;
 }
 header nav ul {
   display: flex;
@@ -36,6 +43,21 @@ header #logo {
   font-size: 1rem;
 }
 
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top: auto;
+  min-height: 4.5rem;
+}
+footer p {
+  padding: 0.4rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
 .button {
   margin-top: 3.5%;
   text-decoration: none;
@@ -52,17 +74,6 @@ header #logo {
 
 p label {
   color: #494949;
-}
-
-/* footer */
-footer {
-  display: flex;
-  justify-content: center;
-}
-footer p {
-  padding: 0.4rem;
-  font-size: 0.6rem;
-  font-weight: 600;
 }
 
 body {
@@ -86,6 +97,7 @@ main nav {
 main nav li {
   width: 45%;
   list-style: none;
+  margin-bottom: 2.8rem;
 }
 main nav li a {
   text-decoration: none;
@@ -101,7 +113,6 @@ main nav li a article {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  margin: 1.4rem 0;
   box-shadow: 0 6px 20px rgb(180, 180, 180);
   border-radius: 6px;
 }

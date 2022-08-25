@@ -4,8 +4,14 @@
 }
 
 body {
-  margin: 0px;
+  margin: 0;
+  padding: 0;
   font-family: "Open Sans", "Arial", sans-serif;
+  height: 100vh;
+}
+
+img {
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
 /* header */
@@ -16,6 +22,7 @@ header {
   justify-content: space-between;
   padding: 1rem 2rem;
   height: 3.5rem;
+  margin-bottom: 2rem;
 }
 header nav ul {
   display: flex;
@@ -36,6 +43,21 @@ header #logo {
   font-size: 1rem;
 }
 
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top: auto;
+  min-height: 4.5rem;
+}
+footer p {
+  padding: 0.4rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
 .button {
   margin-top: 3.5%;
   text-decoration: none;
@@ -54,17 +76,6 @@ p label {
   color: #494949;
 }
 
-/* footer */
-footer {
-  display: flex;
-  justify-content: center;
-}
-footer p {
-  padding: 0.4rem;
-  font-size: 0.6rem;
-  font-weight: 600;
-}
-
 body {
   display: flex;
   flex-direction: column;
@@ -72,7 +83,6 @@ body {
 }
 
 #calculator {
-  margin-top: 2vw;
   background-color: #FEFFFA;
   border-radius: 6px;
   box-shadow: 0 6px 20px rgb(180, 180, 180);
@@ -122,13 +132,6 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-}
-#calculator figure {
-  width: 150px;
-  height: 150px;
-  background: rgb(6, 12, 46);
-  margin-right: 0;
-  float: right;
 }
 
 #backend {
