@@ -2,17 +2,24 @@
 
 $color-one: #FEFFFA;
 $color-two: #ef4242;
-$color-three: white;
-$color-four: black;
-$stroke-color: #B0B2B5;
-$typeface-one: "Montserrat", Arial, sans-serif;
-$typeface-two: "Open Sans", Arial, sans-serif;
+
+$font-family-heading: "Montserrat", Arial, sans-serif;
+$font-family-standard: "Open Sans", Arial, sans-serif;
+$font-heading: 1rem;
+$font-standard: 500 1rem 1.4rem "Open Sans", Arial, sans-serif;
+
+
+
 $line: 3px solid $color-two;
+
 $box-shadow: 0 6px 20px rgb(180, 180, 180);
 $card-border-radius: 6px;
 $article-width: 87%;
 $article-top-padding: 2rem;
 $article-side-padding: 3.5rem;
+
+$section-gap: calc(2.5rem + 2vh);
+
 
 
 * {
@@ -22,13 +29,49 @@ $article-side-padding: 3.5rem;
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     font-family: "Open Sans", "Arial", sans-serif;
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-img {
-    font-family: $typeface-one;
+body > section, body > article {
+    margin-bottom: $section-gap;
 }
+
+
+@media screen and (min-width: 1000px) {
+    body {
+        width: 1000px;
+        background-color: white;
+        box-shadow: 0 6px 90px rgb(187, 187, 187);
+        ;
+    }
+
+    html {
+        background-color: #fafaf7;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+.button:hover {
+    box-shadow: 0 4px 5px rgb(180, 180, 180);
+    transform: scale(1.04);
+}
+
+
+
+header a:hover {
+    transform: scale(1.07);
+}
+
+a article:hover {
+    transform: scale(1.02);
+}
+
 
 
 
@@ -38,12 +81,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 3rem 3.5rem;
     height: 3.5rem;
     margin-bottom: 2rem;
+    transition: 0.2s;
 
     nav ul {
         display: flex;
+        align-items: center;
             
         li {
             list-style: none;
@@ -55,6 +100,7 @@ header {
             a {
                 text-decoration: none;
                 color: #494949;
+                display: inline-block;
             }
         }
     }
@@ -83,7 +129,6 @@ footer {
 
 
 .button {
-    margin-top: 3.5%;
     text-decoration: none;
     color: white;
     display: block;
@@ -94,6 +139,7 @@ footer {
     font-weight: bold;
     font-size: 0.75rem;
     box-shadow: 0 2px 3px #7d7d7d;
+    transition: 0.2s;
 }
 
 p label {
@@ -241,10 +287,10 @@ p label {
 
 @mixin underline {
     border-bottom: $line;
-    margin: 0rem;
     padding-bottom: 0.35rem;
-    margin-bottom: 0;
     display: inline-block;
+    margin-bottom: 0.4rem;
+    margin-top: 0;
 }
 
 @mixin para-text {
@@ -284,8 +330,15 @@ p label {
 
                 article {
                     @include blog-preview;
+                    transition: 0.1s;
                 }
             }
         }
     }
+}
+
+@mixin header-nav-selected {
+    font-size: 0.9rem;
+    display: inline-block;
+    border-bottom: $line;
 }

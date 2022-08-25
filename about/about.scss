@@ -1,9 +1,7 @@
 @use '../base';
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#about-button {
+    @include base.header-nav-selected;
 }
 
 article {

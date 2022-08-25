@@ -1,11 +1,5 @@
 @use '../base';
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .back-nav {
     align-self: flex-start;
     margin-left: calc(((100% - base.$article-width) / 2));

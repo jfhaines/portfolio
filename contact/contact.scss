@@ -1,9 +1,7 @@
 @use '../base';
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#contact-button {
+    @include base.header-nav-selected;
 }
 
 .form {
@@ -44,23 +42,33 @@ body {
 
 .details {
     margin-top: 1.3rem;
-    @include layout;
+    @include base.layout;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 
     h2 {
-        margin-bottom: 1.6rem;
-        @include underline;
+        @include base.underline;
     }
 
-    p {
-        margin: 0.2rem;
+    #info-list {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+
+        li {
+            list-style: none;
+            @include base.para-text;
+            margin: 0.8rem 0;
+        }
     }
 
     nav {
         @include base.card;
-        margin-top: 1.3rem;
+        display: flex;
+        align-items: flex-end;
 
         ul {
             padding: 0;

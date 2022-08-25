@@ -1,8 +1,7 @@
 @use '../base';
 
-body {
-    display: flex;
-    flex-direction: column;
+#blog-button {
+    @include base.header-nav-selected;
 }
 
 main {
