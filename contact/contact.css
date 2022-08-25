@@ -71,57 +71,91 @@ body {
   align-items: center;
 }
 
-.back-nav {
-  align-self: flex-start;
-  margin: 1.4vh 0 0 6.5%;
-}
-
-article {
-  margin-top: calc(0.5vh + 4.5%);
-  padding: 2rem 3.5rem;
-  width: 87%;
+.form {
   background-color: #FEFFFA;
   border-radius: 6px;
   box-shadow: 0 6px 20px rgb(180, 180, 180);
+  margin: calc(0.5rem + 2.5%);
+  padding: 2rem 3.5rem;
+  width: 87%;
 }
-article h2 {
+.form h2 {
+  border-bottom: 3px solid #ef4242;
+  margin: 0rem;
+  padding-bottom: 0.35rem;
+  margin-bottom: 1.6rem;
+  display: inline-block;
+}
+.form form {
+  display: flex;
+  flex-direction: column;
+}
+.form form input {
+  margin: 0.5rem 0 1rem 0;
+  padding: 0.5em;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  color: 494949;
+}
+.form form label {
+  font-size: 0.85rem;
+  line-height: 1.4rem;
+  font-weight: 600;
+}
+.form form #message {
+  height: 8rem;
+}
+
+.details {
+  padding: 2rem 3.5rem;
+  width: 87%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.details h2 {
   border-bottom: 3px solid #ef4242;
   margin: 0rem;
   padding-bottom: 0.35rem;
   margin-bottom: 0;
   display: inline-block;
 }
-article p {
+.details p {
   font-size: 0.85rem;
   line-height: 1.4rem;
   font-weight: 500;
 }
-article .button {
+.details .button {
   display: inline-block;
 }
-article h2 {
-  margin-left: 100%;
-  transform: translateX(-100%);
-  white-space: nowrap;
+.details h2 {
+  margin-bottom: 1.6rem;
 }
-article .button {
-  margin-left: 100%;
-  transform: translateX(-100%);
-  white-space: nowrap;
+.details p {
+  margin: 0.2rem;
 }
-article figure {
-  width: 150px;
-  height: 150px;
-  background: white;
-  box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-  border-radius: 8px;
+.details nav {
+  background-color: #FEFFFA;
+  border-radius: 6px;
+  box-shadow: 0 6px 20px rgb(180, 180, 180);
+  margin-top: 1.3rem;
+}
+.details nav ul {
+  padding: 0;
   display: flex;
-  justify-content: center;
-  overflow: hidden;
-  margin-left: 0;
-  float: left;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
 }
-article img {
-  -o-object-fit: cover;
-     object-fit: cover;
-}/*# sourceMappingURL=blog-post.css.map */
+.details nav ul li {
+  width: 50px;
+  height: 50px;
+  list-style: none;
+  margin: 0 1rem;
+}
+.details nav ul li figure {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(140, 140, 140);
+}/*# sourceMappingURL=contact.css.map */

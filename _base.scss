@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
 
 $color-one: #FEFFFA;
-$color-two: #ef4d42;
-$color-three: #000000;
-$color-four: white;
-$color-five: black;
+$color-two: #ef4242;
+$color-three: white;
+$color-four: black;
 $stroke-color: #B0B2B5;
 $typeface-one: "Montserrat", Arial, sans-serif;
 $typeface-two: "Open Sans", Arial, sans-serif;
-$stroke: 0px solid $stroke-color;
 $line: 3px solid $color-two;
 $box-shadow: 0 6px 20px rgb(180, 180, 180);
 $card-border-radius: 6px;
-$width: 87%;
+$article-width: 87%;
+$article-top-padding: 2rem;
+$article-side-padding: 3.5rem;
 
 
 * {
@@ -58,6 +58,24 @@ header {
     }
 }
 
+.button {
+    margin-top: 3.5%;
+    text-decoration: none;
+    color: white;
+    display: block;
+    background-color: $color-two;
+    padding: 0.4rem 0.7rem;
+    border-radius: 25px;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.75rem;
+    box-shadow: 0 2px 3px #7d7d7d;
+}
+
+p label {
+    color: #494949;
+}
+
 
 
 /* footer */
@@ -73,180 +91,72 @@ footer {
 
 
 
-.button {
-    margin-top: 3.5%;
-    text-decoration: none;
-    color: white;
-    display: block;
-    background-color: $color-two;
-    padding: 0.4rem 0.7rem;
-    border-radius: 25px;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: bold;
-    font-size: 0.75rem;
-    box-shadow: 0 2px 3px #7d7d7d;
-}
-
-p {
-    color: #494949;
-}
-
-.decorator {
-    font-size: 0.65rem;
-    font-weight: 600;
-    color: #979797;
-    display: none;
-}
-
-
-
-@mixin left-article {
-    width: 89%;
-    border-radius: $card-border-radius;
-    box-shadow: $box-shadow-one;
-    background-color: $color-one;
-    padding: 0 3rem;
-    
-    h2 {
-
-    }
-    
-    figure {
-        width: 180px;
-        height: 180px;
-        margin: 0;
-        float: right;
-        background-color: white;
-        border-radius: 14px;
-        box-shadow: 1px 1px 5px rgb(176, 176, 176);
-        margin: 0 2.5rem 1rem 0;
-    }
-
-    div {
-        width: 180px;
-        height: 180px;
-    }
-
-    p {
-        font-size: 0.85rem;
-        line-height: 1.4rem;
-        font-weight: 500;
-        margin-bottom: 4rem;
-    }
-
-    .button {
-        display: inline-block;
-    }
-}
-
-@mixin center-article {
-    width: 89%;
-    border-radius: $card-border-radius;
-    box-shadow: $box-shadow;
-    background-color: $color-one;
-    padding: 0 3rem;
-    
-    h2 {
-        border-bottom: $line;
-        padding-bottom: 0.35rem;
-        display: inline-block;
-        margin-right: 100%;
-        white-space: nowrap;
-    }
-    
-    figure {
-        width: 180px;
-        height: 180px;
-        margin: 0;
-        float: left;
-        background-color: white;
-        border-radius: 14px;
-        box-shadow: 1px 1px 5px rgb(176, 176, 176);
-        margin: 0 2.5rem 1rem 0;
-    }
-
-    div {
-        width: 180px;
-        height: 180px;
-    }
-
-    p {
-        font-size: 0.85rem;
-        line-height: 1.4rem;
-        font-weight: 500;
-        margin-bottom: 4rem;
-    }
-}
-
-
 @mixin card {
     background-color: $color-one;
     border-radius: $card-border-radius;
     box-shadow: 0 6px 20px rgb(180, 180, 180);
 }
 
+@mixin layout {
+    padding: $article-top-padding $article-side-padding;
+    width: $article-width;
+}
+
 @mixin article {
-    padding: 2rem 3.5rem;
-    width: $width;
+    @include layout;
 
     h2 {
-        border-bottom: $line;
-        margin: 0rem;
-        padding-bottom: 0.35rem;
-        margin-bottom: 0;
-        display: inline-block;
+        @include underline;
     }
     
     p {
-        font-size: 0.85rem;
-        line-height: 1.4rem;
-        font-weight: 500;
+        @include para-text;
     }
 
     .button {
         display: inline-block;
-    }
-}
-
-@mixin article-right {
-    h2 {
-        margin-left: 100%;
-        transform: translateX(-100%);
-        white-space: nowrap;
-    }
-
-    .button {
-        margin-left: 100%;
-        transform: translateX(-100%);
-        white-space: nowrap;
-    }
-
-    figure {
-        width: 150px;
-        height: 150px;
-        background: rgb(6, 12, 46);
-        margin-left: 0;
-        float: left;
     }
 }
 
 @mixin article-left {
     h2 {
-        margin-right: 100%;
-        white-space: nowrap;
+        @include align-left;
     }
 
     .button {
-        margin-right: 100%;
-        white-space: nowrap;
+        @include align-left;
+    }
+    
+    figure {
+        @include figure-display;
+        @include square;
+        margin: 0 0 0.5rem 2rem;
+        float: right;
+    }
+
+    img {
+        @include img-fit;
+    }
+}
+
+@mixin article-right {
+    h2 {
+        @include align-right;
+    }
+
+    .button {
+        @include align-right;
     }
 
     figure {
-        width: 150px;
-        height: 150px;
-        background: rgb(6, 12, 46);
-        margin-right: 0;
-        float: right;
+        @include figure-display;
+        @include square;
+        margin-left: 0;
+        float: left;
+    }
+
+    img {
+        @include img-fit;
     }
 }
 
@@ -271,9 +181,12 @@ p {
     }
 
     figure {
-        margin: 0;
-        width: auto;
-        height: auto;
+        @include figure-display;
+        @include rectangle;
+
+        img {
+            @include img-fit;
+        }
     }
 
     p {
@@ -285,5 +198,83 @@ p {
 
     .button {
         margin-bottom: 1.2rem;
+    }
+}
+
+@mixin figure-display {
+    background: white;
+    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+@mixin img-fit {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin square {
+    width: 150px;
+    height: 150px;
+}
+
+@mixin rectangle {
+    width: 200px;
+    height: 150px;
+}
+
+@mixin underline {
+    border-bottom: $line;
+    margin: 0rem;
+    padding-bottom: 0.35rem;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+@mixin para-text {
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+    font-weight: 500;
+}
+
+@mixin align-right {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+}
+
+@mixin align-left {
+    margin-right: 100%;
+    white-space: nowrap;
+}
+
+@mixin blog-list {
+    nav {
+        width: $article-width;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        li {
+            width: 45%;
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: inherit;
+
+                article {
+                    @include blog-preview;
+                }
+            }
+        }
     }
 }

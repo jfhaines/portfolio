@@ -36,6 +36,24 @@ header #logo {
   font-size: 1rem;
 }
 
+.button {
+  margin-top: 3.5%;
+  text-decoration: none;
+  color: white;
+  display: block;
+  background-color: #ef4242;
+  padding: 0.4rem 0.7rem;
+  border-radius: 25px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 0.75rem;
+  box-shadow: 0 2px 3px #7d7d7d;
+}
+
+p label {
+  color: #494949;
+}
+
 /* footer */
 footer {
   display: flex;
@@ -47,62 +65,33 @@ footer p {
   font-weight: 600;
 }
 
-.button {
-  margin-top: 3.5%;
-  text-decoration: none;
-  color: white;
-  display: block;
-  background-color: #ef4d42;
-  padding: 0.4rem 0.7rem;
-  border-radius: 25px;
-  font-family: "Montserrat", Arial, sans-serif;
-  font-weight: bold;
-  font-size: 0.75rem;
-  box-shadow: 0 2px 3px #7d7d7d;
-}
-
-p {
-  color: #494949;
-}
-
-.decorator {
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: #979797;
-  display: none;
-}
-
 body {
   display: flex;
   flex-direction: column;
 }
 
 main {
-  padding: 2rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main nav {
   width: 87%;
   display: flex;
   flex-direction: row;
-  width: 100%;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
-main h2 {
-  border-bottom: 3px solid #ef4d42;
-  margin: 0rem;
-  padding-bottom: 0.35rem;
-  margin-bottom: 0;
-  display: inline-block;
+main nav li {
+  width: 45%;
+  list-style: none;
 }
-main p {
-  font-size: 0.85rem;
-  line-height: 1.4rem;
-  font-weight: 500;
+main nav li a {
+  text-decoration: none;
+  color: inherit;
 }
-main .button {
-  display: inline-block;
-}
-main article {
-  width: 46%;
+main nav li a article {
   display: flex;
   padding: 0.3rem 1.5rem;
   flex: 0 1 auto;
@@ -116,22 +105,36 @@ main article {
   box-shadow: 0 6px 20px rgb(180, 180, 180);
   border-radius: 6px;
 }
-main article h3 {
+main nav li a article h3 {
   font-size: 0.85rem;
-  border-bottom: 3px solid #ef4d42;
+  border-bottom: 3px solid #ef4242;
   padding-bottom: 0.6rem;
 }
-main article figure {
-  margin: 0;
-  width: auto;
-  height: auto;
+main nav li a article figure {
+  background: white;
+  box-shadow: 0 1.5px 4px rgb(156, 156, 156);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  height: 150px;
 }
-main article p {
+main nav li a article figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main nav li a article p {
   font-size: 0.7rem;
   font-weight: 600;
   color: rgb(101, 101, 101);
   margin: 0.4rem;
 }
-main article .button {
+main nav li a article .button {
   margin-bottom: 1.2rem;
 }/*# sourceMappingURL=blog.css.map */

@@ -6,15 +6,8 @@ body {
 }
 
 main {
-    @include base.article;
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-    article {
-        width: 46%;
-        @include base.blog-preview;
-    }
+    flex-direction: column;
+    align-items: center;
+    @include base.blog-list;
 }
