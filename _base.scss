@@ -43,16 +43,76 @@ $font-weight-nav: 700;
 $text-color-nav: #494949;
 $line-height-nav: 1.7rem;
 
+
+
+
 // heading underline
 $line: 3px solid $color-two;
 
-// section properties
+// card properties
 $box-shadow: 0 9px 30px rgb(189, 189, 189);
 $card-border-radius: 6px;
-$article-width: 87%;
-$article-top-padding: 1.8rem;
-$article-side-padding: 3.5rem;
+
+//section gap
 $section-gap: calc(3.5rem + 3vw);
+
+
+
+
+
+/* Section Properties */
+//section small properties
+$section-small-width: 93%;
+$section-small-top-padding: 1.2rem;
+$section-small-side-padding: 1.2rem;
+
+//section medium properties
+$section-medium-width: 87%;
+$section-medium-top-padding: 2rem;
+$section-medium-side-padding: 2rem;
+
+//section large properties
+$section-large-width: 87%;
+$section-large-top-padding: 2rem;
+$section-large-side-padding: 2rem;
+
+//section extra large properties
+$section-extralarge-width: 87%;
+$section-extralarge-top-padding: 2rem;
+$section-extralarge-side-padding: 2rem;
+
+
+
+
+
+/* Blog Preview Properties */
+//section small properties
+$blog-small-width: 100%;
+$blog-small-padding: 1.2rem;
+$blog-small-margin: 1.2rem;
+
+//section medium properties
+$blog-medium-width: 80%;
+$blog-medium-padding: 1.2rem;
+$blog-medium-margin: 1.2rem;
+
+//section large properties
+$blog-large-width: 45%;
+$blog-large-padding: 1.2rem;
+$blog-large-margin: 1.2rem;
+
+//section extra large properties
+$blog-extralarge-width: 45%;
+$blog-extralarge-padding: 1.2rem;
+$blog-extralarge-margin: 1.2rem;
+
+
+
+
+
+
+
+
 
 
 
@@ -60,11 +120,85 @@ $section-gap: calc(3.5rem + 3vw);
 
 /* MIXINS */
 
+@mixin section-small-settings {
+    body > section, body > article {
+        width: $section-small-width;
+        padding: $section-small-top-padding $section-small-side-padding;
+
+        nav ul li {
+            width: $blog-small-width;
+
+            article {
+                padding: $blog-small-padding;
+                margin: $blog-small-margin;
+            }
+        }
+    }
+}
+
+@mixin section-medium-settings {
+    body > section, body > article {
+        width: $section-medium-width;
+        padding: $section-medium-top-padding $section-medium-side-padding;
+
+        nav ul li {
+            width: $blog-medium-width;
+
+            article {
+                padding: $blog-medium-padding;
+                margin: $blog-medium-margin;
+            }
+        }
+    }
+}
+
+@mixin section-large-settings {
+    body > section, body > article {
+        width: $section-large-width;
+        padding: $section-large-top-padding $section-large-side-padding;
+
+        nav ul li {
+            width: $blog-large-width;
+
+            article {
+                padding: $blog-large-padding;
+                margin: $blog-large-margin;
+            }
+        }
+    }
+}
+
+@mixin section-extralarge-settings {
+    body > section, body > article {
+        width: $section-extralarge-width;
+        padding: $section-extralarge-top-padding $section-extralarge-side-padding;
+
+        nav ul li {
+            width: $blog-extralarge-width;
+
+            article {
+                padding: $blog-extralarge-padding;
+                margin: $blog-extralarge-margin;
+            }
+        }
+    }
+}
+
+
+
+
 @mixin card {
     background-color: white;
     border-radius: $card-border-radius;
     box-shadow: $box-shadow
 }
+
+
+
+
+
+
+
 
 @mixin layout {
     padding: $article-top-padding $article-side-padding;
@@ -172,6 +306,8 @@ $section-gap: calc(3.5rem + 3vw);
     width: 200px;
     height: 150px;
 }
+
+
 
 @mixin underline {
     border-bottom: $line;
@@ -318,6 +454,22 @@ header a {
 
 body > section, body > article {
     margin-bottom: $section-gap;
+}
+
+figure {
+    @include figure-display;
+}
+
+img {
+    @include img-fit;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 

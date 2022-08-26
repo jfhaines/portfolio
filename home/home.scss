@@ -42,40 +42,38 @@
 }
 
 
-// About
-#about {
-    @include base.card;
-    @include base.article;
-    @include base.article-left;
-}
+// // About
+// #about {
+
+// }
 
 
-// Blogs
-#blogs {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+// // Blogs
+// #blogs {
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     justify-content: center;
 
-    @include base.blog-list;
+//     @include base.blog-list;
 
-    h2 {
-        @include base.underline;
-        margin-left: 100%;
-        transform: translateX(calc(-100% - base.$article-side-padding));
-        white-space: nowrap;
-        margin-top: base.$article-top-padding;
-        margin-bottom: 1rem;
-    }
-}
+//     h2 {
+//         @include base.underline;
+//         margin-left: 100%;
+//         transform: translateX(calc(-100% - base.$article-side-padding));
+//         white-space: nowrap;
+//         margin-top: base.$article-top-padding;
+//         margin-bottom: 1rem;
+//     }
+// }
 
 
-// Projects
-#projects {
-    @include base.card;
-    @include base.article;
-    @include base.article-left;
-}
+// // Projects
+// #projects {
+//     @include base.card;
+//     @include base.article;
+//     @include base.article-left;
+// }
 
 
 
@@ -84,43 +82,44 @@
 
 
 
-// iPad Mini to small desktop
-@media screen and (min-width: 551px) and (max-width: 750px) {
-    #projects {
-        border-radius: 0;
-        box-shadow: none;
-        background-color: base.$color-one;
-        @include base.article-right;
-    }
+// iPad Mini to iPad
+// @media screen and (min-width: 551px) and (max-width: 750px) {
+//     #projects {
+//         border-radius: 0;
+//         box-shadow: none;
+//         background-color: base.$color-one;
+//         @include base.article-right;
+//     }
 
-    #blogs {
-        flex-direction: column;
-        align-items: center;
-        order: 1;
-        width: 60%;
+//     #blogs {
+//         flex-direction: column;
+//         align-items: center;
+//         order: 1;
+//         width: 60%;
         
-        h2 {
-            transform: none;
-            margin-bottom: 1.6rem;
-            margin-right: 0;
-            margin-left: 0;
-        }
-        nav {
-            justify-content: center;
-            width: 100%;
+//         h2 {
+//             transform: none;
+//             margin-bottom: 1.6rem;
+//             margin-right: 0;
+//             margin-left: 0;
+//         }
+//         nav {
+//             justify-content: center;
+//             width: 100%;
             
-            li {
-                width: 100%;
-            }
-        }
-    }
+//             li {
+//                 width: 100%;
+//             }
+//         }
+//     }
 
-    footer {
-        order: 2;
-    }
-}
+//     footer {
+//         order: 2;
+//     }
+// }
 
-// Phone to iPad Mini
+/*
+// iPhone to iPad Mini
 @media screen and (max-width: 550px) {
     #about, #projects {
         width: 93.5%;
@@ -175,59 +174,180 @@
         order: 2;
     }
 }
+*/
 
 
 
 
-// small
+
+
+
+
+// set global section width
+// set global section padding top
+// set global section padding bottom
+
+// card, no card
+// heading underline
+// figure and img
+
+// if center, flexbox
+// if left or right, heading, img, button float
+
+
+
+
+
+
+@mixin article-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    figure {
+        @include base.figure-display;
+        @include base.square;
+        order: 1;
+    }
+
+    img {
+        @include base.img-fit;
+    }
+
+    .button {
+        order: 2;
+    }
+}
+
 @mixin article-center-card {
-
+    @include article-center;
+    @include base.card;
 }
 
-@mixin article-center-nocard {
+@mixin article-left {
+    figure {
+        @include base.square;
+        float: right;
+    }
 
+    h2 {
+        @include base.align-left;
+    }
+
+    .button {
+        @include base.align-left;
+    }
 }
 
-@mixin blog-list-1col-small {
-    
-}
-
-
-
-// medium
-@mixin blog-list-1col-medium {
-
-}
-
-
-
-// large
 @mixin article-left-card {
+    @include article-left;
+    @include base.card;
+}
 
+@mixin article-right {
+    figure {
+        @include base.square;
+        float: left;
+    }
+
+    h2 {
+        @include base.align-right;
+    }
+
+    .button {
+        @include base.align-right;
+    }
 }
 
 @mixin article-right-card {
-
-}
-
-@mixin article-left-nocard {
-
-}
-
-@mixin article-right-nocard {
-
+    @include article-right;
+    @include base.card;
 }
 
 
-@mixin blog-list-2cols {
 
-}
 
 @mixin blog-preview {
 
 }
 
 
-@mixin mini-card {
+@mixin blog-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 
+    article {
+        @include article-center-card;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+// section-settings-small
+// section width
+// section padding
+
+// blog width
+// blog padding-margin
+
+
+
+
+
+@media screen and (max-width: 550px) {
+    body > section, body > article {
+        width: 93.5%;
+        padding: 2rem 2rem;
+    }
+
+    #about {
+        @include article-center-card;
+    }
+}
+
+
+
+@media screen and (min-width: 551px) and (max-width: 750px) {
+    body > section, body > article {
+        width: 87%;
+        padding: 2rem 2rem;
+
+        li {
+            width: 50%;
+
+            article {
+                padding: 1rem;
+                margin: 1rem;
+            }
+        }
+    }
+
+    #about {
+        @include article-right-card;
+    }
+
+    #blogs {
+        h2 {
+            @include base.align-right;
+            margin-bottom: 2rem;
+        }
+        @include blog-list;
+    }
 }

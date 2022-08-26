@@ -77,6 +77,33 @@ body > section, body > article {
   margin-bottom: calc(3.5rem + 3vw);
 }
 
+figure {
+  background: white;
+  box-shadow: 0 1.5px 4px rgb(156, 156, 156);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .button:hover {
   box-shadow: 0 4px 5px rgb(180, 180, 180);
   transform: scale(1.04);

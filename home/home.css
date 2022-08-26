@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap");
 /* VARIABLES */
+/* Section Properties */
+/* Blog Preview Properties */
 /* MIXINS */
 * {
   box-sizing: border-box;
@@ -75,6 +77,33 @@ header a {
 
 body > section, body > article {
   margin-bottom: calc(3.5rem + 3vw);
+}
+
+figure {
+  background: white;
+  box-shadow: 0 1.5px 4px rgb(156, 156, 156);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 .button:hover {
@@ -183,181 +212,77 @@ footer p {
   padding: 0 2%;
 }
 
-#about {
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 9px 30px rgb(189, 189, 189);
-  padding: 1.8rem 3.5rem;
-  width: 87%;
-}
-#about h2 {
-  border-bottom: 3px solid #ef1d28;
-  padding-bottom: clamp(0.6rem, 0.25rem + 1vw, 1rem);
-  display: inline-block;
-  margin-bottom: 0.4rem;
-  margin-top: 0;
-}
-#about h2 {
-  margin-right: 100%;
-  white-space: nowrap;
-}
-#about .button {
-  margin-right: 100%;
-  white-space: nowrap;
-}
-#about figure {
-  background: white;
-  box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-  width: 170px;
-  height: 170px;
-  margin: 1rem 0 0.5rem 2rem;
-  float: right;
-}
-#about img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+/*
+// iPhone to iPad Mini
+@media screen and (max-width: 550px) {
+    #about, #projects {
+        width: 93.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 2.4rem;
+        padding-left: 2.4rem;
 
-#blogs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-#blogs nav {
-  width: 87%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
-#blogs nav li {
-  width: 45%;
-  list-style: none;
-  margin-bottom: 2.8rem;
-}
-#blogs nav li a {
-  text-decoration: none;
-}
-#blogs nav li a article {
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 9px 30px rgb(189, 189, 189);
-  display: flex;
-  padding: 1.8rem 3.5rem;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  transition: 0.1s;
-}
-#blogs nav li a article figure {
-  background: white;
-  box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-  width: 200px;
-  height: 150px;
-}
-#blogs nav li a article figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-#blogs nav li a article p {
-  margin: 0;
-}
-#blogs h2 {
-  border-bottom: 3px solid #ef1d28;
-  padding-bottom: clamp(0.6rem, 0.25rem + 1vw, 1rem);
-  display: inline-block;
-  margin-bottom: 0.4rem;
-  margin-top: 0;
-  margin-left: 100%;
-  transform: translateX(calc(-100% - 3.5rem));
-  white-space: nowrap;
-  margin-top: 1.8rem;
-  margin-bottom: 1rem;
-}
+        h2 {
+            margin-bottom: 0.35rem;
+            margin-left: 0;
+            margin-right: 0;
+        }
 
-#projects {
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 9px 30px rgb(189, 189, 189);
-  padding: 1.8rem 3.5rem;
-  width: 87%;
-}
-#projects h2 {
-  border-bottom: 3px solid #ef1d28;
-  padding-bottom: clamp(0.6rem, 0.25rem + 1vw, 1rem);
-  display: inline-block;
-  margin-bottom: 0.4rem;
-  margin-top: 0;
-}
-#projects h2 {
-  margin-right: 100%;
-  white-space: nowrap;
-}
-#projects .button {
-  margin-right: 100%;
-  white-space: nowrap;
-}
-#projects figure {
-  background: white;
-  box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-  width: 170px;
-  height: 170px;
-  margin: 1rem 0 0.5rem 2rem;
-  float: right;
-}
-#projects img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
+        .button {
+            margin: 2.3rem 0 0.7rem 0;
+            order: 2;
+        }
 
-@media screen and (min-width: 551px) and (max-width: 750px) {
-  #projects {
-    border-radius: 0;
-    box-shadow: none;
-    background-color: #fbfdf2;
+        .img-container {
+            float: none;
+            margin: 0.7rem 0 0 0;
+            order: 1;
+        }
+    }
+
+    #blogs {
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+        width: 93.5%;
+
+        h2 {
+            transform: none;
+            margin-bottom: 1.6rem;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        nav {
+            justify-content: center;
+            width: 100%;
+
+            li {
+                width: 100%;
+                background-color: base.$color-one;
+            }
+        }
+    }
+
+    footer {
+        order: 2;
+    }
+}
+*/
+@media screen and (max-width: 550px) {
+  body > section, body > article {
+    width: 93.5%;
+    padding: 2rem 2rem;
   }
-  #projects h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
+  #about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #projects .button {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-  }
-  #projects figure {
+  #about figure {
     background: white;
     box-shadow: 0 1.5px 4px rgb(156, 156, 156);
     border-radius: 6px;
@@ -365,10 +290,9 @@ footer p {
     position: relative;
     width: 170px;
     height: 170px;
-    margin: 1rem 2rem 0.5rem 0;
-    float: left;
+    order: 1;
   }
-  #projects img {
+  #about img {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
@@ -378,73 +302,93 @@ footer p {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  #blogs {
-    flex-direction: column;
-    align-items: center;
-    order: 1;
-    width: 60%;
-  }
-  #blogs h2 {
-    transform: none;
-    margin-bottom: 1.6rem;
-    margin-right: 0;
-    margin-left: 0;
-  }
-  #blogs nav {
-    justify-content: center;
-    width: 100%;
-  }
-  #blogs nav li {
-    width: 100%;
-  }
-  footer {
+  #about .button {
     order: 2;
   }
 }
-@media screen and (max-width: 550px) {
-  #about, #projects {
-    width: 93.5%;
+@media screen and (min-width: 551px) and (max-width: 750px) {
+  body > section, body > article {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section li, body > article li {
+    width: 50%;
+  }
+  body > section li article, body > article li article {
+    padding: 1rem;
+    margin: 1rem;
+  }
+  #about {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #about figure {
+    width: 170px;
+    height: 170px;
+    float: left;
+  }
+  #about h2 {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+  }
+  #about .button {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+  }
+  #blogs {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #blogs h2 {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+    margin-bottom: 2rem;
+  }
+  #blogs article {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-right: 2.4rem;
-    padding-left: 2.4rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #about h2, #projects h2 {
-    margin-bottom: 0.35rem;
-    margin-left: 0;
-    margin-right: 0;
+  #blogs article figure {
+    background: white;
+    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    width: 170px;
+    height: 170px;
+    order: 1;
   }
-  #about .button, #projects .button {
-    margin: 2.3rem 0 0.7rem 0;
+  #blogs article img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #blogs article .button {
     order: 2;
   }
-  #about .img-container, #projects .img-container {
-    float: none;
-    margin: 0.7rem 0 0 0;
-    order: 1;
-  }
-  #blogs {
-    flex-direction: column;
-    align-items: center;
-    order: 1;
-    width: 93.5%;
-  }
-  #blogs h2 {
-    transform: none;
-    margin-bottom: 1.6rem;
-    margin-right: 0;
-    margin-left: 0;
+  #blogs p {
+    text-align: center;
   }
   #blogs nav {
-    justify-content: center;
     width: 100%;
-  }
-  #blogs nav li {
-    width: 100%;
-    background-color: #fbfdf2;
-  }
-  footer {
-    order: 2;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 }/*# sourceMappingURL=home.css.map */
