@@ -109,7 +109,6 @@
 /* EXTRA LARGE */
 @media screen and (min-width: 1051px) {
     @include base.page-settings-extralarge;
-    @include base.extra-large-background;
 
     article {
         @include base.article-left-card;

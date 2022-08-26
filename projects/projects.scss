@@ -4,16 +4,72 @@
     @include base.header-nav-selected;
 }
 
-#calculator {
-    @include base.card;
-    @include base.article-left;
+
+/* SMALL */
+@media screen and (max-width: 550px) {
+    @include base.page-settings-small;
+
+    #calculator {
+        @include base.article-center-card;
+    }
+
+    #backend {
+        @include base.article-center;
+    }
+
+    #portfolio {
+        @include base.article-center-card;
+    }
 }
 
-#backend {
-    @include base.article-right;
+
+/* MEDIUM */
+@media screen and (min-width: 551px) and (max-width: 740px) {
+    @include base.page-settings-medium;
+
+    #calculator {
+        @include base.article-left-card;
+    }
+
+    #backend {
+        @include base.article-right;
+    }
+
+    #portfolio {
+        @include base.article-left-card;
+    }
 }
 
-#portfolio {
-    @include base.card;
-    @include base.article-left;
+/* LARGE */
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+    @include base.page-settings-large;
+
+    #calculator {
+        @include base.article-left-card;
+    }
+
+    #backend {
+        @include base.article-right;
+    }
+
+    #portfolio {
+        @include base.article-left-card;
+    }
+}
+
+/* EXTRA LARGE */
+@media screen and (min-width: 1051px) {
+    @include base.page-settings-extralarge;
+
+    #calculator {
+        @include base.article-left-card;
+    }
+
+    #backend {
+        @include base.article-right;
+    }
+
+    #portfolio {
+        @include base.article-left-card;
+    }
 }

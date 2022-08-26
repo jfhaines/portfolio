@@ -2,26 +2,79 @@
 
 .back-nav {
     align-self: flex-start;
-    margin-left: calc(((100% - base.$article-width) / 2));
+    margin-left: calc((100% - base.$section-medium-width) / 2 + base.$section-medium-side-padding);
+    margin-bottom: 1.8rem;
 }
 
-article {
-    margin-top: calc(0.5vh + 4.5%);
-    @include base.article;
+@mixin blog-article-center {
     @include base.card;
-    
-    h2 {
-        @include base.align-left;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     figure {
         @include base.figure-display;
         @include base.rectangle;
-        margin-left: 0;
-        float: left;
     }
 
     img {
         @include base.img-fit;
+    }
+
+    h2 {
+        text-align: center;
+        line-height: 2.5rem;
+    }
+}
+
+@mixin blog-article-left {
+    @include base.card;
+
+    figure {
+        @include base.rectangle;
+        float: right;
+    }
+
+
+    h2 {
+        line-height: 2.5rem;
+    }
+}
+
+
+/* SMALL */
+@media screen and (max-width: 550px) {
+    @include base.page-settings-small;
+
+    article {
+        @include blog-article-center;
+    }
+}
+
+
+/* MEDIUM */
+@media screen and (min-width: 551px) and (max-width: 740px) {
+    @include base.page-settings-medium;
+
+    article {
+        @include blog-article-left;
+    }
+}
+
+/* LARGE */
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+    @include base.page-settings-large;
+
+    article {
+        @include blog-article-left;
+    }
+}
+
+/* EXTRA LARGE */
+@media screen and (min-width: 1051px) {
+    @include base.page-settings-extralarge;
+
+    article {
+        @include blog-article-left;
     }
 }

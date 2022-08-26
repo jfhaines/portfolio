@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap");
 /* VARIABLES */
+/* Section Properties */
+/* Blog Preview Properties */
 /* MIXINS */
 * {
   box-sizing: border-box;
@@ -117,17 +119,6 @@ a article:hover {
   transform: scale(1.02);
 }
 
-@media screen and (min-width: 1100px) {
-  body {
-    width: 1100px;
-    box-shadow: 0 6px 90px rgb(187, 187, 187);
-  }
-  html {
-    background-color: #fafaf7;
-    display: flex;
-    justify-content: center;
-  }
-}
 /* header */
 header {
   width: 100%;
@@ -172,6 +163,34 @@ footer p {
   font-weight: 600;
 }
 
+@media screen and (max-width: 550px) {
+  header {
+    padding: 1.5rem;
+    height: 7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+  ul {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1051px) {
+  body {
+    width: 1100px;
+    box-shadow: 0 6px 90px rgb(187, 187, 187);
+  }
+  html {
+    background-color: #fafaf7;
+    display: flex;
+    justify-content: center;
+  }
+}
 #contact-button {
   font-size: calc(clamp(0.65rem, 0.32rem + 1.2vw, 1.1rem) * 1.15);
   display: inline-block;
@@ -182,15 +201,6 @@ footer p {
   background-color: white;
   border-radius: 6px;
   box-shadow: 0 9px 30px rgb(189, 189, 189);
-  padding: 2rem 3.5rem;
-  width: 87%;
-}
-.form h2 {
-  border-bottom: 3px solid #ef1d28;
-  margin: 0rem;
-  padding-bottom: 0.35rem;
-  margin-bottom: 1.6rem;
-  display: inline-block;
 }
 .form form {
   display: flex;
@@ -212,30 +222,18 @@ footer p {
 }
 
 .details {
-  margin-top: 1.3rem;
-  padding: 1.8rem 3.5rem;
-  width: 87%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-}
-.details h2 {
-  border-bottom: 3px solid #ef1d28;
-  padding-bottom: clamp(0.6rem, 0.25rem + 1vw, 1rem);
-  display: inline-block;
-  margin-bottom: 0.4rem;
-  margin-top: 0;
 }
 .details #info-list {
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-end;
 }
 .details #info-list li {
-  list-style: none;
-  margin: 0.8rem 0;
+  margin: 0.6rem 0;
 }
 .details nav {
   background-color: white;
@@ -247,10 +245,9 @@ footer p {
 .details nav ul {
   padding: 0;
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
 }
 .details nav ul li {
   list-style: none;
@@ -278,4 +275,61 @@ footer p {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+/* SMALL */
+@media screen and (max-width: 550px) {
+  body > section, body > article, main {
+    width: 93%;
+    padding: 1.2rem 1.2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 100%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+/* MEDIUM */
+@media screen and (min-width: 551px) and (max-width: 740px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 80%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+/* LARGE */
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+/* EXTRA LARGE */
+@media screen and (min-width: 1051px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
 }/*# sourceMappingURL=contact.css.map */

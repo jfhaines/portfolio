@@ -4,9 +4,50 @@
     @include base.header-nav-selected;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include base.blog-list;
+
+
+
+/* SMALL */
+@media screen and (max-width: 550px) {
+    @include base.page-settings-small;
+
+    main {
+        nav {
+            @include base.blog-list-1col;
+        }
+    }
+}
+
+
+/* MEDIUM */
+@media screen and (min-width: 551px) and (max-width: 740px) {
+    @include base.page-settings-medium;
+
+    main {
+        nav {
+            @include base.blog-list-1col;
+        }
+    }
+}
+
+/* LARGE */
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+    @include base.page-settings-large;
+
+    main {
+        nav {
+            @include base.blog-list-2cols;
+        }
+    }
+}
+
+/* EXTRA LARGE */
+@media screen and (min-width: 1051px) {
+    @include base.page-settings-extralarge;
+
+    main {
+        nav {
+            @include base.blog-list-2cols;
+        }
+    }
 }
