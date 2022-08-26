@@ -119,17 +119,6 @@ a article:hover {
   transform: scale(1.02);
 }
 
-@media screen and (min-width: 1100px) {
-  body {
-    width: 1100px;
-    box-shadow: 0 6px 90px rgb(187, 187, 187);
-  }
-  html {
-    background-color: #fafaf7;
-    display: flex;
-    justify-content: center;
-  }
-}
 /* header */
 header {
   width: 100%;
@@ -193,11 +182,6 @@ footer p {
   margin-bottom: 0.45rem;
   border: none;
 }
-#hero p {
-  font-weight: 600;
-  border-bottom: 3px solid #ef1d28;
-  padding-bottom: 1.5rem;
-}
 #hero ul {
   margin-top: 0.6rem;
   display: flex;
@@ -212,67 +196,18 @@ footer p {
   padding: 0 2%;
 }
 
-/*
-// iPhone to iPad Mini
-@media screen and (max-width: 550px) {
-    #about, #projects {
-        width: 93.5%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-right: 2.4rem;
-        padding-left: 2.4rem;
-
-        h2 {
-            margin-bottom: 0.35rem;
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        .button {
-            margin: 2.3rem 0 0.7rem 0;
-            order: 2;
-        }
-
-        .img-container {
-            float: none;
-            margin: 0.7rem 0 0 0;
-            order: 1;
-        }
-    }
-
-    #blogs {
-        flex-direction: column;
-        align-items: center;
-        order: 1;
-        width: 93.5%;
-
-        h2 {
-            transform: none;
-            margin-bottom: 1.6rem;
-            margin-right: 0;
-            margin-left: 0;
-        }
-        nav {
-            justify-content: center;
-            width: 100%;
-
-            li {
-                width: 100%;
-                background-color: base.$color-one;
-            }
-        }
-    }
-
-    footer {
-        order: 2;
-    }
-}
-*/
+/* SMALL */
 @media screen and (max-width: 550px) {
   body > section, body > article {
-    width: 93.5%;
-    padding: 2rem 2rem;
+    width: 93%;
+    padding: 1.2rem 1.2rem;
+  }
+  body > section nav ul li, body > article nav ul li {
+    width: 100%;
+  }
+  body > section nav ul li article, body > article nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
   }
   #about {
     display: flex;
@@ -305,60 +240,12 @@ footer p {
   #about .button {
     order: 2;
   }
-}
-@media screen and (min-width: 551px) and (max-width: 750px) {
-  body > section, body > article {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section li, body > article li {
-    width: 50%;
-  }
-  body > section li article, body > article li article {
-    padding: 1rem;
-    margin: 1rem;
-  }
-  #about {
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  #about figure {
-    width: 170px;
-    height: 170px;
-    float: left;
-  }
-  #about h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-  }
-  #about .button {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-  }
-  #blogs {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #blogs h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-    margin-bottom: 2rem;
-  }
-  #blogs article {
+  #projects {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #blogs article figure {
+  #projects figure {
     background: white;
     box-shadow: 0 1.5px 4px rgb(156, 156, 156);
     border-radius: 6px;
@@ -368,7 +255,7 @@ footer p {
     height: 170px;
     order: 1;
   }
-  #blogs article img {
+  #projects img {
     -o-object-fit: cover;
        object-fit: cover;
     width: 100%;
@@ -378,17 +265,411 @@ footer p {
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  #blogs article .button {
+  #projects .button {
     order: 2;
   }
-  #blogs p {
-    text-align: center;
+  #blogs {
+    order: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
   }
   #blogs nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #blogs nav article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #blogs nav article figure {
+    background: white;
+    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    width: 170px;
+    height: 170px;
+    order: 1;
+  }
+  #blogs nav article img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #blogs nav article .button {
+    order: 2;
+  }
+  #blogs nav p, #blogs nav h3 {
+    text-align: center;
+  }
+  #blogs nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  footer {
+    order: 2;
+  }
+}
+/* MEDIUM */
+@media screen and (min-width: 551px) and (max-width: 740px) {
+  body > section, body > article {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li {
+    width: 80%;
+  }
+  body > section nav ul li article, body > article nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  #about {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #about figure {
+    width: 170px;
+    height: 170px;
+    float: right;
+  }
+  #about h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #about .button {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #projects figure {
+    width: 170px;
+    height: 170px;
+    float: left;
+  }
+  #projects h2 {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+  }
+  #projects .button {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+  }
+  #blogs {
+    order: 1;
+  }
+  #blogs h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #blogs nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #blogs nav article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #blogs nav article figure {
+    background: white;
+    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    width: 170px;
+    height: 170px;
+    order: 1;
+  }
+  #blogs nav article img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #blogs nav article .button {
+    order: 2;
+  }
+  #blogs nav p, #blogs nav h3 {
+    text-align: center;
+  }
+  #blogs nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  footer {
+    order: 2;
+  }
+}
+/* LARGE */
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+  body > section, body > article {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  #about {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #about figure {
+    width: 170px;
+    height: 170px;
+    float: right;
+  }
+  #about h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #about .button {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #blogs {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #blogs h2 {
+    transform: translateX(2rem);
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #blogs nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #blogs nav article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #blogs nav article figure {
+    background: white;
+    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    width: 170px;
+    height: 170px;
+    order: 1;
+  }
+  #blogs nav article img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #blogs nav article .button {
+    order: 2;
+  }
+  #blogs nav p, #blogs nav h3 {
+    text-align: center;
+  }
+  #blogs nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
     width: 100%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+  }
+  #projects {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #projects figure {
+    width: 170px;
+    height: 170px;
+    float: right;
+  }
+  #projects h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #projects .button {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+}
+/* EXTRA LARGE */
+@media screen and (min-width: 1051px) {
+  body > section, body > article {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  body {
+    width: 1100px;
+    box-shadow: 0 6px 90px rgb(187, 187, 187);
+  }
+  html {
+    background-color: #fafaf7;
+    display: flex;
+    justify-content: center;
+  }
+  #about {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #about figure {
+    width: 170px;
+    height: 170px;
+    float: right;
+  }
+  #about h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #about .button {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #blogs {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #blogs h2 {
+    transform: translateX(2rem);
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #blogs nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #blogs nav article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #blogs nav article figure {
+    background: white;
+    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    width: 170px;
+    height: 170px;
+    order: 1;
+  }
+  #blogs nav article img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #blogs nav article .button {
+    order: 2;
+  }
+  #blogs nav p, #blogs nav h3 {
+    text-align: center;
+  }
+  #blogs nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #projects {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #projects figure {
+    width: 170px;
+    height: 170px;
+    float: right;
+  }
+  #projects h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #projects .button {
+    margin-right: 100%;
+    white-space: nowrap;
   }
 }/*# sourceMappingURL=home.css.map */

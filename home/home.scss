@@ -19,12 +19,6 @@
         border: none;
     }
 
-    p {
-        font-weight: 600;
-        border-bottom: base.$line;
-        padding-bottom: 1.5rem;
-    }
-
     ul {
         margin-top: 0.6rem;
         display: flex;
@@ -42,131 +36,29 @@
 }
 
 
-// // About
-// #about {
-
-// }
 
 
-// // Blogs
-// #blogs {
-//     display: flex;
-//     flex-direction: row;
-//     flex-wrap: wrap;
-//     justify-content: center;
-
-//     @include base.blog-list;
-
-//     h2 {
-//         @include base.underline;
-//         margin-left: 100%;
-//         transform: translateX(calc(-100% - base.$article-side-padding));
-//         white-space: nowrap;
-//         margin-top: base.$article-top-padding;
-//         margin-bottom: 1rem;
-//     }
-// }
-
-
-// // Projects
-// #projects {
-//     @include base.card;
-//     @include base.article;
-//     @include base.article-left;
-// }
-
-
-
-
-
-
-
-
-// iPad Mini to iPad
-// @media screen and (min-width: 551px) and (max-width: 750px) {
-//     #projects {
-//         border-radius: 0;
-//         box-shadow: none;
-//         background-color: base.$color-one;
-//         @include base.article-right;
-//     }
-
-//     #blogs {
-//         flex-direction: column;
-//         align-items: center;
-//         order: 1;
-//         width: 60%;
-        
-//         h2 {
-//             transform: none;
-//             margin-bottom: 1.6rem;
-//             margin-right: 0;
-//             margin-left: 0;
-//         }
-//         nav {
-//             justify-content: center;
-//             width: 100%;
-            
-//             li {
-//                 width: 100%;
-//             }
-//         }
-//     }
-
-//     footer {
-//         order: 2;
-//     }
-// }
-
-/*
-// iPhone to iPad Mini
+/* SMALL */
 @media screen and (max-width: 550px) {
-    #about, #projects {
-        width: 93.5%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-right: 2.4rem;
-        padding-left: 2.4rem;
+    @include base.page-settings-small;
 
-        h2 {
-            margin-bottom: 0.35rem;
-            margin-left: 0;
-            margin-right: 0;
-        }
+    #about {
+        @include base.article-center-card;
+    }
 
-        .button {
-            margin: 2.3rem 0 0.7rem 0;
-            order: 2;
-        }
-
-        .img-container {
-            float: none;
-            margin: 0.7rem 0 0 0;
-            order: 1;
-        }
+    #projects {
+        @include base.article-center;
     }
 
     #blogs {
-        flex-direction: column;
-        align-items: center;
         order: 1;
-        width: 93.5%;
-        
-        h2 {
-            transform: none;
-            margin-bottom: 1.6rem;
-            margin-right: 0;
-            margin-left: 0;
-        }
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
         nav {
-            justify-content: center;
-            width: 100%;
-            
-            li {
-                width: 100%;
-                background-color: base.$color-one;
-            }
+            @include base.blog-list-1col;
         }
     }
 
@@ -174,180 +66,88 @@
         order: 2;
     }
 }
-*/
 
 
+/* MEDIUM */
+@media screen and (min-width: 551px) and (max-width: 740px) {
+    @include base.page-settings-medium;
 
+    #about {
+        @include base.article-left-card;
+    }
 
+    #projects {
+        @include base.article-right;
+    }
 
-
-
-
-// set global section width
-// set global section padding top
-// set global section padding bottom
-
-// card, no card
-// heading underline
-// figure and img
-
-// if center, flexbox
-// if left or right, heading, img, button float
-
-
-
-
-
-
-@mixin article-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    figure {
-        @include base.figure-display;
-        @include base.square;
+    #blogs {
         order: 1;
+
+        h2 {
+            @include base.align-left;
+        }
+
+        nav {
+            @include base.blog-list-1col;
+        }
     }
 
-    img {
-        @include base.img-fit;
-    }
-
-    .button {
+    footer {
         order: 2;
     }
 }
 
-@mixin article-center-card {
-    @include article-center;
-    @include base.card;
-}
-
-@mixin article-left {
-    figure {
-        @include base.square;
-        float: right;
-    }
-
-    h2 {
-        @include base.align-left;
-    }
-
-    .button {
-        @include base.align-left;
-    }
-}
-
-@mixin article-left-card {
-    @include article-left;
-    @include base.card;
-}
-
-@mixin article-right {
-    figure {
-        @include base.square;
-        float: left;
-    }
-
-    h2 {
-        @include base.align-right;
-    }
-
-    .button {
-        @include base.align-right;
-    }
-}
-
-@mixin article-right-card {
-    @include article-right;
-    @include base.card;
-}
-
-
-
-
-@mixin blog-preview {
-
-}
-
-
-@mixin blog-list {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-
-    article {
-        @include article-center-card;
-    }
-
-    p {
-        text-align: center;
-    }
-
-    nav {
-        width: 100%;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-}
-
-
-
-
-
-
-// section-settings-small
-// section width
-// section padding
-
-// blog width
-// blog padding-margin
-
-
-
-
-
-@media screen and (max-width: 550px) {
-    body > section, body > article {
-        width: 93.5%;
-        padding: 2rem 2rem;
-    }
+/* LARGE */
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+    @include base.page-settings-large;
 
     #about {
-        @include article-center-card;
-    }
-}
-
-
-
-@media screen and (min-width: 551px) and (max-width: 750px) {
-    body > section, body > article {
-        width: 87%;
-        padding: 2rem 2rem;
-
-        li {
-            width: 50%;
-
-            article {
-                padding: 1rem;
-                margin: 1rem;
-            }
-        }
-    }
-
-    #about {
-        @include article-right-card;
+        @include base.article-left-card;
     }
 
     #blogs {
+        padding-left: 0;
+        padding-right: 0;
+
         h2 {
-            @include base.align-right;
-            margin-bottom: 2rem;
+            transform: translateX(base.$section-large-side-padding);
+            @include base.align-left;
         }
-        @include blog-list;
+
+        nav {
+            @include base.blog-list-2cols;
+        }
+    }
+
+    #projects {
+        @include base.article-left-card;
+    }
+}
+
+/* EXTRA LARGE */
+@media screen and (min-width: 1051px) {
+    @include base.page-settings-extralarge;
+    @include base.extra-large-background;
+
+    #about {
+        @include base.article-left-card;
+    }
+
+    #blogs {
+        padding-left: 0;
+        padding-right: 0;
+
+        h2 {
+            transform: translateX(base.$section-extralarge-side-padding);
+            @include base.align-left;
+        }
+
+        nav {
+            @include base.blog-list-2cols;
+        }
+    }
+
+    #projects {
+        @include base.article-left-card;
     }
 }

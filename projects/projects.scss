@@ -6,17 +6,14 @@
 
 #calculator {
     @include base.card;
-    @include base.article;
     @include base.article-left;
 }
 
 #backend {
-    @include base.article;
     @include base.article-right;
 }
 
 #portfolio {
     @include base.card;
-    @include base.article;
     @include base.article-left;
 }

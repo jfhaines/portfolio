@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap");
 /* VARIABLES */
+/* Section Properties */
+/* Blog Preview Properties */
 /* MIXINS */
 * {
   box-sizing: border-box;
@@ -117,17 +119,6 @@ a article:hover {
   transform: scale(1.02);
 }
 
-@media screen and (min-width: 1100px) {
-  body {
-    width: 1100px;
-    box-shadow: 0 6px 90px rgb(187, 187, 187);
-  }
-  html {
-    background-color: #fafaf7;
-    display: flex;
-    justify-content: center;
-  }
-}
 /* header */
 header {
   width: 100%;
@@ -178,93 +169,341 @@ footer p {
   border-bottom: 3px solid #ef1d28;
 }
 
-article {
-  padding: 1.8rem 3.5rem;
-  width: 87%;
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 9px 30px rgb(189, 189, 189);
+/* SMALL */
+@media screen and (max-width: 550px) {
+  body > section, body > article {
+    width: 93%;
+    padding: 1.2rem 1.2rem;
+  }
+  body > section nav ul li, body > article nav ul li {
+    width: 100%;
+  }
+  body > section nav ul li article, body > article nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  article figure {
+    background: white;
+    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    width: 170px;
+    height: 170px;
+    order: 1;
+  }
+  article img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  article .button {
+    order: 2;
+  }
+  section h2 {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+    margin-bottom: 0.6rem;
+  }
+  section ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  section ul li {
+    height: 4rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.45rem;
+    line-height: normal;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  section ul li figure {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 0.1rem;
+    box-shadow: none;
+  }
+  section ul li img {
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+    margin: 0rem;
+  }
+  section ul li p {
+    font-weight: 700;
+    text-align: center;
+    align-self: center;
+  }
+  section li {
+    width: 45%;
+  }
 }
-article h2 {
-  border-bottom: 3px solid #ef1d28;
-  padding-bottom: clamp(0.6rem, 0.25rem + 1vw, 1rem);
-  display: inline-block;
-  margin-bottom: 0.4rem;
-  margin-top: 0;
+/* MEDIUM */
+@media screen and (min-width: 551px) and (max-width: 740px) {
+  body > section, body > article {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li {
+    width: 80%;
+  }
+  body > section nav ul li article, body > article nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  article {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  article figure {
+    width: 170px;
+    height: 170px;
+    float: right;
+  }
+  article h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  article .button {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  section h2 {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+    margin-bottom: 0.6rem;
+  }
+  section ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  section ul li {
+    height: 4rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.45rem;
+    line-height: normal;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  section ul li figure {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 0.1rem;
+    box-shadow: none;
+  }
+  section ul li img {
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+    margin: 0rem;
+  }
+  section ul li p {
+    font-weight: 700;
+    text-align: center;
+    align-self: center;
+  }
+  section li {
+    width: 40%;
+  }
 }
-article h2 {
-  margin-right: 100%;
-  white-space: nowrap;
+/* LARGE */
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+  body > section, body > article {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  article {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  article figure {
+    width: 170px;
+    height: 170px;
+    float: right;
+  }
+  article h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  article .button {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  section h2 {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+    margin-bottom: 0.6rem;
+  }
+  section ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  section ul li {
+    height: 4rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.45rem;
+    line-height: normal;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  section ul li figure {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 0.1rem;
+    box-shadow: none;
+  }
+  section ul li img {
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+    margin: 0rem;
+  }
+  section ul li p {
+    font-weight: 700;
+    text-align: center;
+    align-self: center;
+  }
+  section li {
+    width: 22%;
+  }
 }
-article .button {
-  margin-right: 100%;
-  white-space: nowrap;
-}
-article figure {
-  background: white;
-  box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
-  width: 170px;
-  height: 170px;
-  margin: 1rem 0 0.5rem 2rem;
-  float: right;
-}
-article img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-section {
-  width: 87%;
-  margin-top: 5vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  padding: 0;
-}
-section h2 {
-  margin-left: 100%;
-  transform: translateX(-100%);
-  white-space: nowrap;
-  border-bottom: 3px solid #ef1d28;
-  padding-bottom: 0.35rem;
-}
-section ul {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-section ul li {
-  width: 22%;
-  height: 4rem;
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  padding: 0.45rem;
-  border-radius: 6px;
-  box-shadow: 0 9px 30px rgb(189, 189, 189);
-}
-section ul li img {
-  max-height: 100%;
-  max-width: 100%;
-  border-radius: 5px;
-}
-section ul li p {
-  font-weight: 700;
-  text-align: center;
-  line-height: clamp(0.95rem, 0.6rem + 1vw, 1.2rem);
+/* EXTRA LARGE */
+@media screen and (min-width: 1051px) {
+  body > section, body > article {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  body {
+    width: 1100px;
+    box-shadow: 0 6px 90px rgb(187, 187, 187);
+  }
+  html {
+    background-color: #fafaf7;
+    display: flex;
+    justify-content: center;
+  }
+  article {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  article figure {
+    width: 170px;
+    height: 170px;
+    float: right;
+  }
+  article h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  article .button {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  section h2 {
+    margin-left: 100%;
+    transform: translateX(-100%);
+    white-space: nowrap;
+    margin-bottom: 0.6rem;
+  }
+  section ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  section ul li {
+    height: 4rem;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.45rem;
+    line-height: normal;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  section ul li figure {
+    margin: 0;
+    width: 100%;
+    height: auto;
+    padding: 0.1rem;
+    box-shadow: none;
+  }
+  section ul li img {
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
+    margin: 0rem;
+  }
+  section ul li p {
+    font-weight: 700;
+    text-align: center;
+    align-self: center;
+  }
+  section li {
+    width: 22%;
+  }
 }/*# sourceMappingURL=about.css.map */

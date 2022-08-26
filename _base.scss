@@ -120,7 +120,7 @@ $blog-extralarge-margin: 1.2rem;
 
 /* MIXINS */
 
-@mixin section-small-settings {
+@mixin page-settings-small {
     body > section, body > article {
         width: $section-small-width;
         padding: $section-small-top-padding $section-small-side-padding;
@@ -130,13 +130,13 @@ $blog-extralarge-margin: 1.2rem;
 
             article {
                 padding: $blog-small-padding;
-                margin: $blog-small-margin;
+                margin-top: $blog-small-margin;
             }
         }
     }
 }
 
-@mixin section-medium-settings {
+@mixin page-settings-medium {
     body > section, body > article {
         width: $section-medium-width;
         padding: $section-medium-top-padding $section-medium-side-padding;
@@ -146,13 +146,13 @@ $blog-extralarge-margin: 1.2rem;
 
             article {
                 padding: $blog-medium-padding;
-                margin: $blog-medium-margin;
+                margin-top: $blog-medium-margin;
             }
         }
     }
 }
 
-@mixin section-large-settings {
+@mixin page-settings-large {
     body > section, body > article {
         width: $section-large-width;
         padding: $section-large-top-padding $section-large-side-padding;
@@ -162,13 +162,13 @@ $blog-extralarge-margin: 1.2rem;
 
             article {
                 padding: $blog-large-padding;
-                margin: $blog-large-margin;
+                margin-top: $blog-large-margin;
             }
         }
     }
 }
 
-@mixin section-extralarge-settings {
+@mixin page-settings-extralarge {
     body > section, body > article {
         width: $section-extralarge-width;
         padding: $section-extralarge-top-padding $section-extralarge-side-padding;
@@ -178,7 +178,7 @@ $blog-extralarge-margin: 1.2rem;
 
             article {
                 padding: $blog-extralarge-padding;
-                margin: $blog-extralarge-margin;
+                margin-top: $blog-extralarge-margin;
             }
         }
     }
@@ -191,92 +191,6 @@ $blog-extralarge-margin: 1.2rem;
     background-color: white;
     border-radius: $card-border-radius;
     box-shadow: $box-shadow
-}
-
-
-
-
-
-
-
-
-@mixin layout {
-    padding: $article-top-padding $article-side-padding;
-    width: $article-width;
-}
-
-@mixin article {
-    @include layout;
-
-    h2 {
-        @include underline;
-    }
-}
-
-@mixin article-left {
-    h2 {
-        @include align-left;
-    }
-
-    .button {
-        @include align-left;
-    }
-    
-    figure {
-        @include figure-display;
-        @include square;
-        margin: 1rem 0 0.5rem 2rem;
-        float: right;
-    }
-
-    img {
-        @include img-fit;
-    }
-}
-
-@mixin article-right {
-    h2 {
-        @include align-right;
-    }
-
-    .button {
-        @include align-right;
-    }
-
-    figure {
-        @include figure-display;
-        @include square;
-        margin: 1rem 2rem 0.5rem 0;
-        float: left;
-    }
-
-    img {
-        @include img-fit;
-    }
-}
-
-@mixin blog-preview {
-    @include card;
-    display: flex;
-    padding: $article-top-padding $article-side-padding;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-
-    figure {
-        @include figure-display;
-        @include rectangle;
-
-        img {
-            @include img-fit;
-        }
-    }
-
-    p {
-        margin: 0;
-    }
 }
 
 @mixin figure-display {
@@ -307,8 +221,6 @@ $blog-extralarge-margin: 1.2rem;
     height: 150px;
 }
 
-
-
 @mixin underline {
     border-bottom: $line;
     padding-bottom: clamp(0.6rem, 0.25rem + 1vw, 1rem);
@@ -328,31 +240,129 @@ $blog-extralarge-margin: 1.2rem;
     white-space: nowrap;
 }
 
-@mixin blog-list {
-    nav {
-        width: $article-width;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
+@mixin article-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        li {
-            width: 45%;
-            list-style: none;
-            margin-bottom: 2.8rem;
+    figure {
+        @include figure-display;
+        @include square;
+        order: 1;
+    }
 
-            a {
-                text-decoration: none;
+    img {
+        @include img-fit;
+    }
 
-                article {
-                    @include blog-preview;
-                    transition: 0.1s;
-                }
-            }
-        }
+    .button {
+        order: 2;
     }
 }
+
+@mixin article-center-card {
+    @include article-center;
+    @include card;
+}
+
+@mixin article-left {
+    figure {
+        @include square;
+        float: right;
+    }
+
+    h2 {
+        @include align-left;
+    }
+
+    .button {
+        @include align-left;
+    }
+}
+
+@mixin article-left-card {
+    @include article-left;
+    @include card;
+}
+
+@mixin article-right {
+    figure {
+        @include square;
+        float: left;
+    }
+
+    h2 {
+        @include align-right;
+    }
+
+    .button {
+        @include align-right;
+    }
+}
+
+@mixin article-right-card {
+    @include article-right;
+    @include card;
+}
+
+
+@mixin blog-list-1col {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    article {
+        @include article-center-card;
+    }
+
+    p, h3 {
+        text-align: center;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin blog-list-2cols {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    article {
+        @include article-center-card;
+    }
+
+    p, h3 {
+        text-align: center;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
 
 @mixin header-nav-selected {
     font-size: calc($font-size-nav * 1.15);
@@ -360,6 +370,19 @@ $blog-extralarge-margin: 1.2rem;
     border-bottom: $line;
 }
 
+
+@mixin extra-large-background {
+    body {
+        width: 1100px;
+        box-shadow: 0 6px 90px rgb(187, 187, 187);
+    }
+
+    html {
+        background-color: #fafaf7;
+        display: flex;
+        justify-content: center;
+    }
+}
 
 
 @mixin text-standard {
@@ -488,23 +511,6 @@ header a:hover {
 
 a article:hover {
     transform: scale(1.02);
-}
-
-
-
-
-// Responsiveness
-@media screen and (min-width: 1100px) {
-    body {
-        width: 1100px;
-        box-shadow: 0 6px 90px rgb(187, 187, 187);
-    }
-
-    html {
-        background-color: #fafaf7;
-        display: flex;
-        justify-content: center;
-    }
 }
 
 

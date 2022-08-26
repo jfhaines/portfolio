@@ -4,28 +4,14 @@
     @include base.header-nav-selected;
 }
 
-article {
-    @include base.article;
-    @include base.article-left;
-    @include base.card;
-}
 
-section {
-    width: base.$article-width;
-    margin-top: 5vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 0;
-
+@mixin mini-card-display {
     h2 {
         @include base.align-right;
-        border-bottom: base.$line;
-        padding-bottom: 0.35rem;
+        margin-bottom: 0.6rem;
     }
 
     ul {
-        list-style: none;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -35,27 +21,105 @@ section {
         padding: 0;
 
         li {
-            width: 22%;
             height: 4rem;
             margin: 1rem 0;
             display: flex;
             flex-direction: row;
             justify-content: center;
             padding: 0.45rem;
-            border-radius: base.$card-border-radius;
-            box-shadow: base.$box-shadow;
+            line-height: normal;
+            @include base.card;
+
+            figure {
+                margin: 0;
+                width: 100%;
+                height: auto;
+                padding: 0.1rem;
+                box-shadow: none;
+            }
 
             img {
-                max-height: 100%;
-                max-width: 100%;
-                border-radius: 5px;
+                object-fit: scale-down;
+                margin: 0rem;
             }
 
             p {
                 font-weight: 700;
                 text-align: center;
-                line-height: base.$font-size-standard;
+                align-self: center;
             }
+        }
+    }
+}
+
+
+
+/* SMALL */
+@media screen and (max-width: 550px) {
+    @include base.page-settings-small;
+
+    article {
+        @include base.article-center-card;
+    }
+
+    section {
+        @include mini-card-display;
+        
+        li {
+            width: 45%;
+        }
+    }
+}
+
+
+/* MEDIUM */
+@media screen and (min-width: 551px) and (max-width: 740px) {
+    @include base.page-settings-medium;
+
+    article {
+        @include base.article-left-card;
+    }
+
+    section {
+        @include mini-card-display;
+        
+        li {
+            width: 40%;
+        }
+    }
+}
+
+/* LARGE */
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+    @include base.page-settings-large;
+
+    article {
+        @include base.article-left-card;
+    }
+
+    section {
+        @include mini-card-display;
+        
+        li {
+            width: 22%;
+        }
+    }
+}
+
+/* EXTRA LARGE */
+@media screen and (min-width: 1051px) {
+    @include base.page-settings-extralarge;
+    @include base.extra-large-background;
+
+    article {
+        @include base.article-left-card;
+    }
+
+    section {
+        @include mini-card-display;
+        
+        li {
+            width: 22%;
         }
     }
 }
