@@ -60,7 +60,6 @@
 
         li {
             list-style: none;
-            @include base.para-text;
             margin: 0.8rem 0;
         }
     }

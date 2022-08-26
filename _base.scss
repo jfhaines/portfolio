@@ -1,157 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap');
 
-$color-one: #FEFFFA;
-$color-two: #ef4242;
 
+/* VARIABLES */
+
+//colors
+$color-one: #fbfdf2;
+$color-two: #ef1d28;
+
+// headings
 $font-family-heading: "Montserrat", Arial, sans-serif;
+$font-size-heading: clamp(1.85rem, 1.55rem + 1vw, 2.25rem);
+$font-weight-heading: 700;
+$text-color-heading: black;
+$line-height-heading: 1.7rem;
+
+//subheadings
+$font-family-subheading: "Montserrat", Arial, sans-serif;
+$font-size-subheading: clamp(0.8rem, 0.5rem + 1vw, 1.3rem);
+$font-weight-subheading: 700;
+$text-color-subheading: black;
+$line-height-subheading: 1.7rem;
+
+
+// standard text
 $font-family-standard: "Open Sans", Arial, sans-serif;
-$font-heading: 1rem;
-$font-standard: 500 1rem 1.4rem "Open Sans", Arial, sans-serif;
+$font-size-standard: clamp(0.95rem, 0.6rem + 1vw, 1.2rem);
+$font-weight-standard: 500;
+$text-color-standard: #494949;
+$line-height-standard: 1.7rem;
 
+// button text
+$font-family-button: "Montserrat", Arial, sans-serif;
+$font-size-button: clamp(0.7rem, 0.4rem + 1vw, 0.9rem);
+$font-weight-button: bold;
+$text-color-button: white;
+$line-height-button: 1.7rem;
 
+// nav text
+$font-family-nav: "Open Sans", Arial, sans-serif;
+$font-size-nav: clamp(0.65rem, 0.32rem + 1.2vw, 1.1rem);
+$font-weight-nav: 700;
+$text-color-nav: #494949;
+$line-height-nav: 1.7rem;
 
+// heading underline
 $line: 3px solid $color-two;
 
-$box-shadow: 0 6px 20px rgb(180, 180, 180);
+// section properties
+$box-shadow: 0 9px 30px rgb(189, 189, 189);
 $card-border-radius: 6px;
 $article-width: 87%;
-$article-top-padding: 2rem;
+$article-top-padding: 1.8rem;
 $article-side-padding: 3.5rem;
-
-$section-gap: calc(2.5rem + 2vh);
-
-
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    font-family: "Open Sans", "Arial", sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-body > section, body > article {
-    margin-bottom: $section-gap;
-}
-
-
-@media screen and (min-width: 1000px) {
-    body {
-        width: 1000px;
-        background-color: white;
-        box-shadow: 0 6px 90px rgb(187, 187, 187);
-        ;
-    }
-
-    html {
-        background-color: #fafaf7;
-        display: flex;
-        justify-content: center;
-    }
-}
-
-
-.button:hover {
-    box-shadow: 0 4px 5px rgb(180, 180, 180);
-    transform: scale(1.04);
-}
-
-
-
-header a:hover {
-    transform: scale(1.07);
-}
-
-a article:hover {
-    transform: scale(1.02);
-}
+$section-gap: calc(3.5rem + 3vw);
 
 
 
 
-/* header */
-header {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3rem 3.5rem;
-    height: 3.5rem;
-    margin-bottom: 2rem;
-    transition: 0.2s;
 
-    nav ul {
-        display: flex;
-        align-items: center;
-            
-        li {
-            list-style: none;
-            padding: 0rem 0.8rem;
-            font-family: "Open Sans", "Arial", sans-serif;
-            font-size: 0.65rem;
-            font-weight: 700;
-
-            a {
-                text-decoration: none;
-                color: #494949;
-                display: inline-block;
-            }
-        }
-    }
-        
-    #logo {
-          font-family: "Montserrat", Arial, sans-serif;
-          font-size: 1rem;
-    }
-}
-
-/* footer */
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0;
-    margin-top: auto;
-    min-height: 4.5rem;
-  
-    p {
-      padding: 0.4rem;
-      font-size: 0.6rem;
-      font-weight: 600;
-    }
-  }
-
-
-.button {
-    text-decoration: none;
-    color: white;
-    display: block;
-    background-color: $color-two;
-    padding: 0.4rem 0.7rem;
-    border-radius: 25px;
-    font-family: "Montserrat", Arial, sans-serif;
-    font-weight: bold;
-    font-size: 0.75rem;
-    box-shadow: 0 2px 3px #7d7d7d;
-    transition: 0.2s;
-}
-
-p label {
-    color: #494949;
-}
-
-
+/* MIXINS */
 
 @mixin card {
-    background-color: $color-one;
+    background-color: white;
     border-radius: $card-border-radius;
-    box-shadow: 0 6px 20px rgb(180, 180, 180);
+    box-shadow: $box-shadow
 }
 
 @mixin layout {
@@ -164,14 +76,6 @@ p label {
 
     h2 {
         @include underline;
-    }
-    
-    p {
-        @include para-text;
-    }
-
-    .button {
-        display: inline-block;
     }
 }
 
@@ -187,7 +91,7 @@ p label {
     figure {
         @include figure-display;
         @include square;
-        margin: 0 0 0.5rem 2rem;
+        margin: 1rem 0 0.5rem 2rem;
         float: right;
     }
 
@@ -208,7 +112,7 @@ p label {
     figure {
         @include figure-display;
         @include square;
-        margin-left: 0;
+        margin: 1rem 2rem 0.5rem 0;
         float: left;
     }
 
@@ -218,23 +122,14 @@ p label {
 }
 
 @mixin blog-preview {
+    @include card;
     display: flex;
-    padding: 0.3rem 1.5rem;
-    flex: 0 1 auto;
+    padding: $article-top-padding $article-side-padding;
     text-align: center;
-    background-color: $color-one;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    box-shadow: $box-shadow;
-    border-radius: $card-border-radius;
-
-    h3 {
-        font-size: 0.85rem;
-        border-bottom: $line;
-        padding-bottom: 0.6rem;
-    }
 
     figure {
         @include figure-display;
@@ -246,21 +141,14 @@ p label {
     }
 
     p {
-        font-size: 0.7rem;
-        font-weight: 600;
-        color: rgb(101, 101, 101);
-        margin: 0.4rem;
-    }
-
-    .button {
-        margin-bottom: 1.2rem;
+        margin: 0;
     }
 }
 
 @mixin figure-display {
     background: white;
     box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-    border-radius: 8px;
+    border-radius: $card-border-radius;
     overflow: hidden;
     position: relative;
 }
@@ -276,8 +164,8 @@ p label {
 }
 
 @mixin square {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
 }
 
 @mixin rectangle {
@@ -287,16 +175,10 @@ p label {
 
 @mixin underline {
     border-bottom: $line;
-    padding-bottom: 0.35rem;
+    padding-bottom: clamp(0.6rem, 0.25rem + 1vw, 1rem);
     display: inline-block;
     margin-bottom: 0.4rem;
     margin-top: 0;
-}
-
-@mixin para-text {
-    font-size: 0.85rem;
-    line-height: 1.4rem;
-    font-weight: 500;
 }
 
 @mixin align-right {
@@ -326,7 +208,6 @@ p label {
 
             a {
                 text-decoration: none;
-                color: inherit;
 
                 article {
                     @include blog-preview;
@@ -338,7 +219,191 @@ p label {
 }
 
 @mixin header-nav-selected {
-    font-size: 0.9rem;
+    font-size: calc($font-size-nav * 1.15);
     display: inline-block;
     border-bottom: $line;
 }
+
+
+
+@mixin text-standard {
+    font-family: $font-family-standard;
+    font-size: $font-size-standard;
+    font-weight: $font-weight-standard;
+    color: $text-color-standard;
+    line-height: $line-height-standard;
+}
+
+@mixin text-heading {
+    font-family: $font-family-heading;
+    font-size: $font-size-heading;
+    font-weight: $font-weight-heading;
+    color: $text-color-heading;
+    line-height: $line-height-heading;
+    @include underline;
+}
+
+@mixin text-subheading {
+    font-family: $font-family-subheading;
+    font-size: $font-size-subheading;
+    font-weight: $font-weight-subheading;
+    color: $text-color-subheading;
+    line-height: $line-height-subheading;
+    @include underline;
+}
+
+@mixin text-button {
+    font-family: $font-family-button;
+    font-size: $font-size-button;
+    font-weight: $font-weight-button;
+    color: $text-color-button;
+    line-height: $line-height-button;
+}
+
+@mixin text-nav {
+    font-family: $font-family-nav;
+    font-size: $font-size-nav;
+    font-weight: $font-weight-nav;
+    color: $text-color-nav;
+    line-height: $line-height-nav;
+}
+
+
+
+
+
+
+//global settings
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Open Sans", "Arial", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fdfffa;
+}
+
+p, li, label, input {
+    @include text-standard;
+}
+
+h1, h2 {
+    @include text-heading;
+}
+
+h3 {
+    @include text-subheading;
+}
+
+header a {
+    @include text-nav;
+}
+
+.button {
+    @include text-button;
+    text-decoration: none;
+    background-color: $color-two;
+    padding: 0.4rem 0.7rem;
+    border-radius: 25px;
+    box-shadow: 0 2px 3px #7d7d7d;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+body > section, body > article {
+    margin-bottom: $section-gap;
+}
+
+
+
+
+// animate
+.button:hover {
+    box-shadow: 0 4px 5px rgb(180, 180, 180);
+    transform: scale(1.04);
+}
+
+
+header a:hover {
+    transform: scale(1.07);
+}
+
+a article:hover {
+    transform: scale(1.02);
+}
+
+
+
+
+// Responsiveness
+@media screen and (min-width: 1100px) {
+    body {
+        width: 1100px;
+        box-shadow: 0 6px 90px rgb(187, 187, 187);
+    }
+
+    html {
+        background-color: #fafaf7;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+
+
+/* header */
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    transition: 0.2s;
+
+    #logo {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: $font-size-heading;
+        font-weight: $font-weight-heading;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+            
+        li {
+            list-style: none;
+            padding: 0rem 0.8rem;
+
+            a {
+                text-decoration: none;
+                display: inline-block;
+            }
+        }
+    }
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: auto;
+    min-height: 4.5rem;
+  
+    p {
+      padding: 0.4rem;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+  }

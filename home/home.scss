@@ -6,7 +6,7 @@
 
 // Hero
 #hero {
-    margin: 4rem 0 5.5rem;
+    margin: 3rem 0 8rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -14,16 +14,15 @@
     width: 100%;
     
     h1 {
-        font-family: base.$typeface-one;
-        font-size: 3.1rem;
-        margin: 0px;
+        font-size: calc(base.$font-size-heading * 2);
+        margin-bottom: 0.45rem;
+        border: none;
     }
 
     p {
         font-weight: 600;
         border-bottom: base.$line;
         padding-bottom: 1.5rem;
-
     }
 
     ul {
@@ -34,7 +33,7 @@
         padding: 0px;
         
         li {
-            font-size: 0.6rem;
+            font-size: 0.65rem;
             font-weight: 700;
             list-style: none;
             padding: 0 2%;
@@ -76,4 +75,159 @@
     @include base.card;
     @include base.article;
     @include base.article-left;
+}
+
+
+
+
+
+
+
+
+// iPad Mini to small desktop
+@media screen and (min-width: 551px) and (max-width: 750px) {
+    #projects {
+        border-radius: 0;
+        box-shadow: none;
+        background-color: base.$color-one;
+        @include base.article-right;
+    }
+
+    #blogs {
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+        width: 60%;
+        
+        h2 {
+            transform: none;
+            margin-bottom: 1.6rem;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        nav {
+            justify-content: center;
+            width: 100%;
+            
+            li {
+                width: 100%;
+            }
+        }
+    }
+
+    footer {
+        order: 2;
+    }
+}
+
+// Phone to iPad Mini
+@media screen and (max-width: 550px) {
+    #about, #projects {
+        width: 93.5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-right: 2.4rem;
+        padding-left: 2.4rem;
+
+        h2 {
+            margin-bottom: 0.35rem;
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        .button {
+            margin: 2.3rem 0 0.7rem 0;
+            order: 2;
+        }
+
+        .img-container {
+            float: none;
+            margin: 0.7rem 0 0 0;
+            order: 1;
+        }
+    }
+
+    #blogs {
+        flex-direction: column;
+        align-items: center;
+        order: 1;
+        width: 93.5%;
+        
+        h2 {
+            transform: none;
+            margin-bottom: 1.6rem;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        nav {
+            justify-content: center;
+            width: 100%;
+            
+            li {
+                width: 100%;
+                background-color: base.$color-one;
+            }
+        }
+    }
+
+    footer {
+        order: 2;
+    }
+}
+
+
+
+
+// small
+@mixin article-center-card {
+
+}
+
+@mixin article-center-nocard {
+
+}
+
+@mixin blog-list-1col-small {
+    
+}
+
+
+
+// medium
+@mixin blog-list-1col-medium {
+
+}
+
+
+
+// large
+@mixin article-left-card {
+
+}
+
+@mixin article-right-card {
+
+}
+
+@mixin article-left-nocard {
+
+}
+
+@mixin article-right-nocard {
+
+}
+
+
+@mixin blog-list-2cols {
+
+}
+
+@mixin blog-preview {
+
+}
+
+
+@mixin mini-card {
+
 }
