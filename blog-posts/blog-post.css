@@ -224,6 +224,8 @@ footer p {
     border-radius: 6px;
     overflow: hidden;
     position: relative;
+  }
+  article figure figure {
     width: 200px;
     height: 150px;
   }
@@ -261,9 +263,11 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   article figure {
+    float: right;
+  }
+  article figure figure {
     width: 200px;
     height: 150px;
-    float: right;
   }
   article h2 {
     line-height: 2.5rem;
@@ -288,9 +292,11 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   article figure {
+    float: right;
+  }
+  article figure figure {
     width: 200px;
     height: 150px;
-    float: right;
   }
   article h2 {
     line-height: 2.5rem;
@@ -315,9 +321,11 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   article figure {
+    float: right;
+  }
+  article figure figure {
     width: 200px;
     height: 150px;
-    float: right;
   }
   article h2 {
     line-height: 2.5rem;

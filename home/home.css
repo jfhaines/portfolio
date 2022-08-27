@@ -197,19 +197,6 @@ footer p {
   border-bottom: 3px solid #ef1d28;
 }
 
-#img-logo-container {
-  width: clamp(4rem, 3rem + 5vw, 7rem);
-  height: clamp(4rem, 3rem + 5vw, 7rem);
-  border-radius: 50%;
-  margin: clamp(1.5rem, 0.7rem + 3vw, 3rem);
-}
-
-#logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 #hero {
   margin: 1rem 0 8rem;
   display: flex;
@@ -217,6 +204,17 @@ footer p {
   justify-content: center;
   align-items: center;
   width: 100%;
+}
+#hero #img-logo-container {
+  width: clamp(4rem, 3rem + 5vw, 7rem);
+  height: clamp(4rem, 3rem + 5vw, 7rem);
+  border-radius: 50%;
+  margin: clamp(1.5rem, 0.7rem + 3vw, 3rem);
+}
+#hero #logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 #hero h1 {
   font-size: calc(clamp(1.85rem, 1.55rem + 1vw, 2.25rem) * 2);
@@ -244,7 +242,7 @@ footer p {
   padding: 0 2%;
 }
 
-/* SMALL */
+/* SMALL Viewport */
 @media screen and (max-width: 550px) {
   body > section, body > article, main {
     width: 93%;
@@ -266,24 +264,11 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #about figure {
-    background: white;
-    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    width: 170px;
-    height: 170px;
     order: 1;
   }
-  #about img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  #about figure {
+    width: 150px;
+    height: 150px;
   }
   #about .button {
     order: 2;
@@ -292,26 +277,16 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #projects figure {
-    background: white;
-    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    width: 170px;
-    height: 170px;
     order: 1;
   }
-  #projects img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  #projects figure {
+    width: 150px;
+    height: 150px;
   }
   #projects .button {
     order: 2;
@@ -341,27 +316,11 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #blogs nav article figure {
-    background: white;
-    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    width: 170px;
-    height: 170px;
     order: 1;
   }
-  #blogs nav article img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #blogs nav article .button {
-    order: 2;
+  #blogs nav article figure {
+    width: 200px;
+    height: 150px;
   }
   #blogs nav p, #blogs nav h3 {
     text-align: center;
@@ -382,7 +341,7 @@ footer p {
     order: 2;
   }
 }
-/* MEDIUM */
+/* MEDIUM Viewport*/
 @media screen and (min-width: 551px) and (max-width: 740px) {
   body > section, body > article, main {
     width: 87%;
@@ -401,27 +360,31 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #about figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #about h2 {
     margin-right: 100%;
     white-space: nowrap;
   }
+  #about figure {
+    width: 150px;
+    height: 150px;
+  }
   #about .button {
     margin-right: 100%;
     white-space: nowrap;
   }
   #projects figure {
-    width: 170px;
-    height: 170px;
     float: left;
   }
   #projects h2 {
     margin-left: 100%;
     transform: translateX(-100%);
     white-space: nowrap;
+  }
+  #projects figure {
+    width: 150px;
+    height: 150px;
   }
   #projects .button {
     margin-left: 100%;
@@ -453,27 +416,11 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #blogs nav article figure {
-    background: white;
-    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    width: 170px;
-    height: 170px;
     order: 1;
   }
-  #blogs nav article img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #blogs nav article .button {
-    order: 2;
+  #blogs nav article figure {
+    width: 200px;
+    height: 150px;
   }
   #blogs nav p, #blogs nav h3 {
     text-align: center;
@@ -491,7 +438,7 @@ footer p {
     order: 2;
   }
 }
-/* LARGE */
+/* LARGE Viewport */
 @media screen and (min-width: 741px) and (max-width: 1050px) {
   body > section, body > article, main {
     width: 87%;
@@ -510,13 +457,15 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #about figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #about h2 {
     margin-right: 100%;
     white-space: nowrap;
+  }
+  #about figure {
+    width: 150px;
+    height: 150px;
   }
   #about .button {
     margin-right: 100%;
@@ -549,27 +498,11 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #blogs nav article figure {
-    background: white;
-    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    width: 170px;
-    height: 170px;
     order: 1;
   }
-  #blogs nav article img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #blogs nav article .button {
-    order: 2;
+  #blogs nav article figure {
+    width: 200px;
+    height: 150px;
   }
   #blogs nav p, #blogs nav h3 {
     text-align: center;
@@ -590,13 +523,15 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #projects figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #projects h2 {
     margin-right: 100%;
     white-space: nowrap;
+  }
+  #projects figure {
+    width: 150px;
+    height: 150px;
   }
   #projects .button {
     margin-right: 100%;
@@ -622,13 +557,15 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #about figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #about h2 {
     margin-right: 100%;
     white-space: nowrap;
+  }
+  #about figure {
+    width: 150px;
+    height: 150px;
   }
   #about .button {
     margin-right: 100%;
@@ -661,27 +598,11 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #blogs nav article figure {
-    background: white;
-    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    width: 170px;
-    height: 170px;
     order: 1;
   }
-  #blogs nav article img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #blogs nav article .button {
-    order: 2;
+  #blogs nav article figure {
+    width: 200px;
+    height: 150px;
   }
   #blogs nav p, #blogs nav h3 {
     text-align: center;
@@ -702,13 +623,15 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #projects figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #projects h2 {
     margin-right: 100%;
     white-space: nowrap;
+  }
+  #projects figure {
+    width: 150px;
+    height: 150px;
   }
   #projects .button {
     margin-right: 100%;

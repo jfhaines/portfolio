@@ -219,24 +219,7 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #calculator figure {
-    background: white;
-    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    width: 170px;
-    height: 170px;
     order: 1;
-  }
-  #calculator img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
   #calculator .button {
     order: 2;
@@ -247,24 +230,7 @@ footer p {
     align-items: center;
   }
   #backend figure {
-    background: white;
-    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    width: 170px;
-    height: 170px;
     order: 1;
-  }
-  #backend img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
   #backend .button {
     order: 2;
@@ -278,24 +244,7 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #portfolio figure {
-    background: white;
-    box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-    border-radius: 6px;
-    overflow: hidden;
-    position: relative;
-    width: 170px;
-    height: 170px;
     order: 1;
-  }
-  #portfolio img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
   }
   #portfolio .button {
     order: 2;
@@ -320,8 +269,6 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #calculator figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #calculator h2 {
@@ -333,8 +280,6 @@ footer p {
     white-space: nowrap;
   }
   #backend figure {
-    width: 170px;
-    height: 170px;
     float: left;
   }
   #backend h2 {
@@ -353,8 +298,6 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #portfolio figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #portfolio h2 {
@@ -385,8 +328,6 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #calculator figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #calculator h2 {
@@ -398,8 +339,6 @@ footer p {
     white-space: nowrap;
   }
   #backend figure {
-    width: 170px;
-    height: 170px;
     float: left;
   }
   #backend h2 {
@@ -418,8 +357,6 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #portfolio figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #portfolio h2 {
@@ -450,8 +387,6 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #calculator figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #calculator h2 {
@@ -463,8 +398,6 @@ footer p {
     white-space: nowrap;
   }
   #backend figure {
-    width: 170px;
-    height: 170px;
     float: left;
   }
   #backend h2 {
@@ -483,8 +416,6 @@ footer p {
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #portfolio figure {
-    width: 170px;
-    height: 170px;
     float: right;
   }
   #portfolio h2 {

@@ -58,6 +58,14 @@ $section-gap: calc(3.5rem + 3vw);
 
 
 
+// figure dimensions
+$square-width: 150px;
+$square-height: 150px;
+$rectangle-width: 200px;
+$rectangle-height: 150px;
+
+
+
 
 
 /* Section Properties */
@@ -211,16 +219,6 @@ $blog-extralarge-margin: 1.2rem;
     transform: translate(-50%, -50%);
 }
 
-@mixin square {
-    width: 170px;
-    height: 170px;
-}
-
-@mixin rectangle {
-    width: 200px;
-    height: 150px;
-}
-
 @mixin underline {
     border-bottom: $line;
     padding-bottom: clamp(0.6rem, 0.25rem + 1vw, 1rem);
@@ -244,68 +242,237 @@ $blog-extralarge-margin: 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-
     figure {
-        @include figure-display;
-        @include square;
         order: 1;
     }
+}
 
-    img {
-        @include img-fit;
+@mixin article-left {
+    figure {
+        float: right;
     }
+    h2 {
+        @include align-left;
+    }
+}
 
+@mixin article-right {
+    figure {
+        float: left;
+    }
+    h2 {
+        @include align-right;
+    }
+}
+
+
+
+@mixin button-left {
+    .button {
+        @include align-left;
+    }
+}
+
+@mixin button-right {
+    .button {
+        @include align-right;
+    }
+}
+
+@mixin button-center {
     .button {
         order: 2;
     }
 }
 
-@mixin article-center-card {
+@mixin square {
+    figure {
+        width: $square-width;
+        height: $square-height;
+    }
+}
+
+@mixin rectangle {
+    figure {
+        width: $rectangle-width;
+        height: $rectangle-height;
+    }
+}
+
+
+
+// articles aligned center
+@mixin article-center-card-squarefig-button {
     @include article-center;
     @include card;
+    @include square;
+    @include button-center;
 }
 
-@mixin article-left {
-    figure {
-        @include square;
-        float: right;
-    }
-
-    h2 {
-        @include align-left;
-    }
-
-    .button {
-        @include align-left;
-    }
+@mixin article-center-card-squarefig-nobutton {
+    @include article-center;
+    @include card;
+    @include square;
 }
 
-@mixin article-left-card {
+@mixin article-center-card-rectanglefig-button {
+    @include article-center;
+    @include card;
+    @include rectangle;
+    @include button-center;
+}
+
+@mixin article-center-card-rectanglefig-nobutton {
+    @include article-center;
+    @include card;
+    @include rectangle;
+}
+
+@mixin article-center-nocard-squarefig-button {
+    @include article-center;
+    @include square;
+    @include button-center;
+}
+
+@mixin article-center-nocard-squarefig-nobutton {
+    @include article-center;
+    @include square;
+}
+
+@mixin article-center-nocard-rectanglefig-button {
+    @include article-center;
+    @include rectangle;
+    @include button-center;
+}
+
+@mixin article-center-nocard-rectanglefig-nobutton {
+    @include article-center;
+    @include rectangle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// articles aligned left
+@mixin article-left-card-squarefig-button {
     @include article-left;
     @include card;
+    @include square;
+    @include button-left;
 }
 
-@mixin article-right {
-    figure {
-        @include square;
-        float: left;
-    }
-
-    h2 {
-        @include align-right;
-    }
-
-    .button {
-        @include align-right;
-    }
+@mixin article-left-card-squarefig-nobutton {
+    @include article-left;
+    @include card;
+    @include square;
 }
 
-@mixin article-right-card {
+@mixin article-left-card-rectanglefig-button {
+    @include article-left;
+    @include card;
+    @include rectangle;
+    @include button-left;
+}
+
+@mixin article-left-card-rectanglefig-nobutton {
+    @include article-left;
+    @include card;
+    @include rectangle;
+}
+
+@mixin article-left-nocard-squarefig-button {
+    @include article-left;
+    @include square;
+    @include button-left;
+}
+
+@mixin article-left-nocard-squarefig-nobutton {
+    @include article-left;
+    @include square;
+}
+
+@mixin article-left-nocard-rectanglefig-button {
+    @include article-left;
+    @include rectangle;
+    @include button-left;
+}
+
+@mixin article-left-nocard-rectanglefig-nobutton {
+    @include article-left;
+    @include rectangle;
+}
+
+
+
+
+
+
+
+
+
+
+
+// articles aligned right
+@mixin article-right-card-squarefig-button {
     @include article-right;
     @include card;
+    @include square;
+    @include button-right;
+}
+
+@mixin article-right-card-squarefig-nobutton {
+    @include article-right;
+    @include card;
+    @include square;
+}
+
+@mixin article-right-card-rectanglefig-button {
+    @include article-right;
+    @include card;
+    @include rectangle;
+    @include button-right;
+}
+
+@mixin article-right-card-rectanglefig-nobutton {
+    @include article-right;
+    @include card;
+    @include rectangle;
+}
+
+@mixin article-right-nocard-squarefig-button {
+    @include article-right;
+    @include square;
+    @include button-right;
+}
+
+@mixin article-right-nocard-squarefig-nobutton {
+    @include article-right;
+    @include square;
+}
+
+@mixin article-right-nocard-rectanglefig-button {
+    @include article-right;
+    @include rectangle;
+    @include button-right;
+}
+
+@mixin article-right-nocard-rectanglefig-nobutton {
+    @include article-right;
+    @include rectangle;
 }
 
 
+// blog list mixins
 @mixin blog-list-1col {
     display: flex;
     flex-flow: row wrap;
@@ -316,7 +483,7 @@ $blog-extralarge-margin: 1.2rem;
     width: 100%;
 
     article {
-        @include article-center-card;
+        @include article-center-card-rectanglefig-nobutton;
     }
 
     p, h3 {
@@ -344,7 +511,7 @@ $blog-extralarge-margin: 1.2rem;
     width: 100%;
 
     article {
-        @include article-center-card;
+        @include article-center-card-rectanglefig-nobutton;
     }
 
     p, h3 {
@@ -370,7 +537,7 @@ $blog-extralarge-margin: 1.2rem;
     border-bottom: $line;
 }
 
-
+// text mixins
 @mixin text-standard {
     font-family: $font-family-standard;
     font-size: $font-size-standard;
@@ -589,3 +756,6 @@ footer {
         justify-content: center;
     }
 }
+
+
+
