@@ -197,8 +197,21 @@ footer p {
   border-bottom: 3px solid #ef1d28;
 }
 
+#img-logo-container {
+  width: clamp(4rem, 3rem + 5vw, 7rem);
+  height: clamp(4rem, 3rem + 5vw, 7rem);
+  border-radius: 50%;
+  margin: clamp(1.5rem, 0.7rem + 3vw, 3rem);
+}
+
+#logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 #hero {
-  margin: 3rem 0 8rem;
+  margin: 1rem 0 8rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
