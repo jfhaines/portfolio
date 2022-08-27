@@ -10,7 +10,6 @@
         @include base.align-right;
         margin-bottom: 0.6rem;
     }
-
     ul {
         display: flex;
         flex-direction: row;
@@ -19,7 +18,6 @@
         width: 100%;
         margin: 0;
         padding: 0;
-
         li {
             height: 4rem;
             margin: 1rem 0;
@@ -29,7 +27,6 @@
             padding: 0.45rem;
             line-height: normal;
             @include base.card;
-
             figure {
                 margin: 0;
                 width: 100%;
@@ -37,12 +34,10 @@
                 padding: 0.1rem;
                 box-shadow: none;
             }
-
             img {
                 object-fit: scale-down;
                 margin: 0rem;
             }
-
             p {
                 font-weight: 700;
                 text-align: center;
@@ -57,17 +52,17 @@
 /* SMALL */
 @media screen and (max-width: 550px) {
     @include base.page-settings-small;
-
-    article {
-        @include base.article-center-card;
+    #mystory {
+        @include base.article-center-card-squarefig-button;
     }
-
     section {
-        @include mini-card-display;
-        
+        @include mini-card-display;  
         li {
             width: 45%;
         }
+    }
+    #interests {
+        @include base.article-center-card-squarefig-nobutton;
     }
 }
 
@@ -75,50 +70,50 @@
 /* MEDIUM */
 @media screen and (min-width: 551px) and (max-width: 740px) {
     @include base.page-settings-medium;
-
-    article {
-        @include base.article-left-card;
+    #mystory {
+        @include base.article-left-card-squarefig-button;
     }
-
     section {
         @include mini-card-display;
-        
         li {
             width: 40%;
         }
+    }
+    #interests {
+        @include base.article-left-card-squarefig-nobutton;
     }
 }
 
 /* LARGE */
 @media screen and (min-width: 741px) and (max-width: 1050px) {
     @include base.page-settings-large;
-
-    article {
-        @include base.article-left-card;
+    #mystory {
+        @include base.article-left-card-squarefig-button;
     }
-
     section {
         @include mini-card-display;
-        
         li {
             width: 22%;
         }
+    }
+    #interests {
+        @include base.article-left-card-squarefig-nobutton;
     }
 }
 
 /* EXTRA LARGE */
 @media screen and (min-width: 1051px) {
     @include base.page-settings-extralarge;
-
-    article {
-        @include base.article-left-card;
+    #mystory {
+        @include base.article-left-card-squarefig-button;
     }
-
     section {
-        @include mini-card-display;
-        
+        @include mini-card-display;  
         li {
             width: 22%;
         }
+    }
+    #interests {
+        @include base.article-left-card-squarefig-nobutton;
     }
 }

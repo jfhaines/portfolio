@@ -6,21 +6,16 @@
     margin-bottom: 1.8rem;
 }
 
+.date {
+    color: gray;
+}
+
 @mixin blog-article-center {
     @include base.card;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    figure {
-        @include base.figure-display;
-        @include base.rectangle;
-    }
-
-    img {
-        @include base.img-fit;
-    }
-
+    @include base.rectangle;
     h2 {
         text-align: center;
         line-height: 2.5rem;
@@ -29,13 +24,10 @@
 
 @mixin blog-article-left {
     @include base.card;
-
+    @include base.rectangle;
     figure {
-        @include base.rectangle;
         float: right;
     }
-
-
     h2 {
         line-height: 2.5rem;
     }

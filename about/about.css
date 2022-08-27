@@ -210,7 +210,7 @@ footer p {
     padding: 1.2rem;
     margin-top: 1.2rem;
   }
-  article {
+  #mystory {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -218,10 +218,14 @@ footer p {
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  article figure {
+  #mystory figure {
     order: 1;
   }
-  article .button {
+  #mystory figure {
+    width: 150px;
+    height: 150px;
+  }
+  #mystory .button {
     order: 2;
   }
   section h2 {
@@ -271,6 +275,21 @@ footer p {
   section li {
     width: 45%;
   }
+  #interests {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #interests figure {
+    order: 1;
+  }
+  #interests figure {
+    width: 150px;
+    height: 150px;
+  }
 }
 /* MEDIUM */
 @media screen and (min-width: 551px) and (max-width: 740px) {
@@ -285,19 +304,23 @@ footer p {
     padding: 1.2rem;
     margin-top: 1.2rem;
   }
-  article {
+  #mystory {
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  article figure {
+  #mystory figure {
     float: right;
   }
-  article h2 {
+  #mystory h2 {
     margin-right: 100%;
     white-space: nowrap;
   }
-  article .button {
+  #mystory figure {
+    width: 150px;
+    height: 150px;
+  }
+  #mystory .button {
     margin-right: 100%;
     white-space: nowrap;
   }
@@ -348,6 +371,22 @@ footer p {
   section li {
     width: 40%;
   }
+  #interests {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #interests figure {
+    float: right;
+  }
+  #interests h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #interests figure {
+    width: 150px;
+    height: 150px;
+  }
 }
 /* LARGE */
 @media screen and (min-width: 741px) and (max-width: 1050px) {
@@ -362,19 +401,23 @@ footer p {
     padding: 1.2rem;
     margin-top: 1.2rem;
   }
-  article {
+  #mystory {
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  article figure {
+  #mystory figure {
     float: right;
   }
-  article h2 {
+  #mystory h2 {
     margin-right: 100%;
     white-space: nowrap;
   }
-  article .button {
+  #mystory figure {
+    width: 150px;
+    height: 150px;
+  }
+  #mystory .button {
     margin-right: 100%;
     white-space: nowrap;
   }
@@ -424,6 +467,22 @@ footer p {
   }
   section li {
     width: 22%;
+  }
+  #interests {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #interests figure {
+    float: right;
+  }
+  #interests h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #interests figure {
+    width: 150px;
+    height: 150px;
   }
 }
 /* EXTRA LARGE */
@@ -439,19 +498,23 @@ footer p {
     padding: 1.2rem;
     margin-top: 1.2rem;
   }
-  article {
+  #mystory {
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  article figure {
+  #mystory figure {
     float: right;
   }
-  article h2 {
+  #mystory h2 {
     margin-right: 100%;
     white-space: nowrap;
   }
-  article .button {
+  #mystory figure {
+    width: 150px;
+    height: 150px;
+  }
+  #mystory .button {
     margin-right: 100%;
     white-space: nowrap;
   }
@@ -501,5 +564,21 @@ footer p {
   }
   section li {
     width: 22%;
+  }
+  #interests {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  #interests figure {
+    float: right;
+  }
+  #interests h2 {
+    margin-right: 100%;
+    white-space: nowrap;
+  }
+  #interests figure {
+    width: 150px;
+    height: 150px;
   }
 }/*# sourceMappingURL=about.css.map */

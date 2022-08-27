@@ -220,6 +220,23 @@ footer p {
 .form form #message {
   height: 8rem;
 }
+.form form #submit {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: clamp(0.7rem, 0.4rem + 1vw, 0.9rem);
+  font-weight: bold;
+  color: white;
+  line-height: 1.7rem;
+  background-color: #ef1d28;
+  padding: 0.4rem 1.2rem;
+  border-radius: 25px;
+  box-shadow: 0 2px 3px #7d7d7d;
+  transition: 0.2s;
+  align-self: flex-start;
+}
+.form form #submit:hover {
+  box-shadow: 0 4px 5px rgb(180, 180, 180);
+  transform: scale(1.04);
+}
 
 .details {
   display: flex;
@@ -250,7 +267,6 @@ footer p {
   align-items: center;
 }
 .details nav ul li {
-  list-style: none;
   margin: 0 1rem;
 }
 .details nav ul li a {
@@ -258,23 +274,8 @@ footer p {
 }
 .details nav ul li a figure {
   margin: 0;
-  background: white;
-  box-shadow: 0 1.5px 4px rgb(156, 156, 156);
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
   width: 2.5rem;
   height: 2.5rem;
-}
-.details nav ul li a figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* SMALL */

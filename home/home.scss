@@ -65,7 +65,7 @@
     }
 
     #projects {
-        @include base.article-center-card-squarefig-button;
+        @include base.article-center-nocard-squarefig-button;
     }
 
     #blogs {

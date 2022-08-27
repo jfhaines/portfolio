@@ -277,9 +277,6 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #projects figure {
     order: 1;

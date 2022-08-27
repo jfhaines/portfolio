@@ -10,15 +10,15 @@
     @include base.page-settings-small;
 
     #calculator {
-        @include base.article-center-card;
+        @include base.article-center-card-squarefig-button;
     }
 
     #backend {
-        @include base.article-center;
+        @include base.article-center-nocard-squarefig-button;
     }
 
     #portfolio {
-        @include base.article-center-card;
+        @include base.article-center-card-squarefig-button;
     }
 }
 
@@ -28,15 +28,15 @@
     @include base.page-settings-medium;
 
     #calculator {
-        @include base.article-left-card;
+        @include base.article-left-card-squarefig-button;
     }
 
     #backend {
-        @include base.article-right;
+        @include base.article-right-nocard-squarefig-button;
     }
 
     #portfolio {
-        @include base.article-left-card;
+        @include base.article-left-card-squarefig-button;
     }
 }
 
@@ -45,15 +45,15 @@
     @include base.page-settings-large;
 
     #calculator {
-        @include base.article-left-card;
+        @include base.article-left-card-squarefig-button;
     }
 
     #backend {
-        @include base.article-right;
+        @include base.article-right-nocard-squarefig-button;
     }
 
     #portfolio {
-        @include base.article-left-card;
+        @include base.article-left-card-squarefig-button;
     }
 }
 
@@ -62,14 +62,14 @@
     @include base.page-settings-extralarge;
 
     #calculator {
-        @include base.article-left-card;
+        @include base.article-left-card-squarefig-button;
     }
 
     #backend {
-        @include base.article-right;
+        @include base.article-right-nocard-squarefig-button;
     }
 
     #portfolio {
-        @include base.article-left-card;
+        @include base.article-left-card-squarefig-button;
     }
 }

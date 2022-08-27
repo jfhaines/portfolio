@@ -221,6 +221,10 @@ footer p {
   #calculator figure {
     order: 1;
   }
+  #calculator figure {
+    width: 150px;
+    height: 150px;
+  }
   #calculator .button {
     order: 2;
   }
@@ -231,6 +235,10 @@ footer p {
   }
   #backend figure {
     order: 1;
+  }
+  #backend figure {
+    width: 150px;
+    height: 150px;
   }
   #backend .button {
     order: 2;
@@ -245,6 +253,10 @@ footer p {
   }
   #portfolio figure {
     order: 1;
+  }
+  #portfolio figure {
+    width: 150px;
+    height: 150px;
   }
   #portfolio .button {
     order: 2;
@@ -275,6 +287,10 @@ footer p {
     margin-right: 100%;
     white-space: nowrap;
   }
+  #calculator figure {
+    width: 150px;
+    height: 150px;
+  }
   #calculator .button {
     margin-right: 100%;
     white-space: nowrap;
@@ -286,6 +302,10 @@ footer p {
     margin-left: 100%;
     transform: translateX(-100%);
     white-space: nowrap;
+  }
+  #backend figure {
+    width: 150px;
+    height: 150px;
   }
   #backend .button {
     margin-left: 100%;
@@ -303,6 +323,10 @@ footer p {
   #portfolio h2 {
     margin-right: 100%;
     white-space: nowrap;
+  }
+  #portfolio figure {
+    width: 150px;
+    height: 150px;
   }
   #portfolio .button {
     margin-right: 100%;
@@ -334,6 +358,10 @@ footer p {
     margin-right: 100%;
     white-space: nowrap;
   }
+  #calculator figure {
+    width: 150px;
+    height: 150px;
+  }
   #calculator .button {
     margin-right: 100%;
     white-space: nowrap;
@@ -345,6 +373,10 @@ footer p {
     margin-left: 100%;
     transform: translateX(-100%);
     white-space: nowrap;
+  }
+  #backend figure {
+    width: 150px;
+    height: 150px;
   }
   #backend .button {
     margin-left: 100%;
@@ -362,6 +394,10 @@ footer p {
   #portfolio h2 {
     margin-right: 100%;
     white-space: nowrap;
+  }
+  #portfolio figure {
+    width: 150px;
+    height: 150px;
   }
   #portfolio .button {
     margin-right: 100%;
@@ -393,6 +429,10 @@ footer p {
     margin-right: 100%;
     white-space: nowrap;
   }
+  #calculator figure {
+    width: 150px;
+    height: 150px;
+  }
   #calculator .button {
     margin-right: 100%;
     white-space: nowrap;
@@ -404,6 +444,10 @@ footer p {
     margin-left: 100%;
     transform: translateX(-100%);
     white-space: nowrap;
+  }
+  #backend figure {
+    width: 150px;
+    height: 150px;
   }
   #backend .button {
     margin-left: 100%;
@@ -421,6 +465,10 @@ footer p {
   #portfolio h2 {
     margin-right: 100%;
     white-space: nowrap;
+  }
+  #portfolio figure {
+    width: 150px;
+    height: 150px;
   }
   #portfolio .button {
     margin-right: 100%;
