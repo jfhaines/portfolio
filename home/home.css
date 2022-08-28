@@ -263,30 +263,34 @@ footer p {
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #about figure {
-    order: 1;
+  #about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about h2 {
+    text-align: center;
   }
   #about figure {
     width: 150px;
     height: 150px;
-  }
-  #about .button {
-    order: 2;
   }
   #projects {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #projects figure {
-    order: 1;
+  #projects .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #projects h2 {
+    text-align: center;
   }
   #projects figure {
     width: 150px;
     height: 150px;
-  }
-  #projects .button {
-    order: 2;
   }
   #blogs {
     order: 1;
@@ -312,8 +316,13 @@ footer p {
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #blogs nav article figure {
-    order: 1;
+  #blogs nav article .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #blogs nav article h2 {
+    text-align: center;
   }
   #blogs nav article figure {
     width: 200px;
@@ -352,6 +361,9 @@ footer p {
     margin-top: 1.2rem;
   }
   #about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -359,41 +371,30 @@ footer p {
   #about figure {
     float: right;
   }
-  #about h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #about figure {
     width: 150px;
     height: 150px;
   }
-  #about .button {
-    margin-right: 100%;
-    white-space: nowrap;
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
   #projects figure {
     float: left;
-  }
-  #projects h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
   }
   #projects figure {
     width: 150px;
     height: 150px;
   }
-  #projects .button {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-  }
   #blogs {
     order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   #blogs h2 {
-    margin-right: 100%;
-    white-space: nowrap;
+    align-self: flex-start;
   }
   #blogs nav {
     display: flex;
@@ -412,8 +413,13 @@ footer p {
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #blogs nav article figure {
-    order: 1;
+  #blogs nav article .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #blogs nav article h2 {
+    text-align: center;
   }
   #blogs nav article figure {
     width: 200px;
@@ -449,6 +455,9 @@ footer p {
     margin-top: 1.2rem;
   }
   #about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -456,26 +465,19 @@ footer p {
   #about figure {
     float: right;
   }
-  #about h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #about figure {
     width: 150px;
     height: 150px;
   }
-  #about .button {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #blogs {
     padding-left: 0;
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   #blogs h2 {
-    transform: translateX(2rem);
-    margin-right: 100%;
-    white-space: nowrap;
+    align-self: flex-end;
   }
   #blogs nav {
     display: flex;
@@ -494,8 +496,13 @@ footer p {
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #blogs nav article figure {
-    order: 1;
+  #blogs nav article .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #blogs nav article h2 {
+    text-align: center;
   }
   #blogs nav article figure {
     width: 200px;
@@ -515,6 +522,9 @@ footer p {
     align-items: center;
   }
   #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -522,17 +532,9 @@ footer p {
   #projects figure {
     float: right;
   }
-  #projects h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #projects figure {
     width: 150px;
     height: 150px;
-  }
-  #projects .button {
-    margin-right: 100%;
-    white-space: nowrap;
   }
 }
 /* EXTRA LARGE */
@@ -549,6 +551,9 @@ footer p {
     margin-top: 1.2rem;
   }
   #about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -556,26 +561,19 @@ footer p {
   #about figure {
     float: right;
   }
-  #about h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #about figure {
     width: 150px;
     height: 150px;
   }
-  #about .button {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #blogs {
     padding-left: 0;
     padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   #blogs h2 {
-    transform: translateX(2rem);
-    margin-right: 100%;
-    white-space: nowrap;
+    align-self: flex-end;
   }
   #blogs nav {
     display: flex;
@@ -594,8 +592,13 @@ footer p {
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #blogs nav article figure {
-    order: 1;
+  #blogs nav article .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #blogs nav article h2 {
+    text-align: center;
   }
   #blogs nav article figure {
     width: 200px;
@@ -615,6 +618,9 @@ footer p {
     align-items: center;
   }
   #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -622,16 +628,8 @@ footer p {
   #projects figure {
     float: right;
   }
-  #projects h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #projects figure {
     width: 150px;
     height: 150px;
-  }
-  #projects .button {
-    margin-right: 100%;
-    white-space: nowrap;
   }
 }/*# sourceMappingURL=home.css.map */

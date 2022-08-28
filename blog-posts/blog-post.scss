@@ -10,36 +10,15 @@
     color: gray;
 }
 
-@mixin blog-article-center {
-    @include base.card;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include base.rectangle;
-    h2 {
-        text-align: center;
-        line-height: 2.5rem;
-    }
-}
-
-@mixin blog-article-left {
-    @include base.card;
-    @include base.rectangle;
-    figure {
-        float: right;
-    }
-    h2 {
-        line-height: 2.5rem;
-    }
-}
-
 
 /* SMALL */
 @media screen and (max-width: 550px) {
     @include base.page-settings-small;
 
     article {
-        @include blog-article-center;
+        @include base.article-center;
+        @include base.card;
+        @include base.figure-rectangle;
     }
 }
 
@@ -49,7 +28,9 @@
     @include base.page-settings-medium;
 
     article {
-        @include blog-article-left;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-rectangle;
     }
 }
 
@@ -58,7 +39,9 @@
     @include base.page-settings-large;
 
     article {
-        @include blog-article-left;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-rectangle;
     }
 }
 
@@ -67,6 +50,8 @@
     @include base.page-settings-extralarge;
 
     article {
-        @include blog-article-left;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-rectangle;
     }
 }

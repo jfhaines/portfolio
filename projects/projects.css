@@ -218,30 +218,34 @@ footer p {
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #calculator figure {
-    order: 1;
+  #calculator .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #calculator h2 {
+    text-align: center;
   }
   #calculator figure {
     width: 150px;
     height: 150px;
-  }
-  #calculator .button {
-    order: 2;
   }
   #backend {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #backend figure {
-    order: 1;
+  #backend .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #backend h2 {
+    text-align: center;
   }
   #backend figure {
     width: 150px;
     height: 150px;
-  }
-  #backend .button {
-    order: 2;
   }
   #portfolio {
     display: flex;
@@ -251,15 +255,17 @@ footer p {
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #portfolio figure {
-    order: 1;
+  #portfolio .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #portfolio h2 {
+    text-align: center;
   }
   #portfolio figure {
     width: 150px;
     height: 150px;
-  }
-  #portfolio .button {
-    order: 2;
   }
 }
 /* MEDIUM */
@@ -276,6 +282,9 @@ footer p {
     margin-top: 1.2rem;
   }
   #calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -283,36 +292,26 @@ footer p {
   #calculator figure {
     float: right;
   }
-  #calculator h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #calculator figure {
     width: 150px;
     height: 150px;
   }
-  #calculator .button {
-    margin-right: 100%;
-    white-space: nowrap;
+  #backend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
   #backend figure {
     float: left;
   }
-  #backend h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-  }
   #backend figure {
     width: 150px;
     height: 150px;
   }
-  #backend .button {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-  }
   #portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -320,17 +319,9 @@ footer p {
   #portfolio figure {
     float: right;
   }
-  #portfolio h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #portfolio figure {
     width: 150px;
     height: 150px;
-  }
-  #portfolio .button {
-    margin-right: 100%;
-    white-space: nowrap;
   }
 }
 /* LARGE */
@@ -347,6 +338,9 @@ footer p {
     margin-top: 1.2rem;
   }
   #calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -354,36 +348,26 @@ footer p {
   #calculator figure {
     float: right;
   }
-  #calculator h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #calculator figure {
     width: 150px;
     height: 150px;
   }
-  #calculator .button {
-    margin-right: 100%;
-    white-space: nowrap;
+  #backend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
   #backend figure {
     float: left;
   }
-  #backend h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-  }
   #backend figure {
     width: 150px;
     height: 150px;
   }
-  #backend .button {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-  }
   #portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -391,17 +375,9 @@ footer p {
   #portfolio figure {
     float: right;
   }
-  #portfolio h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #portfolio figure {
     width: 150px;
     height: 150px;
-  }
-  #portfolio .button {
-    margin-right: 100%;
-    white-space: nowrap;
   }
 }
 /* EXTRA LARGE */
@@ -418,6 +394,9 @@ footer p {
     margin-top: 1.2rem;
   }
   #calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -425,36 +404,26 @@ footer p {
   #calculator figure {
     float: right;
   }
-  #calculator h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #calculator figure {
     width: 150px;
     height: 150px;
   }
-  #calculator .button {
-    margin-right: 100%;
-    white-space: nowrap;
+  #backend {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
   #backend figure {
     float: left;
   }
-  #backend h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-  }
   #backend figure {
     width: 150px;
     height: 150px;
   }
-  #backend .button {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-  }
   #portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -462,16 +431,8 @@ footer p {
   #portfolio figure {
     float: right;
   }
-  #portfolio h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #portfolio figure {
     width: 150px;
     height: 150px;
-  }
-  #portfolio .button {
-    margin-right: 100%;
-    white-space: nowrap;
   }
 }/*# sourceMappingURL=projects.css.map */

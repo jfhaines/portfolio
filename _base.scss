@@ -227,72 +227,14 @@ $blog-extralarge-margin: 1.2rem;
     margin-top: 0;
 }
 
-@mixin align-right {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-}
-
-@mixin align-left {
-    margin-right: 100%;
-    white-space: nowrap;
-}
-
-@mixin article-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    figure {
-        order: 1;
-    }
-}
-
-@mixin article-left {
-    figure {
-        float: right;
-    }
-    h2 {
-        @include align-left;
-    }
-}
-
-@mixin article-right {
-    figure {
-        float: left;
-    }
-    h2 {
-        @include align-right;
-    }
-}
-
-
-
-@mixin button-left {
-    .button {
-        @include align-left;
-    }
-}
-
-@mixin button-right {
-    .button {
-        @include align-right;
-    }
-}
-
-@mixin button-center {
-    .button {
-        order: 2;
-    }
-}
-
-@mixin square {
+@mixin figure-square {
     figure {
         width: $square-width;
         height: $square-height;
     }
 }
 
-@mixin rectangle {
+@mixin figure-rectangle {
     figure {
         width: $rectangle-width;
         height: $rectangle-height;
@@ -301,175 +243,40 @@ $blog-extralarge-margin: 1.2rem;
 
 
 
-// articles aligned center
-@mixin article-center-card-squarefig-button {
-    @include article-center;
-    @include card;
-    @include square;
-    @include button-center;
+@mixin article-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    figure {
+        float: right;
+    }
 }
 
-@mixin article-center-card-squarefig-nobutton {
-    @include article-center;
-    @include card;
-    @include square;
+@mixin article-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    h2 {
+        text-align: center;
+    }
 }
 
-@mixin article-center-card-rectanglefig-button {
-    @include article-center;
-    @include card;
-    @include rectangle;
-    @include button-center;
-}
-
-@mixin article-center-card-rectanglefig-nobutton {
-    @include article-center;
-    @include card;
-    @include rectangle;
-}
-
-@mixin article-center-nocard-squarefig-button {
-    @include article-center;
-    @include square;
-    @include button-center;
-}
-
-@mixin article-center-nocard-squarefig-nobutton {
-    @include article-center;
-    @include square;
-}
-
-@mixin article-center-nocard-rectanglefig-button {
-    @include article-center;
-    @include rectangle;
-    @include button-center;
-}
-
-@mixin article-center-nocard-rectanglefig-nobutton {
-    @include article-center;
-    @include rectangle;
+@mixin article-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    figure {
+        float: left;
+    }
 }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// articles aligned left
-@mixin article-left-card-squarefig-button {
-    @include article-left;
-    @include card;
-    @include square;
-    @include button-left;
-}
-
-@mixin article-left-card-squarefig-nobutton {
-    @include article-left;
-    @include card;
-    @include square;
-}
-
-@mixin article-left-card-rectanglefig-button {
-    @include article-left;
-    @include card;
-    @include rectangle;
-    @include button-left;
-}
-
-@mixin article-left-card-rectanglefig-nobutton {
-    @include article-left;
-    @include card;
-    @include rectangle;
-}
-
-@mixin article-left-nocard-squarefig-button {
-    @include article-left;
-    @include square;
-    @include button-left;
-}
-
-@mixin article-left-nocard-squarefig-nobutton {
-    @include article-left;
-    @include square;
-}
-
-@mixin article-left-nocard-rectanglefig-button {
-    @include article-left;
-    @include rectangle;
-    @include button-left;
-}
-
-@mixin article-left-nocard-rectanglefig-nobutton {
-    @include article-left;
-    @include rectangle;
-}
-
-
-
-
-
-
-
-
-
-
-
-// articles aligned right
-@mixin article-right-card-squarefig-button {
-    @include article-right;
-    @include card;
-    @include square;
-    @include button-right;
-}
-
-@mixin article-right-card-squarefig-nobutton {
-    @include article-right;
-    @include card;
-    @include square;
-}
-
-@mixin article-right-card-rectanglefig-button {
-    @include article-right;
-    @include card;
-    @include rectangle;
-    @include button-right;
-}
-
-@mixin article-right-card-rectanglefig-nobutton {
-    @include article-right;
-    @include card;
-    @include rectangle;
-}
-
-@mixin article-right-nocard-squarefig-button {
-    @include article-right;
-    @include square;
-    @include button-right;
-}
-
-@mixin article-right-nocard-squarefig-nobutton {
-    @include article-right;
-    @include square;
-}
-
-@mixin article-right-nocard-rectanglefig-button {
-    @include article-right;
-    @include rectangle;
-    @include button-right;
-}
-
-@mixin article-right-nocard-rectanglefig-nobutton {
-    @include article-right;
-    @include rectangle;
-}
 
 
 // blog list mixins
@@ -483,7 +290,9 @@ $blog-extralarge-margin: 1.2rem;
     width: 100%;
 
     article {
-        @include article-center-card-rectanglefig-nobutton;
+        @include article-center;
+        @include card;
+        @include figure-rectangle;
     }
 
     p, h3 {
@@ -511,7 +320,9 @@ $blog-extralarge-margin: 1.2rem;
     width: 100%;
 
     article {
-        @include article-center-card-rectanglefig-nobutton;
+        @include article-center;
+        @include card;
+        @include figure-rectangle;
     }
 
     p, h3 {
@@ -756,6 +567,3 @@ footer {
         justify-content: center;
     }
 }
-
-
-

@@ -61,11 +61,14 @@
     @include base.page-settings-small;
 
     #about {
-        @include base.article-center-card-squarefig-button;
+        @include base.article-center;
+        @include base.card;
+        @include base.figure-square;
     }
 
     #projects {
-        @include base.article-center-nocard-squarefig-button;
+        @include base.article-center;
+        @include base.figure-square;
     }
 
     #blogs {
@@ -97,18 +100,24 @@
     @include base.page-settings-medium;
 
     #about {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 
     #projects {
-        @include base.article-right-nocard-squarefig-button;
+        @include base.article-right;
+        @include base.figure-square;
     }
 
     #blogs {
         order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         h2 {
-            @include base.align-left;
+            align-self: flex-start;
         }
 
         nav {
@@ -126,16 +135,20 @@
     @include base.page-settings-large;
 
     #about {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 
     #blogs {
         padding-left: 0;
         padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         h2 {
-            transform: translateX(base.$section-large-side-padding);
-            @include base.align-left;
+            align-self: flex-end;
         }
 
         nav {
@@ -144,7 +157,9 @@
     }
 
     #projects {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 }
 
@@ -153,16 +168,20 @@
     @include base.page-settings-extralarge;
 
     #about {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 
     #blogs {
         padding-left: 0;
         padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         h2 {
-            transform: translateX(base.$section-extralarge-side-padding);
-            @include base.align-left;
+            align-self: flex-end;
         }
 
         nav {
@@ -171,6 +190,8 @@
     }
 
     #projects {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 }

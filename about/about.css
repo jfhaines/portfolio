@@ -218,21 +218,25 @@ footer p {
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #mystory figure {
-    order: 1;
+  #mystory .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #mystory h2 {
+    text-align: center;
   }
   #mystory figure {
     width: 150px;
     height: 150px;
   }
-  #mystory .button {
-    order: 2;
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
   section h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-    margin-bottom: 0.6rem;
+    align-self: flex-end;
   }
   section ul {
     display: flex;
@@ -283,8 +287,13 @@ footer p {
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
-  #interests figure {
-    order: 1;
+  #interests .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #interests h2 {
+    text-align: center;
   }
   #interests figure {
     width: 150px;
@@ -305,6 +314,9 @@ footer p {
     margin-top: 1.2rem;
   }
   #mystory {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -312,23 +324,17 @@ footer p {
   #mystory figure {
     float: right;
   }
-  #mystory h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #mystory figure {
     width: 150px;
     height: 150px;
   }
-  #mystory .button {
-    margin-right: 100%;
-    white-space: nowrap;
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
   section h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-    margin-bottom: 0.6rem;
+    align-self: flex-end;
   }
   section ul {
     display: flex;
@@ -372,16 +378,15 @@ footer p {
     width: 40%;
   }
   #interests {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #interests figure {
     float: right;
-  }
-  #interests h2 {
-    margin-right: 100%;
-    white-space: nowrap;
   }
   #interests figure {
     width: 150px;
@@ -402,6 +407,9 @@ footer p {
     margin-top: 1.2rem;
   }
   #mystory {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -409,23 +417,17 @@ footer p {
   #mystory figure {
     float: right;
   }
-  #mystory h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #mystory figure {
     width: 150px;
     height: 150px;
   }
-  #mystory .button {
-    margin-right: 100%;
-    white-space: nowrap;
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
   section h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-    margin-bottom: 0.6rem;
+    align-self: flex-end;
   }
   section ul {
     display: flex;
@@ -469,16 +471,15 @@ footer p {
     width: 22%;
   }
   #interests {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #interests figure {
     float: right;
-  }
-  #interests h2 {
-    margin-right: 100%;
-    white-space: nowrap;
   }
   #interests figure {
     width: 150px;
@@ -499,6 +500,9 @@ footer p {
     margin-top: 1.2rem;
   }
   #mystory {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
@@ -506,23 +510,17 @@ footer p {
   #mystory figure {
     float: right;
   }
-  #mystory h2 {
-    margin-right: 100%;
-    white-space: nowrap;
-  }
   #mystory figure {
     width: 150px;
     height: 150px;
   }
-  #mystory .button {
-    margin-right: 100%;
-    white-space: nowrap;
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
   section h2 {
-    margin-left: 100%;
-    transform: translateX(-100%);
-    white-space: nowrap;
-    margin-bottom: 0.6rem;
+    align-self: flex-end;
   }
   section ul {
     display: flex;
@@ -566,16 +564,15 @@ footer p {
     width: 22%;
   }
   #interests {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   #interests figure {
     float: right;
-  }
-  #interests h2 {
-    margin-right: 100%;
-    white-space: nowrap;
   }
   #interests figure {
     width: 150px;

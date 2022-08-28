@@ -10,15 +10,20 @@
     @include base.page-settings-small;
 
     #calculator {
-        @include base.article-center-card-squarefig-button;
+        @include base.article-center;
+        @include base.card;
+        @include base.figure-square;
     }
 
     #backend {
-        @include base.article-center-nocard-squarefig-button;
+        @include base.article-center;
+        @include base.figure-square;
     }
 
     #portfolio {
-        @include base.article-center-card-squarefig-button;
+        @include base.article-center;
+        @include base.card;
+        @include base.figure-square;
     }
 }
 
@@ -28,15 +33,20 @@
     @include base.page-settings-medium;
 
     #calculator {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 
     #backend {
-        @include base.article-right-nocard-squarefig-button;
+        @include base.article-right;
+        @include base.figure-square;
     }
 
     #portfolio {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 }
 
@@ -45,15 +55,20 @@
     @include base.page-settings-large;
 
     #calculator {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 
     #backend {
-        @include base.article-right-nocard-squarefig-button;
+        @include base.article-right;
+        @include base.figure-square;
     }
 
     #portfolio {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 }
 
@@ -62,14 +77,19 @@
     @include base.page-settings-extralarge;
 
     #calculator {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 
     #backend {
-        @include base.article-right-nocard-squarefig-button;
+        @include base.article-right;
+        @include base.figure-square;
     }
 
     #portfolio {
-        @include base.article-left-card-squarefig-button;
+        @include base.article-left;
+        @include base.card;
+        @include base.figure-square;
     }
 }

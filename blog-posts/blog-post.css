@@ -215,20 +215,24 @@ footer p {
     margin-top: 1.2rem;
   }
   article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
+  }
+  article .container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+  article h2 {
+    text-align: center;
+  }
   article figure {
     width: 200px;
     height: 150px;
-  }
-  article h2 {
-    text-align: center;
-    line-height: 2.5rem;
   }
 }
 /* MEDIUM */
@@ -245,19 +249,19 @@ footer p {
     margin-top: 1.2rem;
   }
   article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   article figure {
-    width: 200px;
-    height: 150px;
-  }
-  article figure {
     float: right;
   }
-  article h2 {
-    line-height: 2.5rem;
+  article figure {
+    width: 200px;
+    height: 150px;
   }
 }
 /* LARGE */
@@ -274,19 +278,19 @@ footer p {
     margin-top: 1.2rem;
   }
   article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   article figure {
-    width: 200px;
-    height: 150px;
-  }
-  article figure {
     float: right;
   }
-  article h2 {
-    line-height: 2.5rem;
+  article figure {
+    width: 200px;
+    height: 150px;
   }
 }
 /* EXTRA LARGE */
@@ -303,18 +307,18 @@ footer p {
     margin-top: 1.2rem;
   }
   article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     background-color: white;
     border-radius: 6px;
     box-shadow: 0 9px 30px rgb(189, 189, 189);
   }
   article figure {
-    width: 200px;
-    height: 150px;
-  }
-  article figure {
     float: right;
   }
-  article h2 {
-    line-height: 2.5rem;
+  article figure {
+    width: 200px;
+    height: 150px;
   }
 }/*# sourceMappingURL=blog-post.css.map */
