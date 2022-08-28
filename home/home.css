@@ -186,7 +186,7 @@ footer p {
     box-shadow: 0 6px 90px rgb(187, 187, 187);
   }
   html {
-    background-color: #fafaf7;
+    background-color: #fafafa;
     display: flex;
     justify-content: center;
   }
@@ -313,8 +313,8 @@ footer p {
     text-align: center;
   }
   #about figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #projects {
     display: flex;
@@ -330,8 +330,8 @@ footer p {
     text-align: center;
   }
   #projects figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #blogs {
     order: 1;
@@ -366,8 +366,8 @@ footer p {
     text-align: center;
   }
   #blogs nav article figure {
-    width: 200px;
-    height: 150px;
+    width: clamp(200px, 170px + 7vw, 250px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #blogs nav p, #blogs nav h3 {
     text-align: center;
@@ -402,8 +402,8 @@ footer p {
     float: right;
   }
   #about figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #projects {
     display: flex;
@@ -414,8 +414,8 @@ footer p {
     float: left;
   }
   #projects figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #blogs {
     order: 1;
@@ -452,8 +452,8 @@ footer p {
     text-align: center;
   }
   #blogs nav article figure {
-    width: 200px;
-    height: 150px;
+    width: clamp(200px, 170px + 7vw, 250px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #blogs nav p, #blogs nav h3 {
     text-align: center;
@@ -485,8 +485,8 @@ footer p {
     float: right;
   }
   #about figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #blogs {
     padding-left: 0;
@@ -524,8 +524,8 @@ footer p {
     text-align: center;
   }
   #blogs nav article figure {
-    width: 200px;
-    height: 150px;
+    width: clamp(200px, 170px + 7vw, 250px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #blogs nav p, #blogs nav h3 {
     text-align: center;
@@ -552,7 +552,7 @@ footer p {
     float: right;
   }
   #projects figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
 }/*# sourceMappingURL=home.css.map */

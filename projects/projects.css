@@ -186,7 +186,7 @@ footer p {
     box-shadow: 0 6px 90px rgb(187, 187, 187);
   }
   html {
-    background-color: #fafaf7;
+    background-color: #fafafa;
     display: flex;
     justify-content: center;
   }
@@ -268,8 +268,8 @@ footer p {
     text-align: center;
   }
   #calculator figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #backend {
     display: flex;
@@ -285,8 +285,8 @@ footer p {
     text-align: center;
   }
   #backend figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #portfolio {
     display: flex;
@@ -305,8 +305,8 @@ footer p {
     text-align: center;
   }
   #portfolio figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
 }
 /* MEDIUM */
@@ -323,8 +323,8 @@ footer p {
     float: right;
   }
   #calculator figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #backend {
     display: flex;
@@ -335,8 +335,8 @@ footer p {
     float: left;
   }
   #backend figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
   #portfolio {
     display: flex;
@@ -350,7 +350,7 @@ footer p {
     float: right;
   }
   #portfolio figure {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 120px + 7vw, 200px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
 }/*# sourceMappingURL=projects.css.map */

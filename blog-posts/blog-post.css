@@ -186,7 +186,7 @@ footer p {
     box-shadow: 0 6px 90px rgb(187, 187, 187);
   }
   html {
-    background-color: #fafaf7;
+    background-color: #fafafa;
     display: flex;
     justify-content: center;
   }
@@ -271,8 +271,8 @@ footer p {
     text-align: center;
   }
   article figure {
-    width: 200px;
-    height: 150px;
+    width: clamp(200px, 170px + 7vw, 250px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
 }
 @media screen and (min-width: 551px) {
@@ -288,7 +288,7 @@ footer p {
     float: right;
   }
   article figure {
-    width: 200px;
-    height: 150px;
+    width: clamp(200px, 170px + 7vw, 250px);
+    height: clamp(150px, 120px + 7vw, 200px);
   }
 }/*# sourceMappingURL=blog-post.css.map */

@@ -59,10 +59,10 @@ $section-gap: calc(3.5rem + 3vw);
 
 
 // figure dimensions
-$square-width: 150px;
-$square-height: 150px;
-$rectangle-width: 200px;
-$rectangle-height: 150px;
+$square-width: clamp(150px, 120px + 7vw, 200px);
+$square-height: clamp(150px, 120px + 7vw, 200px);
+$rectangle-width: clamp(200px, 170px + 7vw, 250px);
+$rectangle-height: clamp(150px, 120px + 7vw, 200px);
 
 
 
@@ -113,12 +113,6 @@ $blog-large-margin: 1.2rem;
 $blog-extralarge-width: 45%;
 $blog-extralarge-padding: 1.2rem;
 $blog-extralarge-margin: 1.2rem;
-
-
-
-
-
-
 
 
 
@@ -276,9 +270,6 @@ $blog-extralarge-margin: 1.2rem;
 }
 
 
-
-
-
 // blog list mixins
 @mixin blog-list-1col {
     display: flex;
@@ -341,12 +332,12 @@ $blog-extralarge-margin: 1.2rem;
     }
 }
 
-
 @mixin header-nav-selected {
     font-size: calc($font-size-nav * 1.15);
     display: inline-block;
     border-bottom: $line;
 }
+
 
 // text mixins
 @mixin text-standard {
@@ -462,7 +453,7 @@ a {
 
 
 
-// animate
+// hover animations
 .button:hover {
     box-shadow: 0 4px 5px rgb(180, 180, 180);
     transform: scale(1.04);
@@ -554,7 +545,6 @@ footer {
     }
 }
 
-
 @media screen and (min-width: 1051px) {
     body {
         width: 1100px;
@@ -562,13 +552,11 @@ footer {
     }
 
     html {
-        background-color: #fafaf7;
+        background-color: #fafafa;
         display: flex;
         justify-content: center;
     }
 }
-
-
 
 @media screen and (max-width: 550px) {
     @include page-settings-small;
