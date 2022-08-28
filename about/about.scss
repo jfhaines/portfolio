@@ -1,9 +1,11 @@
 @use '../base';
 
+// styles the about link in top nav bar
 #about-button {
     @include base.header-nav-selected;
 }
 
+// skils section
 section {
     display: flex;
     flex-direction: column;
@@ -50,18 +52,23 @@ section {
 
 
 
-/* SMALL */
+// styles limited to smart phones
 @media screen and (max-width: 550px) {
+    // my story section
     #mystory {
         @include base.article-center;
         @include base.card;
         @include base.figure-square;
     }
+
+    // updating card width in skills section
     section {
         li {
             width: 45%;
         }
     }
+
+    // interests and personality section
     #interests {
         @include base.article-center;
         @include base.card;
@@ -70,18 +77,22 @@ section {
 }
 
 
-/* MEDIUM */
+// styles for tablets and desktop
 @media screen and (min-width: 551px) {
+    // my story section
     #mystory {
         @include base.article-left;
         @include base.card;
         @include base.figure-square;
     }
+
+    // updating card width in skills section
     section {
         li {
             width: 40%;
         }
     }
+    // interests and personality section
     #interests {
         @include base.article-left;
         @include base.card;
@@ -89,7 +100,7 @@ section {
     }
 }
 
-/* LARGE */
+// styles for 
 @media screen and (min-width: 741px) {
     section {
         li {

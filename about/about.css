@@ -296,7 +296,6 @@ section ul li p {
   align-self: center;
 }
 
-/* SMALL */
 @media screen and (max-width: 550px) {
   #mystory {
     display: flex;
@@ -342,7 +341,6 @@ section ul li p {
     height: clamp(150px, 120px + 7vw, 200px);
   }
 }
-/* MEDIUM */
 @media screen and (min-width: 551px) {
   #mystory {
     display: flex;
@@ -378,7 +376,6 @@ section ul li p {
     height: clamp(150px, 120px + 7vw, 200px);
   }
 }
-/* LARGE */
 @media screen and (min-width: 741px) {
   section li {
     width: 22%;
