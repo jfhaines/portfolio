@@ -191,13 +191,6 @@ footer p {
     justify-content: center;
   }
 }
-#blog-button {
-  font-size: calc(clamp(0.65rem, 0.32rem + 1.2vw, 1.1rem) * 1.15);
-  display: inline-block;
-  border-bottom: 3px solid #ef1d28;
-}
-
-/* SMALL */
 @media screen and (max-width: 550px) {
   body > section, body > article, main {
     width: 93%;
@@ -210,49 +203,7 @@ footer p {
     padding: 1.2rem;
     margin-top: 1.2rem;
   }
-  main nav {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  main nav article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  main nav article .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main nav article h2 {
-    text-align: center;
-  }
-  main nav article figure {
-    width: 200px;
-    height: 150px;
-  }
-  main nav p, main nav h3 {
-    text-align: center;
-  }
-  main nav ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-  }
 }
-/* MEDIUM */
 @media screen and (min-width: 551px) and (max-width: 740px) {
   body > section, body > article, main {
     width: 87%;
@@ -265,6 +216,40 @@ footer p {
     padding: 1.2rem;
     margin-top: 1.2rem;
   }
+}
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (min-width: 1051px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+#blog-button {
+  font-size: calc(clamp(0.65rem, 0.32rem + 1.2vw, 1.1rem) * 1.15);
+  display: inline-block;
+  border-bottom: 3px solid #ef1d28;
+}
+
+@media screen and (max-width: 740px) {
   main nav {
     display: flex;
     flex-flow: row wrap;
@@ -307,75 +292,7 @@ footer p {
     align-items: center;
   }
 }
-/* LARGE */
-@media screen and (min-width: 741px) and (max-width: 1050px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 45%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
-  main nav {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  main nav article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  main nav article .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  main nav article h2 {
-    text-align: center;
-  }
-  main nav article figure {
-    width: 200px;
-    height: 150px;
-  }
-  main nav p, main nav h3 {
-    text-align: center;
-  }
-  main nav ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-/* EXTRA LARGE */
-@media screen and (min-width: 1051px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 45%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
+@media screen and (min-width: 741px) {
   main nav {
     display: flex;
     flex-flow: row wrap;

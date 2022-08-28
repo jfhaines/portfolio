@@ -191,6 +191,58 @@ footer p {
     justify-content: center;
   }
 }
+@media screen and (max-width: 550px) {
+  body > section, body > article, main {
+    width: 93%;
+    padding: 1.2rem 1.2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 100%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 740px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 80%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (min-width: 1051px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
 #contact-button {
   font-size: calc(clamp(0.65rem, 0.32rem + 1.2vw, 1.1rem) * 1.15);
   display: inline-block;
@@ -276,61 +328,4 @@ footer p {
   margin: 0;
   width: 2.5rem;
   height: 2.5rem;
-}
-
-/* SMALL */
-@media screen and (max-width: 550px) {
-  body > section, body > article, main {
-    width: 93%;
-    padding: 1.2rem 1.2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 100%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
-}
-/* MEDIUM */
-@media screen and (min-width: 551px) and (max-width: 740px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 80%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
-}
-/* LARGE */
-@media screen and (min-width: 741px) and (max-width: 1050px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 45%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
-}
-/* EXTRA LARGE */
-@media screen and (min-width: 1051px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 45%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
 }/*# sourceMappingURL=contact.css.map */

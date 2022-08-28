@@ -528,12 +528,12 @@ footer {
       font-size: 0.7rem;
       font-weight: 600;
     }
-  }
+}
 
 
 
 
-  // Responsiveness
+// Responsiveness
 @media screen and (max-width: 550px) {
     header {
         padding: 1.5rem;
@@ -566,4 +566,22 @@ footer {
         display: flex;
         justify-content: center;
     }
+}
+
+
+
+@media screen and (max-width: 550px) {
+    @include page-settings-small;
+}
+
+@media screen and (min-width: 551px) and (max-width: 740px) {
+    @include page-settings-medium;
+}
+
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+    @include page-settings-large;
+}
+
+@media screen and (min-width: 1051px) {
+    @include page-settings-extralarge;
 }

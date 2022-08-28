@@ -76,24 +76,3 @@
         }
     }
 }
-
-/* SMALL */
-@media screen and (max-width: 550px) {
-    @include base.page-settings-small;
-}
-
-
-/* MEDIUM */
-@media screen and (min-width: 551px) and (max-width: 740px) {
-    @include base.page-settings-medium;
-}
-
-/* LARGE */
-@media screen and (min-width: 741px) and (max-width: 1050px) {
-    @include base.page-settings-large;
-}
-
-/* EXTRA LARGE */
-@media screen and (min-width: 1051px) {
-    @include base.page-settings-extralarge;
-}

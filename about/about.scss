@@ -4,8 +4,7 @@
     @include base.header-nav-selected;
 }
 
-
-@mixin mini-card-display {
+section {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -53,14 +52,12 @@
 
 /* SMALL */
 @media screen and (max-width: 550px) {
-    @include base.page-settings-small;
     #mystory {
         @include base.article-center;
         @include base.card;
         @include base.figure-square;
     }
     section {
-        @include mini-card-display;  
         li {
             width: 45%;
         }
@@ -74,15 +71,13 @@
 
 
 /* MEDIUM */
-@media screen and (min-width: 551px) and (max-width: 740px) {
-    @include base.page-settings-medium;
+@media screen and (min-width: 551px) {
     #mystory {
         @include base.article-left;
         @include base.card;
         @include base.figure-square;
     }
     section {
-        @include mini-card-display;
         li {
             width: 40%;
         }
@@ -95,43 +90,10 @@
 }
 
 /* LARGE */
-@media screen and (min-width: 741px) and (max-width: 1050px) {
-    @include base.page-settings-large;
-    #mystory {
-        @include base.article-left;
-        @include base.card;
-        @include base.figure-square;
-    }
+@media screen and (min-width: 741px) {
     section {
-        @include mini-card-display;
         li {
             width: 22%;
         }
-    }
-    #interests {
-        @include base.article-left;
-        @include base.card;
-        @include base.figure-square;
-    }
-}
-
-/* EXTRA LARGE */
-@media screen and (min-width: 1051px) {
-    @include base.page-settings-extralarge;
-    #mystory {
-        @include base.article-left;
-        @include base.card;
-        @include base.figure-square;
-    }
-    section {
-        @include mini-card-display;  
-        li {
-            width: 22%;
-        }
-    }
-    #interests {
-        @include base.article-left;
-        @include base.card;
-        @include base.figure-square;
     }
 }

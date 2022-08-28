@@ -191,6 +191,58 @@ footer p {
     justify-content: center;
   }
 }
+@media screen and (max-width: 550px) {
+  body > section, body > article, main {
+    width: 93%;
+    padding: 1.2rem 1.2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 100%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (min-width: 551px) and (max-width: 740px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 80%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (min-width: 1051px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
 #home-button {
   font-size: calc(clamp(0.65rem, 0.32rem + 1.2vw, 1.1rem) * 1.15);
   display: inline-block;
@@ -244,17 +296,6 @@ footer p {
 
 /* SMALL Viewport */
 @media screen and (max-width: 550px) {
-  body > section, body > article, main {
-    width: 93%;
-    padding: 1.2rem 1.2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 100%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
   #about {
     display: flex;
     flex-direction: column;
@@ -349,17 +390,6 @@ footer p {
 }
 /* MEDIUM Viewport*/
 @media screen and (min-width: 551px) and (max-width: 740px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 80%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
   #about {
     display: flex;
     flex-direction: column;
@@ -442,114 +472,7 @@ footer p {
   }
 }
 /* LARGE Viewport */
-@media screen and (min-width: 741px) and (max-width: 1050px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 45%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
-  #about {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  #about figure {
-    float: right;
-  }
-  #about figure {
-    width: 150px;
-    height: 150px;
-  }
-  #blogs {
-    padding-left: 0;
-    padding-right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #blogs h2 {
-    align-self: flex-end;
-  }
-  #blogs nav {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-  #blogs nav article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  #blogs nav article .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #blogs nav article h2 {
-    text-align: center;
-  }
-  #blogs nav article figure {
-    width: 200px;
-    height: 150px;
-  }
-  #blogs nav p, #blogs nav h3 {
-    text-align: center;
-  }
-  #blogs nav ul {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  #projects {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  #projects figure {
-    float: right;
-  }
-  #projects figure {
-    width: 150px;
-    height: 150px;
-  }
-}
-/* EXTRA LARGE */
-@media screen and (min-width: 1051px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 45%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
+@media screen and (min-width: 741px) {
   #about {
     display: flex;
     flex-direction: column;

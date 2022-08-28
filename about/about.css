@@ -191,13 +191,6 @@ footer p {
     justify-content: center;
   }
 }
-#about-button {
-  font-size: calc(clamp(0.65rem, 0.32rem + 1.2vw, 1.1rem) * 1.15);
-  display: inline-block;
-  border-bottom: 3px solid #ef1d28;
-}
-
-/* SMALL */
 @media screen and (max-width: 550px) {
   body > section, body > article, main {
     width: 93%;
@@ -210,6 +203,101 @@ footer p {
     padding: 1.2rem;
     margin-top: 1.2rem;
   }
+}
+@media screen and (min-width: 551px) and (max-width: 740px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 80%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (min-width: 741px) and (max-width: 1050px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (min-width: 1051px) {
+  body > section, body > article, main {
+    width: 87%;
+    padding: 2rem 2rem;
+  }
+  body > section nav ul li, body > article nav ul li, main nav ul li {
+    width: 45%;
+  }
+  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
+    padding: 1.2rem;
+    margin-top: 1.2rem;
+  }
+}
+#about-button {
+  font-size: calc(clamp(0.65rem, 0.32rem + 1.2vw, 1.1rem) * 1.15);
+  display: inline-block;
+  border-bottom: 3px solid #ef1d28;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+section h2 {
+  align-self: flex-end;
+}
+section ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+section ul li {
+  height: 4rem;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0.45rem;
+  line-height: normal;
+  background-color: white;
+  border-radius: 6px;
+  box-shadow: 0 9px 30px rgb(189, 189, 189);
+}
+section ul li figure {
+  margin: 0;
+  width: 100%;
+  height: auto;
+  padding: 0.1rem;
+  box-shadow: none;
+}
+section ul li img {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  margin: 0rem;
+}
+section ul li p {
+  font-weight: 700;
+  text-align: center;
+  align-self: center;
+}
+
+/* SMALL */
+@media screen and (max-width: 550px) {
   #mystory {
     display: flex;
     flex-direction: column;
@@ -229,52 +317,6 @@ footer p {
   #mystory figure {
     width: 150px;
     height: 150px;
-  }
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  section h2 {
-    align-self: flex-end;
-  }
-  section ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  section ul li {
-    height: 4rem;
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0.45rem;
-    line-height: normal;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  section ul li figure {
-    margin: 0;
-    width: 100%;
-    height: auto;
-    padding: 0.1rem;
-    box-shadow: none;
-  }
-  section ul li img {
-    -o-object-fit: scale-down;
-       object-fit: scale-down;
-    margin: 0rem;
-  }
-  section ul li p {
-    font-weight: 700;
-    text-align: center;
-    align-self: center;
   }
   section li {
     width: 45%;
@@ -301,18 +343,7 @@ footer p {
   }
 }
 /* MEDIUM */
-@media screen and (min-width: 551px) and (max-width: 740px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 80%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
+@media screen and (min-width: 551px) {
   #mystory {
     display: flex;
     flex-direction: column;
@@ -327,52 +358,6 @@ footer p {
   #mystory figure {
     width: 150px;
     height: 150px;
-  }
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  section h2 {
-    align-self: flex-end;
-  }
-  section ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  section ul li {
-    height: 4rem;
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0.45rem;
-    line-height: normal;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  section ul li figure {
-    margin: 0;
-    width: 100%;
-    height: auto;
-    padding: 0.1rem;
-    box-shadow: none;
-  }
-  section ul li img {
-    -o-object-fit: scale-down;
-       object-fit: scale-down;
-    margin: 0rem;
-  }
-  section ul li p {
-    font-weight: 700;
-    text-align: center;
-    align-self: center;
   }
   section li {
     width: 40%;
@@ -394,188 +379,8 @@ footer p {
   }
 }
 /* LARGE */
-@media screen and (min-width: 741px) and (max-width: 1050px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 45%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
-  #mystory {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  #mystory figure {
-    float: right;
-  }
-  #mystory figure {
-    width: 150px;
-    height: 150px;
-  }
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  section h2 {
-    align-self: flex-end;
-  }
-  section ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  section ul li {
-    height: 4rem;
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0.45rem;
-    line-height: normal;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  section ul li figure {
-    margin: 0;
-    width: 100%;
-    height: auto;
-    padding: 0.1rem;
-    box-shadow: none;
-  }
-  section ul li img {
-    -o-object-fit: scale-down;
-       object-fit: scale-down;
-    margin: 0rem;
-  }
-  section ul li p {
-    font-weight: 700;
-    text-align: center;
-    align-self: center;
-  }
+@media screen and (min-width: 741px) {
   section li {
     width: 22%;
-  }
-  #interests {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  #interests figure {
-    float: right;
-  }
-  #interests figure {
-    width: 150px;
-    height: 150px;
-  }
-}
-/* EXTRA LARGE */
-@media screen and (min-width: 1051px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 45%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
-  #mystory {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  #mystory figure {
-    float: right;
-  }
-  #mystory figure {
-    width: 150px;
-    height: 150px;
-  }
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-  section h2 {
-    align-self: flex-end;
-  }
-  section ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  section ul li {
-    height: 4rem;
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0.45rem;
-    line-height: normal;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  section ul li figure {
-    margin: 0;
-    width: 100%;
-    height: auto;
-    padding: 0.1rem;
-    box-shadow: none;
-  }
-  section ul li img {
-    -o-object-fit: scale-down;
-       object-fit: scale-down;
-    margin: 0rem;
-  }
-  section ul li p {
-    font-weight: 700;
-    text-align: center;
-    align-self: center;
-  }
-  section li {
-    width: 22%;
-  }
-  #interests {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 9px 30px rgb(189, 189, 189);
-  }
-  #interests figure {
-    float: right;
-  }
-  #interests figure {
-    width: 150px;
-    height: 150px;
   }
 }/*# sourceMappingURL=about.css.map */
