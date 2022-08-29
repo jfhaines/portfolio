@@ -52,7 +52,7 @@ section {
 
 
 
-// styles limited to smart phones
+//screen specific styles
 @media screen and (max-width: 550px) {
     // my story section
     #mystory {
@@ -77,7 +77,7 @@ section {
 }
 
 
-// styles for tablets and desktop
+// screen specifc styles
 @media screen and (min-width: 551px) {
     // my story section
     #mystory {
@@ -100,8 +100,9 @@ section {
     }
 }
 
-// styles for 
+// screen specific styles 
 @media screen and (min-width: 741px) {
+    // updating card width in skills section
     section {
         li {
             width: 22%;

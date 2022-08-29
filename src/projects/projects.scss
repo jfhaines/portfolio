@@ -1,24 +1,27 @@
 @use '../base';
 
-
+// styles the projects link in top nav bar
 #projects-button {
     @include base.header-nav-selected;
 }
 
 
-/* SMALL */
+// screen specific styles
 @media screen and (max-width: 550px) {
+    // calculator project styles
     #calculator {
         @include base.article-center;
         @include base.card;
         @include base.figure-square;
     }
 
+    // backend project styles
     #backend {
         @include base.article-center;
         @include base.figure-square;
     }
 
+    // portfolio project styles
     #portfolio {
         @include base.article-center;
         @include base.card;
@@ -27,19 +30,22 @@
 }
 
 
-/* MEDIUM */
+// screen specific styles
 @media screen and (min-width: 551px) {
+    // calculator project styles
     #calculator {
         @include base.article-left;
         @include base.card;
         @include base.figure-square;
     }
 
+    // backend project styles
     #backend {
         @include base.article-right;
         @include base.figure-square;
     }
 
+    // portfolio project styles
     #portfolio {
         @include base.article-left;
         @include base.card;

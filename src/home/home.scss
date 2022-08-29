@@ -1,12 +1,12 @@
 @use '../base';
 
-
+// styles the home link in top nav bar
 #home-button {
     @include base.header-nav-selected;
 }
 
 
-// Hero
+// Hero component styles
 #hero {
     margin: 1rem 0 8rem;
     display: flex;
@@ -57,19 +57,22 @@
 
 
 
-/* SMALL Viewport */
+// screen specific styles
 @media screen and (max-width: 550px) {
+    // about page preview styles
     #about {
         @include base.article-center;
         @include base.card;
         @include base.figure-square;
     }
 
+    // about page preview styles
     #projects {
         @include base.article-center;
         @include base.figure-square;
     }
 
+    // blog article list preview styles
     #blogs {
         order: 1;
         display: flex;
@@ -82,31 +85,36 @@
         }
     }
 
+    // updating hero component
     #hero {
         h1 {
             font-size: calc(base.$font-size-heading * 1.6);
         }
     }
 
+    // footer styling
     footer {
         order: 2;
     }
 }
 
 
-/* MEDIUM Viewport*/
+// screen specific styles
 @media screen and (min-width: 551px) and (max-width: 740px) {
+    // about page preview styles
     #about {
         @include base.article-left;
         @include base.card;
         @include base.figure-square;
     }
 
+    // projects page preview styles
     #projects {
         @include base.article-right;
         @include base.figure-square;
     }
 
+    // blog article list preview styles
     #blogs {
         order: 1;
         display: flex;
@@ -122,19 +130,22 @@
         }
     }
 
+    // footer styling
     footer {
         order: 2;
     }
 }
 
-/* LARGE Viewport */
+// screen specific styles
 @media screen and (min-width: 741px) {
+    // about page preview styles
     #about {
         @include base.article-left;
         @include base.card;
         @include base.figure-square;
     }
 
+    // blog list preview styles
     #blogs {
         padding-left: 0;
         padding-right: 0;
@@ -151,6 +162,7 @@
         }
     }
 
+    // projects page preview styles
     #projects {
         @include base.article-left;
         @include base.card;

@@ -1,11 +1,13 @@
 @use '../base';
 
-
+// styles the blog link in top nav bar
 #blog-button {
     @include base.header-nav-selected;
 }
 
+// screen specific styles
 @media screen and (max-width: 740px) {
+    // blog list styles
     main {
         nav {
             @include base.blog-list-1col;
@@ -13,7 +15,9 @@
     }
 }
 
+// screen specific styles
 @media screen and (min-width: 741px) {
+    // blog list styles
     main {
         nav {
             @include base.blog-list-2cols;

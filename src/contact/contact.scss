@@ -1,9 +1,11 @@
 @use '../base';
 
+// styles the contact link in top nav bar
 #contact-button {
     @include base.header-nav-selected;
 }
 
+// styles the email form component
 .form {
     @include base.card;
     form {
@@ -39,6 +41,7 @@
     }
 }
 
+// styles the contact details section
 .details {
     display: flex;
     flex-direction: column;

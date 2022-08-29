@@ -3,40 +3,39 @@
 
 /* VARIABLES */
 
-// colors
+// color scheme variables
 $color-one: #fbfdf2;
 $color-two: #ef1d28;
 
-// headings
+// headings - variables
 $font-family-heading: "Montserrat", Arial, sans-serif;
 $font-size-heading: clamp(1.85rem, 1.55rem + 1vw, 2.25rem);
 $font-weight-heading: 700;
 $text-color-heading: black;
 $line-height-heading: 1.7rem;
 
-//subheadings
+//subheadings - variables
 $font-family-subheading: "Montserrat", Arial, sans-serif;
 $font-size-subheading: clamp(0.8rem, 0.5rem + 1vw, 1.3rem);
 $font-weight-subheading: 700;
 $text-color-subheading: black;
 $line-height-subheading: 1.7rem;
 
-
-// standard text
+// standard text - variables
 $font-family-standard: "Open Sans", Arial, sans-serif;
 $font-size-standard: clamp(0.95rem, 0.6rem + 1vw, 1.2rem);
 $font-weight-standard: 500;
 $text-color-standard: #494949;
 $line-height-standard: 1.7rem;
 
-// button text
+// button text - variables
 $font-family-button: "Montserrat", Arial, sans-serif;
 $font-size-button: clamp(0.7rem, 0.4rem + 1vw, 0.9rem);
 $font-weight-button: bold;
 $text-color-button: white;
 $line-height-button: 1.7rem;
 
-// nav text
+// nav text - variables
 $font-family-nav: "Open Sans", Arial, sans-serif;
 $font-size-nav: clamp(0.65rem, 0.32rem + 1.2vw, 1.1rem);
 $font-weight-nav: 700;
@@ -45,20 +44,17 @@ $line-height-nav: 1.7rem;
 
 
 
-
-// heading underline
+// underline style variable
 $line: 3px solid $color-two;
 
-// card component properties
+// card component style variable
 $box-shadow: 0 9px 30px rgb(189, 189, 189);
 $card-border-radius: 6px;
 
-// gap between sections
+// gap between variable
 $section-gap: calc(3.5rem + 3vw);
 
-
-
-// figure dimensions
+// figure variables
 $square-width: clamp(150px, 120px + 7vw, 200px);
 $square-height: clamp(150px, 120px + 7vw, 200px);
 $rectangle-width: clamp(200px, 170px + 7vw, 250px);
@@ -68,23 +64,23 @@ $rectangle-height: clamp(150px, 120px + 7vw, 200px);
 
 
 
-/* Section Properties */
-//section small properties
+/* Page Section Variables */
+// small viewport
 $section-small-width: 93%;
 $section-small-top-padding: 1.2rem;
 $section-small-side-padding: 1.2rem;
 
-//section medium properties
+// medium viewport
 $section-medium-width: 87%;
 $section-medium-top-padding: 2rem;
 $section-medium-side-padding: 2rem;
 
-//section large properties
+// large viewport
 $section-large-width: 87%;
 $section-large-top-padding: 2rem;
 $section-large-side-padding: 2rem;
 
-//section extra large properties
+// extra large viewport
 $section-extralarge-width: 87%;
 $section-extralarge-top-padding: 2rem;
 $section-extralarge-side-padding: 2rem;
@@ -93,23 +89,23 @@ $section-extralarge-side-padding: 2rem;
 
 
 
-/* Blog Preview Properties */
-//section small properties
+/* Blog Preview Variables */
+//small viewport
 $blog-small-width: 100%;
 $blog-small-padding: 1.2rem;
 $blog-small-margin: 1.2rem;
 
-//section medium properties
+// medium viewport
 $blog-medium-width: 80%;
 $blog-medium-padding: 1.2rem;
 $blog-medium-margin: 1.2rem;
 
-//section large properties
+// large viewport
 $blog-large-width: 45%;
 $blog-large-padding: 1.2rem;
 $blog-large-margin: 1.2rem;
 
-//section extra large properties
+// extra large viewport
 $blog-extralarge-width: 45%;
 $blog-extralarge-padding: 1.2rem;
 $blog-extralarge-margin: 1.2rem;
@@ -122,6 +118,7 @@ $blog-extralarge-margin: 1.2rem;
 
 /* MIXINS */
 
+// Mixin with rulesets specific to small screen size
 @mixin page-settings-small {
     body > section, body > article, main {
         width: $section-small-width;
@@ -138,6 +135,7 @@ $blog-extralarge-margin: 1.2rem;
     }
 }
 
+// Mixin with rulesets specific to medium screen size
 @mixin page-settings-medium {
     body > section, body > article, main {
         width: $section-medium-width;
@@ -154,6 +152,7 @@ $blog-extralarge-margin: 1.2rem;
     }
 }
 
+// Mixin with rulesets specific to large screen size
 @mixin page-settings-large {
     body > section, body > article, main {
         width: $section-large-width;
@@ -170,6 +169,7 @@ $blog-extralarge-margin: 1.2rem;
     }
 }
 
+// Mixin with rulesets specific to even larger screen size
 @mixin page-settings-extralarge {
     body > section, body > article, main {
         width: $section-extralarge-width;
@@ -187,14 +187,14 @@ $blog-extralarge-margin: 1.2rem;
 }
 
 
-
-
+// card style mixin
 @mixin card {
     background-color: white;
     border-radius: $card-border-radius;
     box-shadow: $box-shadow
 }
 
+// figure style mixin
 @mixin figure-display {
     background: white;
     box-shadow: 0 1.5px 4px rgb(156, 156, 156);
@@ -203,6 +203,7 @@ $blog-extralarge-margin: 1.2rem;
     position: relative;
 }
 
+// image style mixin
 @mixin img-fit {
     object-fit: cover;
     width: 100%;
@@ -213,6 +214,7 @@ $blog-extralarge-margin: 1.2rem;
     transform: translate(-50%, -50%);
 }
 
+// heading underline mixin
 @mixin underline {
     border-bottom: $line;
     padding-bottom: clamp(0.6rem, 0.25rem + 1vw, 1rem);
@@ -221,6 +223,7 @@ $blog-extralarge-margin: 1.2rem;
     margin-top: 0;
 }
 
+// mixin for square shaped figures
 @mixin figure-square {
     figure {
         width: $square-width;
@@ -228,6 +231,7 @@ $blog-extralarge-margin: 1.2rem;
     }
 }
 
+// mixin for rectangular shaped figures
 @mixin figure-rectangle {
     figure {
         width: $rectangle-width;
@@ -236,7 +240,7 @@ $blog-extralarge-margin: 1.2rem;
 }
 
 
-
+// article aligned left mixin
 @mixin article-left {
     display: flex;
     flex-direction: column;
@@ -246,6 +250,7 @@ $blog-extralarge-margin: 1.2rem;
     }
 }
 
+// article aligned center mixin
 @mixin article-center {
     display: flex;
     flex-direction: column;
@@ -260,6 +265,7 @@ $blog-extralarge-margin: 1.2rem;
     }
 }
 
+// article aligned right mixin
 @mixin article-right {
     display: flex;
     flex-direction: column;
@@ -269,8 +275,7 @@ $blog-extralarge-margin: 1.2rem;
     }
 }
 
-
-// blog list mixins
+// mixin for blog list with 1 column
 @mixin blog-list-1col {
     display: flex;
     flex-flow: row wrap;
@@ -301,6 +306,7 @@ $blog-extralarge-margin: 1.2rem;
     }
 }
 
+// mixin for blog list with 2 columns
 @mixin blog-list-2cols {
     display: flex;
     flex-flow: row wrap;
@@ -332,6 +338,7 @@ $blog-extralarge-margin: 1.2rem;
     }
 }
 
+// mixin for highlighting current page in top nav bar 
 @mixin header-nav-selected {
     font-size: calc($font-size-nav * 1.15);
     display: inline-block;
@@ -339,7 +346,7 @@ $blog-extralarge-margin: 1.2rem;
 }
 
 
-// text mixins
+// standard text mixin
 @mixin text-standard {
     font-family: $font-family-standard;
     font-size: $font-size-standard;
@@ -348,6 +355,7 @@ $blog-extralarge-margin: 1.2rem;
     line-height: $line-height-standard;
 }
 
+// heading text mixin
 @mixin text-heading {
     font-family: $font-family-heading;
     font-size: $font-size-heading;
@@ -357,6 +365,7 @@ $blog-extralarge-margin: 1.2rem;
     @include underline;
 }
 
+// subheading text mixin
 @mixin text-subheading {
     font-family: $font-family-subheading;
     font-size: $font-size-subheading;
@@ -366,6 +375,7 @@ $blog-extralarge-margin: 1.2rem;
     @include underline;
 }
 
+// button text mixin
 @mixin text-button {
     font-family: $font-family-button;
     font-size: $font-size-button;
@@ -374,6 +384,7 @@ $blog-extralarge-margin: 1.2rem;
     line-height: $line-height-button;
 }
 
+// nav text mixin
 @mixin text-nav {
     font-family: $font-family-nav;
     font-size: $font-size-nav;
@@ -387,7 +398,7 @@ $blog-extralarge-margin: 1.2rem;
 
 
 
-//global settings
+/* GLOBAL RULES */
 * {
     box-sizing: border-box;
 }
@@ -451,28 +462,7 @@ a {
 }
 
 
-
-
-// hover animations
-.button:hover {
-    box-shadow: 0 4px 5px rgb(180, 180, 180);
-    transform: scale(1.04);
-}
-
-
-header a:hover {
-    transform: scale(1.07);
-}
-
-a article:hover {
-    transform: scale(1.02);
-}
-
-
-
-
-
-/* header */
+// header styling
 header {
     width: 100%;
     display: flex;
@@ -505,7 +495,7 @@ header {
     }
 }
 
-/* footer */
+// footer styling
 footer {
     display: flex;
     justify-content: center;
@@ -523,8 +513,24 @@ footer {
 
 
 
+// hover animations
+.button:hover {
+    box-shadow: 0 4px 5px rgb(180, 180, 180);
+    transform: scale(1.04);
+}
 
-// Responsiveness
+header a:hover {
+    transform: scale(1.07);
+}
+
+a article:hover {
+    transform: scale(1.02);
+}
+
+
+
+
+/* GLOBAL BREAKPOINTS */
 @media screen and (max-width: 550px) {
     header {
         padding: 1.5rem;
@@ -533,15 +539,15 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-    }
-
-    nav {
-        display: flex;
-        justify-content: center;
-    }
-
-    ul {
-        padding: 0;
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            
+            ul {
+                padding: 0;
+            }
+        }
     }
 }
 

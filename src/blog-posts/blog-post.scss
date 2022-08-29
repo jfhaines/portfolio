@@ -1,6 +1,5 @@
 @use '../base';
 
-
 .back-nav {
     align-self: flex-start;
     margin-left: calc((100% - base.$section-medium-width) / 2 + base.$section-medium-side-padding);
@@ -11,8 +10,9 @@
     color: gray;
 }
 
-
+// screen specific styles
 @media screen and (max-width: 550px) {
+    // blog article styles
     article {
         @include base.article-center;
         @include base.card;
@@ -20,8 +20,9 @@
     }
 }
 
-
+// screen specific styles
 @media screen and (min-width: 551px) {
+    // blog article styles
     article {
         @include base.article-left;
         @include base.card;
