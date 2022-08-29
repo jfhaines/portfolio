@@ -1,6 +1,7 @@
 # T1A2 - Portfolio Website
 
 [GitHub Repository](https://github.com/jfhaines/portfolio)
+[Netlify Site](https://joehaines-portfolio.netlify.app/)
 
 ## Purpose
 
@@ -50,7 +51,8 @@ The target audience of this website is for potential employers who are looking f
 
 - Figma for wireframes
 - Adobe Illustrator
+- GitHub
+- Netlify for deployment
 - HTML
 - CSS
 - SCSS
-- GitHub

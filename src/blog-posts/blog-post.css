@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Satisfy&display=swap");
 /* VARIABLES */
-/* Section Properties */
-/* Blog Preview Properties */
+/* Page Section Variables */
+/* Blog List Variables */
 /* MIXINS */
+/* GLOBAL RULES */
 * {
   box-sizing: border-box;
 }
@@ -106,20 +107,6 @@ a {
   text-decoration: none;
 }
 
-.button:hover {
-  box-shadow: 0 4px 5px rgb(180, 180, 180);
-  transform: scale(1.04);
-}
-
-header a:hover {
-  transform: scale(1.07);
-}
-
-a article:hover {
-  transform: scale(1.02);
-}
-
-/* header */
 header {
   width: 100%;
   display: flex;
@@ -148,7 +135,6 @@ header nav ul li a {
   display: inline-block;
 }
 
-/* footer */
 footer {
   display: flex;
   justify-content: center;
@@ -163,6 +149,20 @@ footer p {
   font-weight: 600;
 }
 
+.button:hover {
+  box-shadow: 0 4px 5px rgb(180, 180, 180);
+  transform: scale(1.04);
+}
+
+header a:hover {
+  transform: scale(1.07);
+}
+
+a article:hover {
+  transform: scale(1.02);
+}
+
+/* GLOBAL BREAKPOINTS */
 @media screen and (max-width: 550px) {
   header {
     padding: 1.5rem;
@@ -172,11 +172,11 @@ footer p {
     align-items: center;
     justify-content: flex-start;
   }
-  nav {
+  header nav {
     display: flex;
     justify-content: center;
   }
-  ul {
+  header nav ul {
     padding: 0;
   }
 }
@@ -194,58 +194,45 @@ footer p {
 @media screen and (max-width: 550px) {
   body > section, body > article, main {
     width: 93%;
-    padding: 1.2rem 1.2rem;
+    padding: 1.2rem 1.3rem;
   }
   body > section nav ul li, body > article nav ul li, main nav ul li {
     width: 100%;
   }
   body > section nav ul li article, body > article nav ul li article, main nav ul li article {
     padding: 1.2rem;
-    margin-top: 1.2rem;
+    margin-top: 1.3rem;
   }
 }
 @media screen and (min-width: 551px) and (max-width: 740px) {
   body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
+    width: 90%;
+    padding: 1.6rem 2.2rem;
   }
   body > section nav ul li, body > article nav ul li, main nav ul li {
     width: 80%;
   }
   body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
+    padding: 1.3rem;
+    margin-top: 1.5rem;
   }
 }
-@media screen and (min-width: 741px) and (max-width: 1050px) {
+@media screen and (min-width: 741px) {
   body > section, body > article, main {
     width: 87%;
-    padding: 2rem 2rem;
+    padding: 1.9rem 2.5rem;
   }
   body > section nav ul li, body > article nav ul li, main nav ul li {
     width: 45%;
   }
   body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
-  }
-}
-@media screen and (min-width: 1051px) {
-  body > section, body > article, main {
-    width: 87%;
-    padding: 2rem 2rem;
-  }
-  body > section nav ul li, body > article nav ul li, main nav ul li {
-    width: 45%;
-  }
-  body > section nav ul li article, body > article nav ul li article, main nav ul li article {
-    padding: 1.2rem;
-    margin-top: 1.2rem;
+    padding: 1.6rem;
+    margin-top: 1.7rem;
   }
 }
 .back-nav {
   align-self: flex-start;
-  margin-left: calc(6.5% + 2rem);
+  margin-left: calc(5% + 2.2rem);
   margin-bottom: 1.8rem;
 }
 

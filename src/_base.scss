@@ -68,49 +68,37 @@ $rectangle-height: clamp(150px, 120px + 7vw, 200px);
 // small viewport
 $section-small-width: 93%;
 $section-small-top-padding: 1.2rem;
-$section-small-side-padding: 1.2rem;
+$section-small-side-padding: 1.3rem;
 
 // medium viewport
-$section-medium-width: 87%;
-$section-medium-top-padding: 2rem;
-$section-medium-side-padding: 2rem;
+$section-medium-width: 90%;
+$section-medium-top-padding: 1.6rem;
+$section-medium-side-padding: 2.2rem;
 
 // large viewport
 $section-large-width: 87%;
-$section-large-top-padding: 2rem;
-$section-large-side-padding: 2rem;
-
-// extra large viewport
-$section-extralarge-width: 87%;
-$section-extralarge-top-padding: 2rem;
-$section-extralarge-side-padding: 2rem;
+$section-large-top-padding: 1.9rem;
+$section-large-side-padding: 2.5rem;
 
 
 
 
 
-/* Blog Preview Variables */
+/* Blog List Variables */
 //small viewport
 $blog-small-width: 100%;
 $blog-small-padding: 1.2rem;
-$blog-small-margin: 1.2rem;
+$blog-small-margin: 1.3rem;
 
 // medium viewport
 $blog-medium-width: 80%;
-$blog-medium-padding: 1.2rem;
-$blog-medium-margin: 1.2rem;
+$blog-medium-padding: 1.3rem;
+$blog-medium-margin: 1.5rem;
 
 // large viewport
 $blog-large-width: 45%;
-$blog-large-padding: 1.2rem;
-$blog-large-margin: 1.2rem;
-
-// extra large viewport
-$blog-extralarge-width: 45%;
-$blog-extralarge-padding: 1.2rem;
-$blog-extralarge-margin: 1.2rem;
-
-
+$blog-large-padding: 1.6rem;
+$blog-large-margin: 1.7rem;
 
 
 
@@ -120,13 +108,16 @@ $blog-extralarge-margin: 1.2rem;
 
 // Mixin with rulesets specific to small screen size
 @mixin page-settings-small {
+    // page content sections
     body > section, body > article, main {
         width: $section-small-width;
         padding: $section-small-top-padding $section-small-side-padding;
 
+        // blog list elements
         nav ul li {
             width: $blog-small-width;
 
+            // blog preview card
             article {
                 padding: $blog-small-padding;
                 margin-top: $blog-small-margin;
@@ -137,13 +128,16 @@ $blog-extralarge-margin: 1.2rem;
 
 // Mixin with rulesets specific to medium screen size
 @mixin page-settings-medium {
+    // page content sections
     body > section, body > article, main {
         width: $section-medium-width;
         padding: $section-medium-top-padding $section-medium-side-padding;
 
+        // blog list elements
         nav ul li {
             width: $blog-medium-width;
 
+            // blog preview card
             article {
                 padding: $blog-medium-padding;
                 margin-top: $blog-medium-margin;
@@ -154,33 +148,19 @@ $blog-extralarge-margin: 1.2rem;
 
 // Mixin with rulesets specific to large screen size
 @mixin page-settings-large {
+    // page content sections
     body > section, body > article, main {
         width: $section-large-width;
         padding: $section-large-top-padding $section-large-side-padding;
 
+        // blog list elements
         nav ul li {
             width: $blog-large-width;
 
+            // blog preview card
             article {
                 padding: $blog-large-padding;
                 margin-top: $blog-large-margin;
-            }
-        }
-    }
-}
-
-// Mixin with rulesets specific to even larger screen size
-@mixin page-settings-extralarge {
-    body > section, body > article, main {
-        width: $section-extralarge-width;
-        padding: $section-extralarge-top-padding $section-extralarge-side-padding;
-
-        nav ul li {
-            width: $blog-extralarge-width;
-
-            article {
-                padding: $blog-extralarge-padding;
-                margin-top: $blog-extralarge-margin;
             }
         }
     }
@@ -572,10 +552,6 @@ a article:hover {
     @include page-settings-medium;
 }
 
-@media screen and (min-width: 741px) and (max-width: 1050px) {
+@media screen and (min-width: 741px) {
     @include page-settings-large;
-}
-
-@media screen and (min-width: 1051px) {
-    @include page-settings-extralarge;
 }

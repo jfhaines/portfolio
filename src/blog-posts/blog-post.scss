@@ -1,5 +1,6 @@
 @use '../base';
 
+// back button to blog page styles
 .back-nav {
     align-self: flex-start;
     margin-left: calc((100% - base.$section-medium-width) / 2 + base.$section-medium-side-padding);
